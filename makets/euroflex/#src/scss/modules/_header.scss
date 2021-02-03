@@ -1,0 +1,148 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 100;
+  &__inner {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+
+    transition: right 0.5s ease-out;
+  }
+  &__nav {
+    margin-right: 70px;
+  }
+}
+
+.logo {
+  &__title {
+    padding-left: 63px;
+    @include fontText($Roboto, 12px, 400);
+    color: #4f4f4f;
+  }
+  &--hidden {
+    display: none;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 26px;
+    }
+  }
+  &__link {
+    @include fontText($Roboto, 16px, 400);
+    line-height: 1.6;
+    color: #222222;
+
+    transition: color 0.2s linear;
+    &:hover {
+      color: #ff5c5c;
+    }
+  }
+}
+
+.callback {
+  &__number-phone {
+    display: block;
+    margin-bottom: 10px;
+    @include fontText($Roboto, 18px, 500);
+    color: #444444;
+  }
+  &__button {
+    font-size: 14px;
+    padding: 4px 15px;
+    margin-left: 5px;
+  }
+}
+
+// BURGER
+
+.burger {
+  position: relative;
+  z-index: 200;
+
+  display: none;
+  width: 30px;
+  height: 22px;
+
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    transition: all 0.3s ease-in-out;
+  }
+  &::after {
+    bottom: 0;
+    left: 0;
+
+    background-color: #01519e;
+  }
+  &::before {
+    top: 0;
+    left: 0;
+
+    background-color: #0095da;
+  }
+  &__line {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    display: block;
+    width: 70%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: #a1d374;
+
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+  }
+  &.active {
+    &::before {
+      top: 8px;
+
+      background-color: #fff;
+
+      transform: rotate(45deg);
+    }
+    &::after {
+      bottom: 10px;
+
+      background-color: #fff;
+
+      transform: rotate(-45deg);
+    }
+    & .burger__line {
+      opacity: 0;
+    }
+  }
+}
+
+.header__content.active-menu {
+  right: 0;
+}
+
+.nav-link.active-link {
+  opacity: 1;
+}

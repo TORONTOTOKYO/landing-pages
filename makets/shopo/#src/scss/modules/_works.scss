@@ -1,0 +1,19 @@
+.works {
+  margin-bottom: 120px;
+  &__heading {
+    margin: 100px 0px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -7.5px;
+  }
+  &__image {
+    padding: 0px 7.5px;
+    margin-bottom: 10px;
+    & img {
+      max-width: 100%;
+    }
+  }
+}

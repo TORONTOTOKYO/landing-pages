@@ -1,0 +1,63 @@
+<div class="popup">
+  <div class="popup__overlay">
+    <button class="popup__button-closed">
+      <svg class="popup__button-icon">
+        <use xlink:href="#closed"></use>
+      </svg>
+    </button>
+    <div class="popup__modal form__wrapper">
+      <form action="mail.php" class="form" id="form-popup">
+        <div class="form__title">
+          Получите расчет за 15 мин и спецпредложение на первый заказ!
+        </div>
+        <div class="form__subtitle">
+          Количество спепредложений в рамках месяца ограничено
+        </div>
+        <div class="form__item">
+          <label class="form__label" for="formNamePopup">Ваше Имя*</label>
+          <input
+            id="formNamePopup"
+            type="text"
+            class="form__input"
+            placeholder="Петров Петр"
+            data-validate-field="name"
+            name="name"
+          />
+        </div>
+        <div class="form__item">
+          <label class="form__label" for="formPhonePopup">Ваш номер*</label>
+          <input
+            id="formPhonePopup"
+            type="tel"
+            class="form__input"
+            placeholder="+7 (___) ___-__-__"
+            data-validate-field="tel"
+            name="tel"
+          />
+        </div>
+        <div class="form__item">
+          <div class="form__file-title">Информация для нас:</div>
+          <div class="file">
+            <div class="file__item">
+              <input
+                id="formImage"
+                accept=".jpg, .png, .gif"
+                type="file"
+                name="image"
+                class="file__input formImage"
+              />
+              <div class="file__button">Выбрать</div>
+            </div>
+            <div id="formPreview" class="file__prieview"></div>
+          </div>
+        </div>
+        <div class="form__item">
+          <button class="form__button">Получить СПЕЦПРЕДЛОЖЕНИЕ</button>
+        </div>
+        <div class="form__confidentiality">
+          Мы гарантируем конфиденциальность данных
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

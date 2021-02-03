@@ -1,0 +1,94 @@
+<!--INTRO-->
+<section class="intro">
+  <div class="container">
+    <div class="intro__inner">
+      <div class="intro__content">
+        <h1 class="intro__title">
+          <strong>Еврофлекс</strong> - ведущий производитель упаковки для
+          пищевой промышленности и сельского хозяйства
+        </h1>
+        <h2 class="intro__subtitle">
+          Пленка БОПП с макроперфорацией до 12 отверстий
+        </h2>
+        <ul class="features">
+          <li class="features__item">
+            <img class="features__img" src="img/intro/icons/img1.svg" alt="" />
+            <div class="features__item-title">СОБСТВЕННОЕ ПРОИЗВОДСТВО</div>
+          </li>
+          <li class="features__item">
+            <img class="features__img" src="img/intro/icons/img2.svg" alt="" />
+            <div class="features__item-title">
+              СУПЕР-УСЛОВИЯ для НОВЫХ КЛИЕНТОВ
+            </div>
+          </li>
+          <li class="features__item">
+            <img class="features__img" src="img/intro/icons/img3.svg" alt="" />
+            <div class="features__item-title">
+              КАЧЕСТВО, СКЛАД, СРОКИ ПРОИЗВОДСТВА
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="intro__form form__wrapper">
+        <form
+          action="mail.php"
+          enctype="multipart/form-data"
+          method="POST"
+          class="form form-top"
+          id="form"
+        >
+          <div class="form__title">
+            Получите расчет за 15 мин и спецпредложение на первый заказ!
+          </div>
+          <div class="form__subtitle">
+            Количество спепредложений в рамках месяца ограничено
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="formNameTop">Ваше Имя*</label>
+            <input
+              id="formNameTop"
+              type="text"
+              class="form__input"
+              data-validate-field="name"
+              placeholder="Петров Петр"
+              name="name"
+            />
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="formNameTop">Ваш номер*</label>
+            <input
+              id="formPhoneTop"
+              type="tel"
+              data-validate-field="tel"
+              class="form__input"
+              placeholder="+7 (___) ___-__-__"
+              name="tel"
+            />
+          </div>
+          <div class="form__item">
+            <div class="form__file-title">Информация для нас:</div>
+            <div class="file">
+              <div class="file__item">
+                <input
+                  id="formImage"
+                  accept=".jpg, .png, .gif"
+                  type="file"
+                  name="image"
+                  class="file__input formImage"
+                />
+                <div class="file__button">Выбрать</div>
+              </div>
+              <div id="formPreview" class="file__prieview"></div>
+            </div>
+          </div>
+          <div class="form__item">
+            <button class="form__button">Получить СПЕЦПРЕДЛОЖЕНИЕ</button>
+            <div class="form__confidentiality">
+              Мы гарантируем конфиденциальность данных
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

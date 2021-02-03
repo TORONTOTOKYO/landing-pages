@@ -1,0 +1,79 @@
+// МИКСИН ШРИФТЫ
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+// <-----------------------  ПЕРЕМЕННЫЕ ----------------------->
+
+// ШРИФТЫ
+$OpenSans: "Open Sans", sans-serif;
+$Roboto: "Roboto", sans-serif;
+
+$cardHover: false;
+
+// МИКСИНЫ =======================================================>
+
+@mixin fontext($font, $size, $weight) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin flexbox($pos1, $pos2, $direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $pos1;
+  align-items: $pos2;
+}
+
+// <----------------------- КОНТЕНТ-КОНТЕЙНЕР  ----------------------->
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+// <----------------------- ОбЩЕЕ  ----------------------->
+.heading {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+  color: #212121;
+  &__title {
+    margin-bottom: 36px;
+    @include fontext($OpenSans, 30px, 700);
+  }
+  &__text {
+    @include fontext($OpenSans, 15px, 400);
+    line-height: 1.4;
+  }
+}
+
+// <----------------------- ИМПОРТЫ  ----------------------->
+@import "fonts";
+
+@import "normalize";
+@import "./modules/header.scss";
+@import "./modules/intro.scss";
+@import "./modules/about.scss";
+@import "./modules/services.scss";
+@import "./modules/works.scss";
+@import "./modules/pricing.scss";
+@import "./modules/team.scss";
+@import "./modules/blog.scss";
+@import "./modules/contacts.scss";
+@import "./modules/footer.scss";
+
+// <----------------------- МЕДИАЗАПРОСЫ  ----------------------->
+@import "./mediaQuery.scss";

@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <svg style="display: none">
+  <symbol id="phone" viewBox="0 0 512 512">
+    <g>
+      <g>
+        <path
+          d="M298.667,25.6h-85.333c-4.71,0-8.533,3.823-8.533,8.533c0,4.71,3.823,8.533,8.533,8.533h85.333
+			c4.71,0,8.533-3.823,8.533-8.533C307.2,29.423,303.377,25.6,298.667,25.6z"
+        />
+      </g>
+    </g>
+    <g>
+      <g>
+        <path
+          d="M358.4,25.6h-8.533c-4.71,0-8.533,3.823-8.533,8.533c0,4.71,3.823,8.533,8.533,8.533h8.533
+			c4.71,0,8.533-3.823,8.533-8.533C366.933,29.423,363.11,25.6,358.4,25.6z"
+        />
+      </g>
+    </g>
+    <g>
+      <g>
+        <path
+          d="M266.598,435.2H245.41c-12.979,0-23.543,10.564-23.543,23.543v4.122c0,12.979,10.564,23.535,23.535,23.535h21.188
+			c12.979,0,23.543-10.556,23.543-23.535v-4.122C290.133,445.764,279.569,435.2,266.598,435.2z M273.067,462.865
+			c0,3.567-2.901,6.468-6.468,6.468H245.41c-3.575,0-6.477-2.901-6.477-6.468v-4.122c0-3.575,2.901-6.477,6.477-6.477h21.18
+			c3.576,0,6.477,2.901,6.477,6.477V462.865z"
+        />
+      </g>
+    </g>
+    <g>
+      <g>
+        <path
+          d="M370.227,0H141.781c-17.007,0-30.848,13.841-30.848,30.848v450.304c0,17.007,13.841,30.848,30.848,30.848h228.437
+			c17.007,0,30.848-13.841,30.848-30.839V30.848C401.067,13.841,387.226,0,370.227,0z M384,481.152
+			c0,7.595-6.178,13.781-13.773,13.781H141.781c-7.603,0-13.781-6.187-13.781-13.773V30.848c0-7.595,6.178-13.781,13.781-13.781
+			h228.437c7.603,0,13.781,6.187,13.781,13.781V481.152z"
+        />
+      </g>
+    </g>
+    <g>
+      <g>
+        <path
+          d="M392.533,51.2H119.467c-4.71,0-8.533,3.823-8.533,8.533v358.4c0,4.71,3.823,8.533,8.533,8.533h273.067
+			c4.71,0,8.533-3.823,8.533-8.533v-358.4C401.067,55.023,397.244,51.2,392.533,51.2z M384,409.6H128V68.267h256V409.6z"
+        />
+      </g>
+    </g>
+  </symbol>
+  <symbol id="spotify" viewBox="0 0 24 24">
+    <g>
+      <path
+        d="m12 24c6.624 0 12-5.376 12-12s-5.376-12-12-12-12 5.376-12 12 5.376 12 12 12zm4.872-6.344v.001c-.807 0-3.356-2.828-10.52-1.36-.189.049-.436.126-.576.126-.915 0-1.09-1.369-.106-1.578 3.963-.875 8.013-.798 11.467 1.268.824.526.474 1.543-.265 1.543zm1.303-3.173c-.113-.03-.08.069-.597-.203-3.025-1.79-7.533-2.512-11.545-1.423-.232.063-.358.126-.576.126-1.071 0-1.355-1.611-.188-1.94 4.716-1.325 9.775-.552 13.297 1.543.392.232.547.533.547.953-.005.522-.411.944-.938.944zm-13.627-7.485c4.523-1.324 11.368-.906 15.624 1.578 1.091.629.662 2.22-.498 2.22l-.001-.001c-.252 0-.407-.063-.625-.189-3.443-2.056-9.604-2.549-13.59-1.436-.175.048-.393.125-.625.125-.639 0-1.127-.499-1.127-1.142 0-.657.407-1.029.842-1.155z"
+      />
+    </g>
+  </symbol>
+
+  <symbol id="mtv" viewBox="0 0 512 512">
+    <g>
+      <path
+        d="M421,274.519l15.504,38.006L452,274.567V86H279.787L226,139.787L172.213,86H0v340h181v-97.867l45,45l45-45V426h181
+			v-72.057L447.078,366h-21.159L391,280.401v-5.882H421z M361,195.291V366h-30V212.632l-97.493,56.354l-15.014-25.973l173-100
+			l15.014,25.973L361,195.291z"
+      />
+      <polygon
+        points="482.031,201 482,201.076 482,280.454 512,206.963 512,201 		"
+      />
+    </g>
+  </symbol>
+
+  <symbol id="apple" viewBox="0 0 512 512">
+    <g>
+      <g>
+        <path
+          d="M457.081,362.584c-14.003-7.049-47.42-28.262-55.26-72.862c-0.717-4.079-4.601-6.802-8.687-6.088
+			c-4.079,0.717-6.805,4.605-6.088,8.686c8.997,51.185,47.102,75.493,63.188,83.613c-4.334,12.556-14.158,37.284-31.447,62.524
+			c-18.375,26.867-39.2,57.318-70.12,57.904c-31.048,0.514-42.266-19.777-82.011-19.777c-39.752,0-52.398,19.222-81.827,20.388
+			c-27.702,1.06-49.923-27.66-72.124-59.749c-41.025-59.34-73.555-169.266-31.209-242.766
+			c17.707-30.733,47.025-51.569,80.435-57.165c4.085-0.684,6.842-4.551,6.158-8.637s-4.548-6.845-8.637-6.158
+			c-37.849,6.34-71.001,29.839-90.956,64.472c-45.263,78.562-12.643,194.408,31.87,258.788
+			c18.316,26.475,45.829,66.248,83.046,66.244c33.553,0,46.154-20.414,83.243-20.416c36.163,0,46.793,20.438,82.29,19.774
+			c38.656-0.733,62.814-36.053,82.22-64.43c18.326-26.754,28.72-52.962,33.283-66.204
+			C466.864,373.714,463.697,365.915,457.081,362.584z"
+        />
+      </g>
+    </g>
+    <g>
+      <g>
+        <path
+          d="M363.875,14.506c-0.188-8.95-8.289-15.691-17.175-14.331c-58.293,8.905-100.445,65.247-98.593,114.719
+			c0.299,7.943,6.883,14.251,14.771,14.251c0.14,0,0.28-0.002,0.42-0.006C317.845,127.596,365.066,70.92,363.875,14.506z
+			 M263.091,114.138c-0.874-25.268,12.409-49.994,25.186-64.767c14.729-17.245,39.083-31.046,60.605-34.365
+			C349.781,62.719,309.703,112.647,263.091,114.138z"
+        />
+      </g>
+    </g>
+    <g>
+      <g>
+        <path
+          d="M447.658,165.468c-22.62-28.835-54.825-43.14-91.835-45.9c-42.603-3.154-78.92,22.862-95.694,22.862
+			c-13.729,0-37.375-14.517-62.942-19.715c-4.062-0.828-8.019,1.796-8.845,5.855c-0.825,4.059,1.796,8.019,5.855,8.845
+			c25.02,5.088,47.74,20.016,65.932,20.016c21.872,0,55.367-25.811,94.582-22.904c32.643,2.436,61.016,14.63,81.035,40.061
+			c-13.025,9.383-43.764,35.909-49.606,80.457c-0.538,4.107,2.355,7.873,6.461,8.412c0.331,0.043,0.66,0.064,0.985,0.064
+			c3.708,0,6.931-2.75,7.428-6.525c5.09-38.814,32.158-62.078,43.558-70.277C451.318,181.869,452.966,172.233,447.658,165.468z"
+        />
+      </g>
+    </g>
+  </symbol>
+
+  <symbol id="yandex" viewBox="0 0 485 485">
+    <g>
+      <path
+        d="m208.464844 400 53.222656-117.585938h23.515625v117.585938h33.414063v-315h-59.171876c-37.664062 0-82.539062 39.609375-82.539062 103.964844 0 64.367187 56.3125 90.355468 56.3125 90.355468l-66.835938 120.679688zm20.636718-160.847656c-8.222656-10.332032-15.382812-27.523438-15.382812-56.058594 0-62.507812 35.941406-70.582031 40.898438-71.394531.355468-.058594.703124-.078125 1.058593-.078125h28.59375v142.945312h-22.246093c-12.71875 0-25-5.464844-32.921876-15.414062zm0 0"
+      />
+      <path d="m0 0v485h485v-485zm455 455h-425v-425h425zm0 0" />
+    </g>
+  </symbol>
+</svg>
+ <!--HEADER-->
+<header class="header" data-aos="zoom-in-down" data-aos-delay="400">
+  <div class="container">
+    <div class="header__inner">
+      <a href="#" class="logo">
+        <img src="img/header/internet.png" alt="" />
+      </a>
+      <!--burger-->
+      <div class="burger">
+        <span class="burger__line"></span>
+      </div>
+      <!--/.burger-->
+
+      <div class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="" class="nav__link">Servicing </a></li>
+          <li class="nav__item"><a href="" class="nav__link">Portfolio</a></li>
+          <li class="nav__item"><a href="" class="nav__link">Blog </a></li>
+          <li class="nav__item"><a href="" class="nav__link">Contact us</a></li>
+        </ul>
+        <button class="nav__search-icon"></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <!--INTRO-->
+<section class="intro" data-aos="fade-down">
+  <div class="container">
+    <div class="intro__inner">
+      <div class="intro__text">
+        <h1 class="intro__title">Web development project</h1>
+        <h2 class="intro__subtitle">
+          Very suitable to support all web development projects
+        </h2>
+        <div class="intro__buttons">
+          <button class="intro__btn">OUR SERVICES</button>
+          <button class="intro__btn">HIRE IS NOW</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--ABOUT-->
+<section class="about">
+  <div class="container">
+    <div class="about__title heading">
+      <div class="heading__title">About Us</div>
+      <div class="heading__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam.
+      </div>
+    </div>
+
+    <ul class="advantages">
+      <!--1-->
+      <li class="advantages__wrapper">
+        <div class="advantages__item">
+          <div class="advantages__icon">
+            <img src="img/about/icons/head.png" alt="" />
+          </div>
+          <div class="advantages__title">Awesome Icons</div>
+          <div class="advantages__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor
+          </div>
+        </div>
+      </li>
+      <!--2-->
+      <li class="advantages__wrapper">
+        <div class="advantages__item">
+          <div class="advantages__icon">
+            <img src="img/about/icons/internet.png" alt="" />
+          </div>
+          <div class="advantages__title">One Page</div>
+          <div class="advantages__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor
+          </div>
+        </div>
+      </li>
+      <!--3-->
+      <li class="advantages__wrapper">
+        <div class="advantages__item">
+          <div class="advantages__icon">
+            <img src="img/about/icons/transfer.png" alt="" />
+          </div>
+          <div class="advantages__title">Fully Responsive</div>
+          <div class="advantages__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <!--SERVICES-->
+<section class="services">
+  <div class="container">
+    <div class="services__title heading">
+      <div class="heading__title">Our Services</div>
+      <div class="heading__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam,
+      </div>
+    </div>
+
+    <ul class="services__cards">
+      <!--1-->
+      <li class="card__wrapper" data-aos="zoom-in">
+        <div class="card">
+          <div class="card__inner">
+            <div class="card__image">
+              <svg class="card__svg">
+                <use xlink:href="#phone"></use>
+              </svg>
+            </div>
+            <div class="card__title">Research</div>
+            <div class="card__text">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum iti atque corrupti quos.
+            </div>
+            <a href="" class="card__link">READ MORE</a>
+          </div>
+        </div>
+      </li>
+      <!--2-->
+      <li class="card__wrapper" data-aos="zoom-in">
+        <div class="card">
+          <div class="card__inner">
+            <div class="card__image">
+              <svg class="card__svg">
+                <use xlink:href="#phone"></use>
+              </svg>
+            </div>
+            <div class="card__title">Research</div>
+            <div class="card__text">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum iti atque corrupti quos.
+            </div>
+            <a href="" class="card__link">READ MORE</a>
+          </div>
+        </div>
+      </li>
+      <!--3-->
+      <li class="card__wrapper" data-aos="zoom-in">
+        <div class="card">
+          <div class="card__inner">
+            <div class="card__image">
+              <svg class="card__svg">
+                <use xlink:href="#phone"></use>
+              </svg>
+            </div>
+            <div class="card__title">Research</div>
+            <div class="card__text">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum iti atque corrupti quos.
+            </div>
+            <a href="" class="card__link">READ MORE</a>
+          </div>
+        </div>
+      </li>
+      <!--4-->
+      <li class="card__wrapper" data-aos="zoom-in">
+        <div class="card">
+          <div class="card__inner">
+            <div class="card__image">
+              <svg class="card__svg">
+                <use xlink:href="#phone"></use>
+              </svg>
+            </div>
+            <div class="card__title">Research</div>
+            <div class="card__text">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum iti atque corrupti quos.
+            </div>
+            <a href="" class="card__link">READ MORE</a>
+          </div>
+        </div>
+      </li>
+      <!--5-->
+      <li class="card__wrapper" data-aos="zoom-in">
+        <div class="card">
+          <div class="card__inner">
+            <div class="card__image">
+              <svg class="card__svg">
+                <use xlink:href="#phone"></use>
+              </svg>
+            </div>
+            <div class="card__title">Research</div>
+            <div class="card__text">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum iti atque corrupti quos.
+            </div>
+            <a href="" class="card__link">READ MORE</a>
+          </div>
+        </div>
+      </li>
+      <!--6-->
+      <li class="card__wrapper" data-aos="zoom-in">
+        <div class="card">
+          <div class="card__inner">
+            <div class="card__image">
+              <svg class="card__svg">
+                <use xlink:href="#phone"></use>
+              </svg>
+            </div>
+            <div class="card__title">Research</div>
+            <div class="card__text">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum iti atque corrupti quos.
+            </div>
+            <a href="" class="card__link">READ MORE</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<!--WORKS-->
+<section class="works">
+  <div class="container">
+    <div class="works__title heading">
+      <div class="heading__title">Latest Works</div>
+      <div class="heading__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam,
+      </div>
+    </div>
+    <div class="tabs">
+      <div class="tabs__inner">
+        <a href="" class="tabs__link">ALL</a>
+        <a href="" class="tabs__link">WEB DESIGN</a>
+        <a href="" class="tabs__link">UI/UX DESIGN</a>
+        <a href="" class="tabs__link">MOCKUPS</a>
+      </div>
+    </div>
+
+    <ul class="work-examples">
+      <li class="work-examples__wrapper">
+        <div class="work-examples__item">
+          <img src="img/works/img1.jpg" alt="" />
+          <div class="work-examples__hidden-text">
+            <div class="work-examples__title">Hand Watch</div>
+            <div class="work-examples__text">ui/ux design</div>
+          </div>
+        </div>
+      </li>
+      <!--2-->
+      <li class="work-examples__wrapper">
+        <div class="work-examples__item">
+          <img src="img/works/img2.jpg" alt="" />
+          <div class="work-examples__hidden-text">
+            <div class="work-examples__title">Hand Watch</div>
+            <div class="work-examples__text">ui/ux design</div>
+          </div>
+        </div>
+      </li>
+      <!--3-->
+      <li class="work-examples__wrapper">
+        <div class="work-examples__item">
+          <img src="img/works/img3.jpg" alt="" />
+          <div class="work-examples__hidden-text">
+            <div class="work-examples__title">Hand Watch</div>
+            <div class="work-examples__text">ui/ux design</div>
+          </div>
+        </div>
+      </li>
+      <!--4-->
+      <li class="work-examples__wrapper">
+        <div class="work-examples__item">
+          <img src="img/works/img4.jpg" alt="" />
+          <div class="work-examples__hidden-text">
+            <div class="work-examples__title">Hand Watch</div>
+            <div class="work-examples__text">ui/ux design</div>
+          </div>
+        </div>
+      </li>
+      <!--5-->
+      <li class="work-examples__wrapper">
+        <div class="work-examples__item">
+          <img src="img/works/img5.jpg" alt="" />
+          <div class="work-examples__hidden-text">
+            <div class="work-examples__title">Hand Watch</div>
+            <div class="work-examples__text">ui/ux design</div>
+          </div>
+        </div>
+      </li>
+      <!--6-->
+      <li class="work-examples__wrapper">
+        <div class="work-examples__item">
+          <img src="img/works/img6.jpg" alt="" />
+          <div class="work-examples__hidden-text">
+            <div class="work-examples__title">Hand Watch</div>
+            <div class="work-examples__text">ui/ux design</div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="works__button button">
+      <a href="#" class="works__link button__link">View All</a>
+    </div>
+  </div>
+</section>
+
+    <!--PRICING-->
+<section class="pricing">
+  <div class="container">
+    <div class="pricing__title heading">
+      <div class="heading__title">Pricing Plan</div>
+      <div class="heading__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam,
+      </div>
+    </div>
+
+    <div class="pricing__inner">
+      <!--1-->
+      <div class="item-price__wrapper">
+        <div class="item-price">
+          <div class="item-price__top">
+            <div class="item-price__title">Free Trail</div>
+            <div class="item-price__coast">
+              <span><sup>$</sup>00</span> per month
+            </div>
+          </div>
+          <div class="item-price__bottom">
+            <ul class="item-price__list">
+              <li class="item-price__adv">30 Free Trail</li>
+              <li class="item-price__adv">5 Free Projects</li>
+              <li class="item-price__adv">PHP 5 Enabled</li>
+              <li class="item-price__adv">24/7 Suports</li>
+            </ul>
+            <button class="item-price__button">Order Now</button>
+          </div>
+        </div>
+      </div>
+      <!--2-->
+      <div class="item-price__wrapper">
+        <div class="item-price">
+          <div class="item-price__top">
+            <div class="item-price__title">Free Trail</div>
+            <div class="item-price__coast">
+              <span><sup>$</sup>00</span> per month
+            </div>
+          </div>
+          <div class="item-price__bottom">
+            <ul class="item-price__list">
+              <li class="item-price__adv">30 Free Trail</li>
+              <li class="item-price__adv">5 Free Projects</li>
+              <li class="item-price__adv">PHP 5 Enabled</li>
+              <li class="item-price__adv">24/7 Suports</li>
+            </ul>
+            <button class="item-price__button">Order Now</button>
+          </div>
+        </div>
+      </div>
+      <!--3-->
+      <div class="item-price__wrapper">
+        <div class="item-price">
+          <div class="item-price__top">
+            <div class="item-price__title">Free Trail</div>
+            <div class="item-price__coast">
+              <span><sup>$</sup>00</span> per month
+            </div>
+          </div>
+          <div class="item-price__bottom">
+            <ul class="item-price__list">
+              <li class="item-price__adv">30 Free Trail</li>
+              <li class="item-price__adv">5 Free Projects</li>
+              <li class="item-price__adv">PHP 5 Enabled</li>
+              <li class="item-price__adv">24/7 Suports</li>
+            </ul>
+            <button class="item-price__button">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--TEAM-->
+<section class="team">
+  <div class="container">
+    <div class="team__title heading">
+      <div class="heading__title">Our Team Member</div>
+      <div class="heading__text">
+        Эти парни лучшие в своем деле. Да, у каждого из них за плечами сомнительное прошлое - кто-то отсидел за закладку, кто-то играл в доту, кто-то до сих пор живет с мамкой. Но всех их объединяет одно - зарплата, каждый месяц 27 числа.
+      </div>
+    </div>
+
+    <div class="slider">
+    <!--1-->
+      <div class="slider__item">
+            <!--1-->
+            <div class="person__wrapper">
+            <div class="preson">
+                <img class="person__img" src="img/team/img1.jpg" alt="" />
+                <div class="person__name">John Doe</div>
+                <div class="person__position">General Manager</div>
+                <div class="person__social social">
+                    <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#spotify'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#mtv'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#apple'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#yandex'></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+          </div>
+    </div>
+       <!--1-->
+    <div class="slider__item">
+      <!--1-->
+        <div class="person__wrapper">
+            <div class="preson">
+                <img class="person__img" src="img/team/img2.jpg" alt="" />
+                <div class="person__name">Alexa Biru</div>
+                <div class="person__position">Office Director</div>
+                  <div class="person__social social">
+                    <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#yandex'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#spotify'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#mtv'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#apple'></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+       <!--1-->
+    <div class='slider__item'>
+             <!--3-->
+            <div class="person__wrapper">
+            <div class="preson">
+                <img class="person__img" src="img/team/img3.jpg" alt="" />
+                <div class="person__name">Ronobir sing</div>
+                <div class="person__position">Admin</div>
+                  <div class="person__social social">
+                    <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#yandex'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#apple'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#mtv'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#spotify'></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            </div>
+            <!--end-->
+    </div>
+       <!--4-->
+           <div class='slider__item'>
+             <!--3-->
+            <div class="person__wrapper">
+            <div class="preson">
+                <img class="person__img" src="img/team/img1.jpg" alt="" />
+                <div class="person__name">Ronobir sing</div>
+                <div class="person__position">Admin</div>
+                  <div class="person__social social">
+                    <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#yandex'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#apple'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#mtv'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#spotify'></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            </div>
+            <!--end-->
+    </div>
+        <!--5-->
+            <div class='slider__item'>
+             <!--3-->
+            <div class="person__wrapper">
+            <div class="preson">
+                <img class="person__img" src="img/team/img2.jpg" alt="" />
+                <div class="person__name">Ronobir sing</div>
+                <div class="person__position">Admin</div>
+                  <div class="person__social social">
+                    <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#yandex'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#apple'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#mtv'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#spotify'></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            </div>
+            <!--end-->
+    </div>
+          <!--6-->
+              <div class='slider__item'>
+             <!--3-->
+            <div class="person__wrapper">
+            <div class="preson">
+                <img class="person__img" src="img/team/img3.jpg" alt="" />
+                <div class="person__name">Ronobir sing</div>
+                <div class="person__position">Admin</div>
+                  <div class="person__social social">
+                    <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#yandex'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#apple'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#mtv'></use>
+                        </svg>
+                    </a>
+                      <a href="" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href='#spotify'></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            </div>
+            <!--end-->
+    </div>
+  </div>
+</section>
+
+    <!--BLOG-->
+<section class="blog">
+  <div class="container">
+    <div class="blog__title heading">
+      <div class="heading__title">Blog</div>
+      <div class="heading__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam,
+      </div>
+    </div>
+    <!--1-->
+    <div class="blog__column">
+      <div class="img-blog" data-aos="fade-down">
+        <img class="img-blog__img" src="img/blog/img1.jpg" alt="" />
+      </div>
+      <div class="blog-content">
+        <div class="blog-content__title">SEO Quis Vestibulum</div>
+        <div class="blog-content__info">
+          <span class="blog-content__date"
+            ><i class="fas fa-calendar-alt"></i> 11.12.2020</span
+          >
+          <span class="blog-content__section"
+            ><i class="far fa-sticky-note"></i> developvent</span
+          >
+        </div>
+        <div class="blog-content__text">
+          Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat...
+        </div>
+      </div>
+    </div>
+    <!--2-->
+    <div class="blog__column">
+      <div class="blog-content">
+        <div class="blog-content__title">SEO Quis Vestibulum</div>
+        <div class="blog-content__info">
+          <span class="blog-content__date"
+            ><i class="fas fa-calendar-alt"></i> 11.12.2020</span
+          >
+          <span class="blog-content__section"
+            ><i class="far fa-sticky-note"></i> developvent</span
+          >
+        </div>
+        <div class="blog-content__text">
+          Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat...
+        </div>
+      </div>
+      <div class="img-blog" data-aos="fade-down">
+        <img class="img-blog__img" src="img/blog/img2.jpg" alt="" />
+      </div>
+    </div>
+    <!--3-->
+    <div class="blog__column">
+      <div class="img-blog" data-aos="fade-down">
+        <img class="img-blog__img" src="img/blog/img3.jpg" alt="" />
+      </div>
+      <div class="blog-content">
+        <div class="blog-content__title">SEO Quis Vestibulum</div>
+        <div class="blog-content__info">
+          <span class="blog-content__date"
+            ><i class="fas fa-calendar-alt"></i> 11.12.2020</span
+          >
+          <span class="blog-content__section"
+            ><i class="far fa-sticky-note"></i> developvent</span
+          >
+        </div>
+        <div class="blog-content__text">
+          Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat...
+        </div>
+      </div>
+    </div>
+    <div class="blog__button button">
+      <a href="" class="blog__link button__link">MORE VIEW</a>
+    </div>
+  </div>
+</section>
+ <!--CONTACTS-->
+<section class="contacts">
+  <div class="container">
+    <div class="contacts__title heading">
+      <div class="heading__title">Contact Us</div>
+      <div class="heading__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam,
+      </div>
+    </div>
+    <div class="block-contacts">
+      <div class="block-contacts__item">
+        <img class="block-contacts__img" src="img/contacts/img1.png" alt="" />
+        <div class="block-contacts__text">
+          Nobinagar savar,Dhaka<br />Bangladesh
+        </div>
+      </div>
+      <div class="block-contacts__item">
+        <img class="block-contacts__img" src="img/contacts/img2.png" alt="" />
+        <div class="block-contacts__text">
+          +8801743331996 <br />+8801928737807
+        </div>
+      </div>
+      <div class="block-contacts__item">
+        <img class="block-contacts__img" src="img/contacts/img2.png" alt="" />
+        <div class="block-contacts__text">
+          quickmasud@gmail.com <br />quickmasud@yahoo.com
+        </div>
+      </div>
+    </div>
+
+    <form action="#" method="POST" class="form">
+      <div class="form__items">
+        <div class="form__item">
+          <input
+            type="text"
+            class="form__input"
+            id="formNAME"
+            name="ИМЯ"
+            placeholder="Ваше имя"
+          />
+        </div>
+        <div class="form__item">
+          <input
+            type="text"
+            class="form__input"
+            id="formEMAIL"
+            name="ЕМАЙЛ"
+            placeholder="Ваш ЕМАЙЛ"
+          />
+        </div>
+      </div>
+      <div class="form__item">
+        <textarea
+          name="Сообщение"
+          id="formTEXTAREA"
+          class="form__textarea"
+        ></textarea>
+      </div>
+      <div class="form__item">
+        <button class="form__button">Отправить</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      Разработано TORONTOTOKYO <span><i class="fas fa-heart"></i></span>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6ccbf80ddd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

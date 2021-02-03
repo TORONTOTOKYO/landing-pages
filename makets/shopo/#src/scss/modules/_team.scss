@@ -1,0 +1,109 @@
+.team {
+  margin-bottom: 120px;
+  &__heading {
+    margin: 120px 0px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px -7.5px;
+  }
+  &__item {
+    position: relative;
+
+    margin: 0px 7.5px;
+    margin-bottom: 14px;
+
+    opacity: 0.7;
+    cursor: pointer;
+
+    transition: opacity 0.2s linear;
+    & img {
+      max-width: 100%;
+    }
+    &:first-child {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        left: 80%;
+
+        width: 40px;
+        height: 40px;
+
+        background: url(../img/about/tap.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transform: translate(-20%, -80%);
+      }
+    }
+    &:hover {
+      opacity: 1;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &__person {
+    display: none;
+    &--visible {
+      display: block;
+    }
+  }
+  &__person-wrapper {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    z-index: 2;
+
+    width: 90%;
+    padding: 43px 54px 42px 38px;
+
+    text-align: center;
+
+    background-color: #6ff6eb;
+
+    transform: translate(-50%, -90%);
+    &::after {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: -30px;
+      border: 20px solid transparent;
+      border-bottom: 20px solid #6ff6eb;
+    }
+  }
+  &__person-name {
+    margin-bottom: 23px;
+
+    @include fontText($Merriweather-bold, 24px, 700);
+    color: #272727;
+  }
+  &__person-about {
+    margin-bottom: 40px;
+
+    @include fontText($Raleway, 16px, 400);
+    color: #000000;
+    line-height: 1.7;
+  }
+  &__social {
+    display: flex;
+  }
+  &__social-link {
+    display: flex;
+    width: 18px;
+    height: 14px;
+    margin-right: 13px;
+    & svg {
+      height: 14px;
+      fill: rgba(0, 0, 0, 0.438);
+      &:hover {
+        fill: #000;
+      }
+    }
+  }
+}

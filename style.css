@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  max-width: 992px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link {
+  position: relative;
+  font-family: "Roboto Slab", serif;
+  margin: 10px 0px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: transform 0.1s linear;
+}
+
+.link:active {
+  transform: translateY(-4px);
+}
+
+.link:visited {
+  color: rgba(42, 2, 153, 0.438);
+}
+
+.link::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transition: all 0.3s;
+}
+
+.link:hover::before {
+  width: 100%;
+  left: 0;
+  background: rgb(255, 174, 0);
+}

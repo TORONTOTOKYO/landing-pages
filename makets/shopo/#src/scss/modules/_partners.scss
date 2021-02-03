@@ -1,0 +1,80 @@
+.partners {
+  padding: 60px 0px;
+  margin-bottom: 30px;
+  background-color: #dad5d5;
+  &__heading {
+    margin-bottom: 40px;
+  }
+  &__subtitle {
+    color: rgb(95, 89, 89);
+  }
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__item {
+    width: 25%;
+    display: flex;
+  }
+  &__item-pic {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    position: relative;
+    &--tap {
+      &::before {
+        content: "";
+        display: none;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: url(../img/clicking.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: 3%;
+        right: 10%;
+        z-index: 10;
+        transition: all 0.2s linear;
+      }
+      &:hover::before {
+        background: none;
+      }
+    }
+  }
+  &__item-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+
+    color: #000;
+
+    @include fontText($Montserrat, 20px, 500);
+    text-transform: uppercase;
+  }
+  &__item-icon {
+    &_darkred {
+      &:hover {
+        fill: #b80103;
+      }
+    }
+    &_green {
+      &:hover {
+        fill: #20d760;
+      }
+    }
+    &_red {
+      &:hover {
+        fill: #ff0000;
+      }
+    }
+    &_gold {
+      &:hover {
+        fill: #fff;
+      }
+    }
+  }
+}

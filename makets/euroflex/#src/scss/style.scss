@@ -1,0 +1,61 @@
+// <-----------------------  Переменные ----------------------->
+$Roboto: "Roboto", sans-serif;
+
+// <---------------------  Шрифт --------------------->
+
+// <---------------------  Цвет --------------------->
+
+$textTitle: #646566;
+$BlockTitle: #646566;
+$BlockText: #646566;
+$buttonColor: #ff5c5c;
+
+// <-----------------------  Миксины ----------------------->
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@mixin fontText($font, $size, $weight) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin flexbox($pos1, $pos2) {
+  display: flex;
+  justify-content: $pos1;
+  align-items: $pos2;
+}
+
+// <----------------------- Контент-контейнер  ----------------------->
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+// <----------------------- ИМПОРТЫ  ----------------------->\
+
+@import "fonts";
+@import "normalize";
+@import "common";
+@import "modules/header";
+@import "modules/intro";
+@import "modules/product";
+@import "modules/solutions";
+@import "modules/production";
+@import "modules/features";
+@import "modules/choice";
+
+// <----------------------- МЕДИАЗАПРОСЫ  ----------------------->
+@import "mediaquery";

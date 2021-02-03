@@ -1,0 +1,42 @@
+.header
+	min-height: 75px
+	position: absolute
+	width: 100%
+	padding: 24px 0
+	z-index: 99999
+	&__inner
+		display: flex
+		justify-content: space-between
+	&__logo
+		&_scroll
+			display: none
+	&__nav-item
+		display: inline-block
+		margin-left: 18px
+		&::last-child
+			margin-left: 0
+	&__nav-link
+		color: #ffffff;
+		font-family: Poppins;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 27px
+		transition: all .2s
+		&:hover
+			color: #cccccc!important
+	&_scroll
+		position: fixed
+		top: 0
+		left: 0
+		background-color: #ffffff
+		box-shadow: 0 0 24px rgba(0, 0, 0, 0.25)
+		& .header__nav-link
+			color: #272727
+		& .header__logo
+			display: none
+			&_scroll
+				display: block
+
+@media (max-width: 991.98px)
+	.header
+		display: none

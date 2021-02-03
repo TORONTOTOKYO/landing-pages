@@ -1,0 +1,98 @@
+@media (max-width: 992px) {
+  .intro {
+    &__inner {
+      &::before {
+        display: none;
+      }
+      &::after {
+        background-size: 40px 40px;
+      }
+    }
+    &__content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    &__title {
+      font-size: 40px;
+      line-height: 1.5;
+
+      &::before {
+        background-size: 40px 40px;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    &__subtitle {
+      position: relative;
+      font-size: 22px;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -40px;
+        right: 0px;
+        z-index: -1;
+        width: 56px;
+        height: 56px;
+
+        background: url(../img/intro/FCT.svg) center no-repeat;
+        background-size: 40px 40px;
+      }
+    }
+    &__buttons-container {
+      &:last-child {
+        display: none;
+      }
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+  .buttons-grout {
+    &__button {
+      padding: 20px 40px;
+      text-transform: uppercase;
+    }
+    &__mas {
+      padding: 20px 40px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .intro {
+    &__inner {
+      min-height: 400px;
+    }
+    &__title {
+      margin-bottom: 13px;
+      font-size: 29px;
+    }
+  }
+  .buttons-grout {
+    &__button {
+      padding: 20px 40px;
+
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    &__mas {
+      padding: 20px 40px;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .intro {
+    &__title {
+      font-size: 25px;
+    }
+  }
+}

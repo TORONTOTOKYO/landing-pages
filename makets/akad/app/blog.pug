@@ -1,0 +1,122 @@
+extends ./pug/layout/layout.pug
+block vars
+	-var pageTitle = 'Blog';
+	-var breadCrumb = ['Home', 'Blog'];
+
+block content
+	+titleBlock('blog posts', breadCrumb, 'title-block_theme_dark')
+
+	section.blog
+		.container(class="wow fadeInUp")
+			.row
+				.col-lg-8
+					+post
+					+post
+					+post
+				.col-lg-4.col-xl-3.offset-xl-1
+					.sidebar
+						.widget-search.sidebar__widget-search
+							input(placeholder='search...').widget-search__input
+							button.widget-search__btn <ion-icon name="search-outline"></ion-icon>
+						.widget-posts
+							.widget-title posts
+							nav.widget-posts__nav
+								a(href="" data-group="latest").widget-posts__nav-item.widget-posts__nav-item_active latest
+								a(href="" data-group="popular").widget-posts__nav-item popular
+							.widget-posts__group(data-group="latest")
+								.widget-posts__post
+									.row
+										.col-4.col-sm-2.col-lg-4
+											.widget-posts__post-img
+												img(src="img/widget-posts-1.jpg", alt="").img-default
+										.col-8.col-sm-10.col-lg-8
+											.widget-posts__post-content
+												.widget-posts__post-name Magna mollis ultricies
+												.widget-posts__post-date 3th oct 2012
+								.widget-posts__post
+									.row
+										.col-4.col-sm-2.col-lg-4
+											.widget-posts__post-img
+												img(src="img/widget-posts-2.jpg", alt="").img-default
+										.col-8.col-sm-10.col-lg-8
+											.widget-posts__post-content
+												.widget-posts__post-name Magna mollis ultricies
+												.widget-posts__post-date 3th oct 2012
+								.widget-posts__post
+									.row
+										.col-4.col-sm-2.col-lg-4
+											.widget-posts__post-img
+												img(src="img/widget-posts-3.jpg", alt="").img-default
+										.col-8.col-sm-10.col-lg-8
+											.widget-posts__post-content
+												.widget-posts__post-name Magna mollis ultricies
+												.widget-posts__post-date 3th oct 2012
+							.widget-posts__group(style="display: none" data-group="popular")
+								.widget-posts__post
+									.row
+										.col-4.col-sm-2.col-lg-4
+											.widget-posts__post-img
+												img(src="img/widget-posts-1.jpg", alt="").img-default
+										.col-8.col-sm-10.col-lg-8
+											.widget-posts__post-content
+												.widget-posts__post-name Magna mollis ultricies
+												.widget-posts__post-date 3th oct 2012
+								.widget-posts__post
+									.row
+										.col-4.col-sm-2.col-lg-4
+											.widget-posts__post-img
+												img(src="img/widget-posts-2.jpg", alt="").img-default
+										.col-8.col-sm-10.col-lg-8
+											.widget-posts__post-content
+												.widget-posts__post-name Magna mollis ultricies
+												.widget-posts__post-date 3th oct 2012
+								.widget-posts__post
+									.row
+										.col-4.col-sm-2.col-lg-4
+											.widget-posts__post-img
+												img(src="img/widget-posts-3.jpg", alt="").img-default
+										.col-8.col-sm-10.col-lg-8
+											.widget-posts__post-content
+												.widget-posts__post-name Magna mollis ultricies
+												.widget-posts__post-date 3th oct 2012
+						.widget-list
+							.widget-title.widget-list__title categories
+							.widget-list__list
+								.widget-list__item
+									.widget-list__item-name Business
+									.widget-list__item-amount 15
+								.widget-list__item
+									.widget-list__item-name Photography
+									.widget-list__item-amount 17
+								.widget-list__item
+									.widget-list__item-name Journal
+									.widget-list__item-amount 22
+								.widget-list__item
+									.widget-list__item-name Web devlopment
+									.widget-list__item-amount 30
+						.widget-tags
+							.widget-title.widget-tags__title tags
+							.widget-tags__wrap
+								a(href="").widget-tags__tag css
+								a(href="").widget-tags__tag javascript
+								a(href="").widget-tags__tag jquery
+								a(href="").widget-tags__tag html5
+								a(href="").widget-tags__tag bootstrap
+								a(href="").widget-tags__tag css
+								a(href="").widget-tags__tag javascript
+								a(href="").widget-tags__tag jquery
+						.widget-list
+							.widget-title.widget-list__title archives
+							.widget-list__list
+								.widget-list__item
+									.widget-list__item-name Business
+									.widget-list__item-amount 15
+								.widget-list__item
+									.widget-list__item-name Photography
+									.widget-list__item-amount 17
+								.widget-list__item
+									.widget-list__item-name Journal
+									.widget-list__item-amount 22
+								.widget-list__item
+									.widget-list__item-name Web devlopment
+									.widget-list__item-amount 30

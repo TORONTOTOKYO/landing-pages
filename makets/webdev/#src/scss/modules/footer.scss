@@ -1,0 +1,11 @@
+.footer {
+  padding: 20px 0px;
+  background-color: #fff;
+  text-align: center;
+  &__inner {
+    @include fontext($OpenSans, 20px, 400);
+    & span {
+      color: red;
+    }
+  }
+}

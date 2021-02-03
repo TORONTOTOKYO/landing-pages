@@ -1,0 +1,266 @@
+@media (max-width: 1140px) {
+}
+
+@media (max-width: 992px) {
+  // <!--HEADER-->
+  .logo {
+    margin-left: 20px;
+  }
+
+  .burger {
+    position: fixed;
+    right: 10px;
+
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 220px;
+    padding: 100px 30px 20px 20px;
+    border-radius: 3px;
+
+    background-color: #fff;
+    box-shadow: 0px 5px 8px 4px rgba(0, 0, 0, 0.07);
+    &__list {
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+    &__item {
+      padding-right: 0px;
+      margin: 15px 0px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+    &__link {
+      color: #000;
+    }
+  }
+
+  // <!--INTRO-->
+
+  .intro {
+    margin-bottom: 30px;
+    &__inner {
+      height: 100vh;
+      &::after {
+        bottom: 0;
+      }
+    }
+    &__title {
+      font-size: 45px;
+    }
+    &__subtitle {
+      margin-bottom: 40px;
+    }
+    &__buttons {
+      @include flexbox(center, center, column);
+    }
+    &__btn {
+      width: 100%;
+      max-width: 220px;
+      &:first-child {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  // <!--ABOUT-->
+  .about {
+    padding-bottom: 30px;
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+
+  .advantages {
+    flex-direction: column;
+    align-items: center;
+    &__wrapper {
+      width: 100%;
+    }
+    &__item {
+      max-width: 300px;
+      margin-bottom: 40px;
+    }
+  }
+  // <!--SERVICES-->
+  .services {
+    padding: 30px 0px 30px;
+    margin-bottom: 30px;
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__cards {
+      margin: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .card {
+    &__wrapper {
+      width: 100%;
+      max-width: 310px;
+    }
+  }
+  // <!--WORKS-->
+  .works {
+    padding-bottom: 30px;
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+  .tabs {
+    margin-bottom: 30px;
+    &__inner {
+      display: flex;
+      flex-direction: column;
+    }
+    &__link {
+      text-align: center;
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+  }
+
+  .work-examples {
+    margin-bottom: 30px;
+  }
+  // <!--PRICING-->
+
+  .pricing {
+    padding: 30px 0px;
+    margin-bottom: 30px;
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__inner {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+  .item-price {
+    &__wrapper {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  // <!--TEAM-->
+  .team {
+    padding-bottom: 30px;
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+
+  .slider {
+    position: relative;
+    margin: 0;
+    &__item {
+      flex-direction: column;
+    }
+  }
+  .slick-dots {
+    margin-top: 10px;
+  }
+
+  .person {
+    &__wrapper {
+      margin-bottom: 30px;
+    }
+  }
+  // <!--BLOG-->
+
+  .blog {
+    padding: 30px 0px;
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__column {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 50px;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    &__button {
+      margin-top: 20px;
+    }
+  }
+
+  .img-blog {
+    width: 100%;
+  }
+  .blog-content {
+    width: 100%;
+    padding-top: 10px;
+    &__text {
+      margin: 0 auto;
+    }
+  }
+
+  // <!--CONTACTS-->
+  .contacts {
+    padding: 30px 0px;
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+  .block-contacts {
+    margin-bottom: 10px;
+    flex-direction: column;
+    &__item {
+      margin-bottom: 30px;
+    }
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    &__items {
+      flex-direction: column;
+    }
+    &__item {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 586px) {
+}
+
+@media (max-width: 320px) {
+  // <!--INTRO-->
+
+  .intro {
+    &__inner {
+      &::after {
+        border: 10px solid transparent;
+        border-top: 10px solid #fff;
+      }
+    }
+    &__text {
+      margin-top: 70px;
+    }
+  }
+  // <!--Works-->
+  .item-price {
+    &__wrapper {
+      max-width: 310px;
+    }
+  }
+}

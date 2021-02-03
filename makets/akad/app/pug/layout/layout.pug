@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+	include ../vars/mixins.pug
+
+	block vars
+		-var pageTitle = 'Document';
+		-var breadCrumb = [];
+
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		meta(name="base_asset_path", content="./")
+		link(href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:400,800&display=swap" rel="stylesheet")
+		link(href="./libs/css/vendor.min.css", rel="stylesheet")
+		link(href="./css/style.css", rel="stylesheet")
+		title= pageTitle
+
+	body
+
+		include ../modules/header.pug
+
+		block content
+
+
+		include ../modules/form-footer.pug
+		include ../modules/footer.pug
+
+		block script
+			<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+			script(src="./libs/js/vendor.min.js")
+			script(src="./js/main-min.js")

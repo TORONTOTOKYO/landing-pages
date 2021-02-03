@@ -1,0 +1,92 @@
+// SLIDER
+// Указываем, чтобы корректно работал слайдер
+.slick {
+  &-track {
+    display: flex;
+  }
+  &-list {
+    overflow: hidden;
+  }
+}
+
+.slider {
+  position: relative;
+  &__item {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+
+    @include fontText($Roboto, 18px, 700);
+    color: #939599;
+    letter-spacing: 1px;
+  }
+  &__text {
+    width: 100%;
+    max-width: 680px;
+    margin-bottom: 40px;
+
+    @include fontText($Roboto, 14px, 400);
+    color: #646566;
+    line-height: 1.2;
+  }
+  &__button {
+    padding: 15px 45px;
+    border: 2px solid #ffaeae;
+    border-radius: 4px;
+
+    @include fontText($Roboto, 14px, 700);
+    color: #ff5c5c;
+
+    background-color: #fff;
+
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16),
+      0px 2px 4px rgba(0, 0, 0, 0.24);
+
+    transition: background 0.2s linear;
+    &:hover {
+      color: #fff;
+
+      background-color: #ff5c5c;
+    }
+  }
+}
+
+// Arrow
+.slick-arrow {
+  position: absolute;
+  z-index: 10;
+  font-size: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  transition: background 0.2s linear;
+}
+
+.slick-arrow.slick-next {
+  bottom: 50%;
+  right: -40px;
+
+  background: #f7b2b2 url(../img/product/slider/right.svg) 60% 50% no-repeat;
+  background-size: 25px 25px;
+  transform: translateY(50%);
+
+  &:hover {
+    background-color: #ff5c5c;
+  }
+}
+
+.slick-arrow.slick-prev {
+  bottom: 50%;
+  left: -40px;
+
+  background: #f7b2b2 url(../img/product/slider/left.svg) 40% 50% no-repeat;
+  background-size: 25px 25px;
+  transform: translateY(50%);
+  &:hover {
+    background-color: #ff5c5c;
+  }
+}

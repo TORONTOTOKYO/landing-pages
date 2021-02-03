@@ -1,0 +1,118 @@
+.index-who
+	min-height: 850px
+	+bg('../img/index-background-1.jpg')
+	padding-top: 229px
+	&__top-block
+		text-align: center
+	&__label
+		color: $gray
+		font-family: 'Montserrat'
+		font-size: 18px
+		font-weight: 700
+		text-transform: uppercase
+		background-color: #7beec7
+		padding: 6px 19px 1px 17px
+	&__title
+		color: $gray
+		font-family: 'Montserrat'
+		font-size: 48px
+		font-weight: 700
+		text-transform: uppercase
+		border: 10px solid $gray
+		padding: 17px 0px 16px 0px
+		margin-bottom: 24px
+		line-height: 48px
+	&__subtext
+		margin-bottom: 143px
+	&__history-title
+		margin-bottom: 4px
+	&__text
+		line-height: 30px
+	&__btn-block
+		position: relative
+	&__btn
+		position: absolute
+		transform: translateY(50%)
+		top: 0
+		right: 0
+		&:hover
+			transform: scale(1.01) translateY(50%)
+	&__img-block
+		position: relative
+	&__img
+		position: absolute
+		bottom: 0
+		left: 0
+		transform: translateY(95%)
+
+@media (max-width: 991.98px)
+	.index-who
+		&__img
+			position: static
+			transform: none
+
+@media (max-width: 767.98px)
+	.index-who
+		&__subtext
+			margin-bottom: 80px
+		&__history
+			text-align: center
+
+
+.index-why
+	min-height: 1079px
+	padding: 237px 0 139px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__card
+		width: 50%
+		padding-top: 21px
+		padding-bottom: 12px
+	&__card-icon
+		margin-bottom: 5px
+	&__card-title
+		margin-bottom: 12px
+		font-family: 'Montserrat'
+		font-size: 18px
+		font-weight: 700
+		text-transform: uppercase
+	&__card-list
+		padding: 0
+	&__card-item
+		color: #999999
+		font-size: 14px
+		line-height: 30px
+		text-transform: uppercase
+		list-style-type: none
+
+@media (max-width: 500px)
+	.index-why
+		&__card
+			width: 100%
+			text-align: center
+
+
+.index-portfolio
+	padding-bottom: 124px
+	&__img-title
+		margin-top: -12px
+		margin-bottom: 26px
+	&__category-item
+		font-family: Montserrat
+		font-size: 14px
+		font-weight: 700
+		line-height: 41px
+		text-transform: uppercase
+	&__category-link
+		padding: 5px 20px
+		transition: all .3s
+		&_active
+			background-color: $aquamarine
+			color: $white!important
+
+@media (max-width: 991.98px)
+	.index-portfolio
+		&__img-title,
+		&__category-list
+			text-align: center

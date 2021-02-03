@@ -1,0 +1,26 @@
+mixin titleBlock(title, links, themeClass='')
+	section.title-block(class= themeClass)
+		.container(class="wow fadeInUp")
+			.title.title_big.title-block__title= title
+			.title-block__bread-crumb
+				+breadCrumb(links)
+
+mixin breadCrumb(links)
+	each val, ind in links
+		if (ind == links.length - 1)
+			a(href="").title-block__bread-crumb-link= val
+		else
+			a(href="").title-block__bread-crumb-link= val
+			span=' / '
+
+mixin post
+	.post
+		.post__img 
+			img(src="img/post-1.jpg", alt="")
+		.post__info
+			.post__date October 13, 2015
+			.post__comments <ion-icon name="chatbox-ellipses-outline"></ion-icon> 8
+			.post__likes <ion-icon name="heart"></ion-icon> 15
+		.post__title THE BIG LEAGUES OUR TURN STRAIGHTNIN
+		.post__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+		.post__continue continue reading <ion-icon name="arrow-forward"></ion-icon>

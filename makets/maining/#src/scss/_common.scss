@@ -1,0 +1,227 @@
+body {
+  background-color: #f5f5f5;
+}
+
+// <!--ЗАГОЛОВОК-->
+.title {
+  @include fontText($Gotham, 48px, 700);
+  color: $blacktext;
+  text-align: center;
+}
+
+//<!--Плавающая кнопка-->
+$white: #ececec;
+$black: #111111;
+$red1: $orange;
+$red2: $green;
+$colorPrimary: $red1;
+$colorSecondary: $red2;
+$cubic-bezier: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+@mixin btn__split($foregroundColor, $backgroundColor, $textColor) {
+  .btn {
+    position: relative;
+
+    padding: 10px 40px;
+
+    @include fontText($Gotham, 20px, 400);
+    color: $black;
+    outline: none;
+    letter-spacing: 1px;
+
+    background: transparent;
+
+    transition: all 0.5s $cubic-bezier 0.15s;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      transition: all 0.5s $cubic-bezier;
+      z-index: -2;
+      border-radius: 50%;
+    }
+    &::before {
+      background-color: $backgroundColor;
+      top: -15px;
+      left: 10px;
+      animation: top 2s $cubic-bezier 0.25s infinite alternate;
+    }
+    &::after {
+      background-color: $foregroundColor;
+      top: 10px;
+      left: 150px;
+      animation: bottom 2s $cubic-bezier 0.5s infinite alternate;
+    }
+    &:hover {
+      color: white;
+      &::before,
+      &::after {
+        top: 0;
+
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        animation: none;
+      }
+      &::after {
+        left: 0px;
+      }
+      &::before {
+        top: 10px;
+        left: 8px;
+      }
+    }
+  }
+}
+
+@keyframes top {
+  from {
+    transform: translate(0px, 0);
+  }
+  to {
+    transform: translate(0px, 50px);
+  }
+}
+@keyframes bottom {
+  from {
+    transform: translate(-100px, 0);
+  }
+  to {
+    transform: translate(40px, 0);
+  }
+}
+
+// Затирающаяся кнопка
+@mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
+  background: $bcolor;
+  -webkit-mask: url($url);
+  mask: url($url);
+  -webkit-mask-size: $x1 $y1;
+  mask-size: $x1 $y1;
+  border: $bor;
+  color: $col;
+}
+
+.buttons-grout {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid $borderlightblue;
+  @include fontText($Gotham, 18px, 400);
+  transition: 0.5s;
+  &--green {
+    border: 1px solid $lightGreen;
+  }
+  &__button {
+    width: 101%;
+    height: 100%;
+
+    padding: 10px 40px;
+
+    @include fontText($Gotham, 18px, 400);
+    @include button(
+      $lightBlue,
+      "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png",
+      3000%,
+      100%,
+      none,
+      #fff
+    );
+    cursor: pointer;
+    -webkit-animation: ani2 0.3s steps(29) forwards;
+    animation: ani2 0.7s steps(29) forwards;
+
+    &:hover {
+      -webkit-animation: ani 0.3s steps(29) forwards;
+      animation: ani 0.7s steps(29) forwards;
+    }
+    &--green {
+      @include button(
+        $lightGreen,
+        "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png",
+        3000%,
+        100%,
+        none,
+        #fff
+      );
+    }
+  }
+  &__mas {
+    position: absolute;
+
+    width: 101%;
+
+    padding: 10px 40px;
+
+    @include fontText($Gotham, 18px, 400);
+    color: #000;
+
+    text-align: center;
+
+    overflow: hidden;
+  }
+}
+
+@keyframes ani {
+  from {
+    mask-position: 0 0;
+  }
+
+  to {
+    mask-position: 100% 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    mask-position: 100% 0;
+  }
+
+  to {
+    mask-position: 0 0;
+  }
+}
+
+// // <----------------------- PHONE-BUTTON  ----------------------->
+
+.phone-call {
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+  right: 70px;
+
+  width: 50px;
+  height: 50px;
+
+  &__svg {
+    height: 100px;
+    fill: #2ee609;
+
+    transition: fill 0.4s linear;
+    &:hover {
+      fill: #2bff00;
+    }
+  }
+}
+
+// // <----------------------- ARROW  ----------------------->
+
+.arrow {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  left: 70px;
+
+  width: 50px;
+  height: 50px;
+  &__svg {
+    height: 100px;
+    fill: #ff5c5c;
+
+    transition: fill 0.2s linear;
+    &:hover {
+      fill: #e71a1a;
+    }
+  }
+}

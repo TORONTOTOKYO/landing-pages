@@ -1,0 +1,102 @@
+extends ./pug/layout/layout.pug
+block vars
+	-var pageTitle = 'Services';
+	-var breadCrumb = ['Home', 'Services'];
+
+block content
+	+titleBlock('our services', breadCrumb)
+
+	section.services-do
+		.container
+			.row(class="wow fadeInUp")
+				.col-sm-8.offset-sm-2
+					.section-title
+						.shape-before.shape-before_large.title.section-title__title What we do
+						.section-title__subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			.row(class="wow fadeInUp")
+				.col-lg-6
+					.services-do__text Erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.
+					.row
+						.col-sm-6
+							ul.services-do__list
+								li.services-do__item <ion-icon name="checkbox"></ion-icon> Stunning on all screens
+								li.services-do__item <ion-icon name="checkbox"></ion-icon> Easy to customize
+								li.services-do__item <ion-icon name="checkbox"></ion-icon> Make a difference
+								li.services-do__item <ion-icon name="checkbox"></ion-icon> Imagine and create
+								li.services-do__item <ion-icon name="checkbox"></ion-icon> Unlimited possibilities
+						.col-sm-6
+							ul.services-do__list
+								li.services-do__item <ion-icon name="checkbox"></ion-icon> Remarkable style
+								li.services-do__item <ion-icon name="checkbox"></ion-icon> Captivating presentations
+								li.services-do__item <ion-icon name="checkbox"></ion-icon> Make your portfolio pop
+								li.services-do__item <ion-icon name="checkbox"></ion-icon> Words that matter
+								li.services-do__item <ion-icon name="checkbox"></ion-icon> Satisfied clients
+				.col-lg-6
+					.services-do__img
+						img(src="img/services-do-1.jpg", alt="")
+			.row(class="wow fadeInUp")
+				.col-sm-6.col-lg-3
+					.services-do__card
+						.shape-before.services-do__card-icon <ion-icon name="pulse-outline"></ion-icon>
+						.services-do__card-title KEEP PULSE GOING
+						.services-do__card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt .
+				.col-sm-6.col-lg-3
+					.services-do__card
+						.shape-before.services-do__card-icon <ion-icon name="infinite-outline"></ion-icon>
+						.services-do__card-title PASS THE LIMITS
+						.services-do__card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt .
+				.col-sm-6.col-lg-3
+					.services-do__card
+						.shape-before.services-do__card-icon <ion-icon name="bulb-outline"></ion-icon>
+						.services-do__card-title GREAT IDEAS
+						.services-do__card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt .
+				.col-sm-6.col-lg-3
+					.services-do__card
+						.shape-before.services-do__card-icon <ion-icon name="options-outline"></ion-icon>
+						.services-do__card-title AWESOME SUPPORT
+						.services-do__card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt .
+	
+	section.services-price
+		.container
+			.row(class="wow fadeInUp")
+				.col-sm-8.offset-sm-2
+					.section-title
+						.shape-before.shape-before_large.title.section-title__title pricing plans
+						.section-title__subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			.row(class="wow fadeInUp")
+				.col-md-6.col-lg-4
+					.services-price__tariff
+						.title.services-price__tariff-title BASIC 
+						.services-price__tariff-price $35.99 Monthly
+						ul.services-price__tariff-list
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Lorem ipsum dolor sit amet
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Consectetuer adipiscing elit
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Sed diam nonummy
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Nibh euismod tincidunt
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Ut laoreet dolore
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Magna aliquam erat volutpat
+						button.btn.services-price__tariff-btn get started
+				.col-md-6.col-lg-4
+					.services-price__tariff
+						.title.services-price__tariff-title ADVANCED 
+						.services-price__tariff-price $55.99 Monthly
+						ul.services-price__tariff-list
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Lorem ipsum dolor sit amet
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Consectetuer adipiscing elit
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Sed diam nonummy
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Nibh euismod tincidunt
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Ut laoreet dolore
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Magna aliquam erat volutpat
+						button.btn.services-price__tariff-btn get started
+				.col-md-6.col-lg-4
+					.services-price__tariff
+						.title.services-price__tariff-title smart
+						.services-price__tariff-price $75.99 Monthly
+						ul.services-price__tariff-list
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Lorem ipsum dolor sit amet
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Consectetuer adipiscing elit
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Sed diam nonummy
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Nibh euismod tincidunt
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Ut laoreet dolore
+							li.services-price__tariff-item <ion-icon name="checkbox"></ion-icon> Magna aliquam erat volutpat
+						button.btn.services-price__tariff-btn get started

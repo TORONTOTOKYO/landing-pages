@@ -1,0 +1,56 @@
+@media (max-width: 1200px) {
+  .info {
+    &__item-heading {
+      font-size: 25px;
+    }
+    &__item-subtitle {
+      font-size: 16px;
+    }
+    &__button {
+      padding: 20px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .calc {
+    padding-top: 0px;
+  }
+  .calculator {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info {
+    flex-direction: column;
+    align-items: center;
+    &__content {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 50%;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+  .dropdown__hidden {
+    bottom: -215px;
+  }
+}
+
+@media (max-width: 568px) {
+  .calc {
+    margin-bottom: 0px;
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+  .noUi-horizontal {
+    padding: 0px 15px;
+    & .noUi-handle {
+      top: -14px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

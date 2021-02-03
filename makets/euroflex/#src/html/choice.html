@@ -1,0 +1,146 @@
+<!--CHOICE-->
+
+<section class="choice">
+  <div class="container">
+    <div class="choice__inner">
+      <div class="choice__form-input form-input__wrapper">
+        <form action="mail.php" method="POST" class="form-input">
+          <h2 class="form-input__title">
+            ЧТО ВАМ ТАК ЖЕ МОЖЕТ БЫТЬ ИНТЕРЕСНО?
+          </h2>
+          <div class="form-input__options">
+            <!--1-->
+            <div class="form-input__item">
+              <input
+                id="bagsForVegetables"
+                class="form-input__input"
+                type="checkbox"
+                name="Пакеты для овощей"
+              />
+              <label for="bagsForVegetables" class="form-input__label"
+                >Пакеты для овощей</label
+              >
+            </div>
+            <!--2-->
+            <div class="form-input__item">
+              <input
+                id="packageForTrash"
+                class="form-input__input"
+                type="checkbox"
+                name="Пакеты для Мусора"
+              />
+              <label for="packageForTrash" class="form-input__label"
+                >Пакеты для мусора</label
+              >
+            </div>
+
+            <!--3-->
+            <div class="form-input__item">
+              <input
+                id="containersForVegetables"
+                class="form-input__input"
+                type="checkbox"
+                name="ПЭТ контейнеры для овощей"
+              />
+              <label for="containersForVegetables" class="form-input__label"
+                >ПЭТ контейнеры для овощей</label
+              >
+            </div>
+
+            <!--4-->
+
+            <div class="form-input__item">
+              <input
+                id="bagsWithValve"
+                class="form-input__input"
+                type="checkbox"
+                name="Пакеты с клапаном из CPP и LDPE"
+              />
+              <label for="bagsWithValve" class="form-input__label"
+                >Пакеты с клапаном из CPP и LDPE</label
+              >
+            </div>
+            <!--5-->
+            <div class="form-input__item">
+              <input
+                id="PackageShirt"
+                class="form-input__input"
+                type="checkbox"
+                name="Пакет-Майка"
+              />
+              <label for="PackageShirt" class="form-input__label"
+                >Пакеты - майка</label
+              >
+            </div>
+
+            <!--6-->
+            <div class="form-input__item">
+              <input
+                id="film"
+                class="form-input__input"
+                type="checkbox"
+                name="Пленка BOPP"
+              />
+              <label for="film" class="form-input__label">Пленка BOPP</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="choice__form form__wrapper">
+        <form action="mail.php" method="POST" class="form" id="form-bottom">
+          <div class="form__title">
+            Получите расчет за 15 мин и спецпредложение на первый заказ!
+          </div>
+          <div class="form__subtitle">
+            Количество спепредложений в рамках месяца ограничено
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="formNameBottom">Ваше Имя*</label>
+            <input
+              id="formNameBottom"
+              type="text"
+              class="form__input"
+              placeholder="Петров Петр"
+              data-validate-field="name"
+              name="name"
+              ;
+            />
+          </div>
+          <div class="form__item">
+            <label class="form__label" for="formPhoneBottom">Ваш номер*</label>
+            <input
+              id="formPhoneBottom"
+              type="tel"
+              class="form__input"
+              placeholder="+7 (___) ___-__-__"
+              data-validate-field="tel"
+              name="tel"
+            />
+          </div>
+          <div class="form__item">
+            <div class="form__file-title">Информация для нас:</div>
+            <div class="file">
+              <div class="file__item">
+                <input
+                  id="formImage"
+                  accept=".jpg, .png, .gif"
+                  type="file"
+                  name="image"
+                  class="file__input formImage"
+                />
+                <div class="file__button">Выбрать</div>
+              </div>
+              <div id="formPreview" class="file__prieview"></div>
+            </div>
+          </div>
+          <div class="form__item">
+            <button class="form__button">Получить СПЕЦПРЕДЛОЖЕНИЕ</button>
+          </div>
+          <div class="form__confidentiality">
+            Мы гарантируем конфиденциальность данных
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

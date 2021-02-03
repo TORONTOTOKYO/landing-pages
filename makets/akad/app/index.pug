@@ -1,0 +1,118 @@
+extends ./pug/layout/layout.pug
+block vars
+	-var pageTitle = 'Home';
+
+block content
+	section.index-who
+		.container(class="wow fadeInUp")
+			.row
+				.col-md-10.offset-md-1.col-lg-7.offset-lg-2.col-xl-6.offset-xl-3
+					.index-who__top-block
+						span.index-who__label we’re
+						.index-who__title creative agency
+						.index-who__subtext Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			.row
+				.col-md-6.col-lg-5
+					.index-who__img-block
+						img(src="img/index-who-1.jpg", alt="").index-who__img
+				.col-md-6.col-lg-6.offset-lg-1
+					.index-who__history
+						.shape-before.shape-before_large.title.index-who__history-title HISTORY OF AGENCY
+						.index-who__text Porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi modi tempora incidunt ut labore.
+					.index-who__btn-block
+						button.btn.index-who__btn read more
+	
+	section.index-why
+		.container
+			.row(class="wow fadeInUp")
+				.col-md-8.offset-md-2
+					.section-title
+						.shape-before.shape-before_large.title.section-title__title why choose us
+						.section-title__subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			.row(class="wow fadeInUp")
+				.col-md-7
+					.index-why__wrap
+							.index-why__card
+								.index-why__card-icon
+									ion-icon(name="infinite-outline", size="large")
+								.index-why__card-title unlimited options
+								ul.index-why__card-list
+									li.index-why__card-item Branding
+									li.index-why__card-item Design & Copywriting
+									li.index-why__card-item Concept development
+									li.index-why__card-item User Experience
+							.index-why__card
+								.index-why__card-icon
+									ion-icon(name="shuffle-outline", size="large")
+								.index-why__card-title DESIGN & DEVELOPMENT
+								ul.index-why__card-list
+									li.index-why__card-item Information architecture
+									li.index-why__card-item Interface design
+									li.index-why__card-item Product Design
+									li.index-why__card-item Integrated ad Companies
+							.index-why__card
+								.index-why__card-icon
+									ion-icon(name="cart-outline", size="large")
+								.index-why__card-title e-commerce
+								ul.index-why__card-list
+									li.index-why__card-item Prototyping
+									li.index-why__card-item Technical Consulting
+									li.index-why__card-item Web applications
+									li.index-why__card-item Quality testing
+							.index-why__card
+								.index-why__card-icon
+									ion-icon(name="options-outline", size="large")
+								.index-why__card-title  CUSTOMIZABLE DESIGN
+								ul.index-why__card-list
+									li.index-why__card-item Information architecture
+									li.index-why__card-item Interface design
+									li.index-why__card-item Product Design
+									li.index-why__card-item Integrated ad Companies
+				.col-md-5
+					.index-why__img
+						img(src="img/index-why-1.jpg", alt="")
+	
+	section.index-portfolio
+		.container
+			.row(class="wow fadeInUp")
+				.col-sm-8.offset-sm-2
+					.section-title
+						.shape-before.shape-before_large.title.section-title__title our portfolio
+						.section-title__subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			.row(class="wow fadeInUp")
+				.col-lg-3
+					.title.index-portfolio__img-title choose category
+					ul.index-portfolio__category-list
+						li.index-portfolio__category-item 
+							a(href="", data-group="").index-portfolio__category-link.index-portfolio__category-link_active All
+						li.index-portfolio__category-item
+							a(href="", data-group="web").index-portfolio__category-link webdesign
+						li.index-portfolio__category-item 
+							a(href="", data-group="graphics").index-portfolio__category-link graphics
+						li.index-portfolio__category-item 
+							a(href="", data-group="fashion").index-portfolio__category-link fashion
+						li.index-portfolio__category-item 
+							a(href="", data-group="logo").index-portfolio__category-link logo design
+						li.index-portfolio__category-item 
+							a(href="", data-group="advertising").index-portfolio__category-link advertising
+				.col-lg-9
+					.index-portfolio__img-container
+						.grid
+							.index-portfolio__img-block.grid__item(data-group="photography")
+								img.index-portfolio__img(src="img/index-portfolio-1.jpg", alt="")
+							.index-portfolio__img-block.grid__item(data-group="fashion logo")
+								img.index-portfolio__img(src="img/index-portfolio-2.jpg", alt="")
+							.index-portfolio__img-block.grid__item(data-group="advertising graphics")
+								img.index-portfolio__img(src="img/index-portfolio-3.jpg", alt="")
+							.index-portfolio__img-block.grid__item(data-group="fashion advertising")
+								img.index-portfolio__img(src="img/index-portfolio-4.jpg", alt="")
+							.index-portfolio__img-block.grid__item(data-group="graphics advertising")
+								img.index-portfolio__img(src="img/index-portfolio-5.jpg", alt="")
+							.index-portfolio__img-block.grid__item(data-group="logo web photography")
+								img.index-portfolio__img(src="img/index-portfolio-6.jpg", alt="")
+							.index-portfolio__img-block.grid__item(data-group="advertising graphics")
+								img.index-portfolio__img(src="img/index-portfolio-7.jpg", alt="")
+							.index-portfolio__img-block.grid__item(data-group="web fashion photography")
+								img.index-portfolio__img(src="img/index-portfolio-8.jpg", alt="")
+							.index-portfolio__img-block.grid__item(data-group="fashion logo")
+								img.index-portfolio__img(src="img/index-portfolio-9.jpg", alt="")

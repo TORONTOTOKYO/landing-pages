@@ -1,0 +1,67 @@
+@font-face {
+	font-family: "Libre Baskerville";
+	src: url("../fonts/LibreBaskerville-Regular.eot");
+	src: local("Libre Baskerville"), local("LibreBaskerville-Regular"),
+		url("../fonts/LibreBaskerville-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/LibreBaskerville-Regular.woff2") format("woff2"),
+		url("../fonts/LibreBaskerville-Regular.woff") format("woff"),
+		url("../fonts/LibreBaskerville-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Libre Baskerville";
+	src: url("../fonts/LibreBaskerville-Bold.eot");
+	src: local("Libre Baskerville Bold"), local("LibreBaskerville-Bold"),
+		url("../fonts/LibreBaskerville-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/LibreBaskerville-Bold.woff2") format("woff2"),
+		url("../fonts/LibreBaskerville-Bold.woff") format("woff"),
+		url("../fonts/LibreBaskerville-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("../fonts/Poppins-Regular.eot");
+	src: local("Poppins Regular"), local("Poppins-Regular"),
+		url("../fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff"),
+		url("../fonts/Poppins-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("../fonts/Poppins-SemiBold.eot");
+	src: local("Poppins SemiBold"), local("Poppins-SemiBold"),
+		url("../fonts/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff"),
+		url("../fonts/Poppins-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Sacramento";
+	src: url("../fonts/Sacramento-Regular.eot");
+	src: local("Sacramento"), local("Sacramento-Regular"),
+		url("../fonts/Sacramento-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/Sacramento-Regular.woff2") format("woff2"), url("../fonts/Sacramento-Regular.woff") format("woff"),
+		url("../fonts/Sacramento-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("../fonts/Poppins-Medium.eot");
+	src: local("Poppins Medium"), local("Poppins-Medium"),
+		url("../fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff"),
+		url("../fonts/Poppins-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}

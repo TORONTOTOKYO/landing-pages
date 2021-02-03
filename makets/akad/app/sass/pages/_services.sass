@@ -1,0 +1,86 @@
+.services-do
+	min-height: 1188px
+	padding: 138px 0 133px
+	&__text
+		font-size: 14px
+		line-height: 30px
+		margin-bottom: 32px
+		margin-top: -10px
+	&__item
+		font-size: 14px
+		line-height: 30px
+		display: flex
+		align-items: center
+	&__img
+		margin-bottom: 151px
+	&__list
+		& ion-icon
+			color: $aquamarine
+			font-size: 14px
+			margin-right: 7px
+	&__card
+		text-align: center
+	&__card-icon
+		font-size: 60px
+		line-height: 30px
+		margin-bottom: 17px
+	&__card-title
+		font-family: Montserrat
+		font-size: 18px
+		font-weight: 700
+		line-height: 30px
+		text-transform: uppercase
+		margin-bottom: 3px
+	&__card-text
+		font-size: 14px
+		line-height: 30px
+
+@media (max-width: 991.98px)
+	.services-do
+		&__card
+			padding-bottom: 20px
+
+.services-price
+	min-height: 830px
+	padding-bottom: 150px
+	&__tariff
+		padding: 17px 30px 40px
+		border-top: 5px solid $aquamarine
+		position: relative
+		transition: all .3s
+		&::after
+			content: ''
+			position: absolute
+			width: 0
+			height: 0
+			right: 0
+			top: 0
+			border-left: 10px solid transparent;
+			border-top: 10px solid $aquamarine
+		&:hover
+			box-shadow: 0 0 50px rgba(0, 0, 0, 0.25)
+	&__tariff-title
+		margin-bottom: 5px
+	&__tariff-price
+		color: #ffffff
+		font-family: Montserrat
+		font-size: 14px
+		font-weight: 700
+		line-height: 30px
+		text-transform: uppercase
+		background-color: $aquamarine
+		padding: 0px 20px
+		display: inline-block
+		margin-bottom: 37px
+	&__tariff-list
+		margin-bottom: 41px
+	&__tariff-item
+		font-size: 14px
+		line-height: 36px
+		display: flex
+		align-items: center
+		& ion-icon
+			margin-right: 5px
+			color: $aquamarine
+	&__tariff-btn
+		width: 135px

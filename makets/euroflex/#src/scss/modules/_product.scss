@@ -1,0 +1,47 @@
+.product {
+  margin-bottom: 150px;
+  padding-bottom: 100px;
+  border-bottom: 5px dashed rgba(0, 0, 0, 0.1);
+  &__title {
+    margin-bottom: 80px;
+  }
+}
+
+.product-example {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  &__item {
+    padding: 25px 20px 24px 20px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    &:hover {
+      border-radius: 4px;
+
+      background: #fafafa;
+
+      box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.15);
+      & .product-example__title {
+        text-decoration: none;
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 120px;
+    }
+  }
+  &__img {
+    margin-bottom: 30px;
+  }
+  &__title {
+    @include fontText($Roboto, 16px, 500);
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+}
+
+// <---------------------  Стили для слайдера --------------------->
+
+@import "slider-product";

@@ -1,0 +1,35 @@
+@media (max-width: 992px) {
+  .contacts {
+    &__container {
+      background: url(../img/contacts/big.png) 0px 100px no-repeat,
+        url(../img/contacts/small.png) 400px 100px no-repeat;
+      background-size: 920px 630px, 520px 472px;
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .contacts {
+    &__container {
+      padding: 0px 10px 50px 10px;
+    }
+    &__title {
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+    &__subtitle {
+      margin-bottom: 50px;
+      font-size: 14px;
+    }
+    &__container {
+      background: url(../img/contacts/big.png) 0px 100px no-repeat,
+        url(../img/contacts/small.png) 400px 100px no-repeat;
+      background-size: 920px 510px, 520px 472px;
+    }
+  }
+  .form-contacts {
+    &__item.confirm {
+      margin-bottom: 40px;
+    }
+  }
+}

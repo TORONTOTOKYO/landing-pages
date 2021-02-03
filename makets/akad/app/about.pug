@@ -1,0 +1,141 @@
+extends ./pug/layout/layout.pug
+block vars
+	-var pageTitle = 'About';
+	-var breadCrumb = ['Home', 'About'];
+
+block content
+	+titleBlock('About us', breadCrumb)
+	
+	section.about-who
+		.container(class="wow fadeInUp")
+			.row
+				.col-lg-6
+					.about-who__about
+						.title.shape-before.shape-before_large.about-who__title about us
+						.about-who__subtitle We are awesome
+						.about-who__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+				.col-lg-6
+					.about-who__do
+						.title.shape-before.shape-before_large.about-who__title What We Do
+						.about-who__subtitle Creative & Digital
+						.about-who__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+	section.about-benefits
+		.container
+			.row(class="wow fadeInUp")
+				.col-sm-8.offset-sm-2
+					.section-title
+						.shape-before.shape-before_large.title.section-title__title some benefits
+						.section-title__subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			.row(class="wow fadeInUp")
+				.col-md-6.col-lg-4
+					.about-benefits__card
+						.about-benefits__card-top
+							.about-benefits__card-icon <ion-icon name="phone-portrait-outline" size="large"></ion-icon>
+							.about-benefits__card-title FULLY RESPONSIVE
+						.about-benefits__card-text Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In eleifend suscipit enim, eu commodo neque molestie vitae.
+				.col-md-6.col-lg-4
+					.about-benefits__card
+						.about-benefits__card-top
+							.about-benefits__card-icon <ion-icon name="infinite-outline" size="large"></ion-icon>
+							.about-benefits__card-title UNLIMITED OPTIONS
+						.about-benefits__card-text Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In eleifend suscipit enim, eu commodo neque molestie vitae.
+				.col-md-6.col-lg-4
+					.about-benefits__card
+						.about-benefits__card-top
+							.about-benefits__card-icon <ion-icon name="logo-wordpress" size="large"></ion-icon>
+							.about-benefits__card-title WORDPRESS
+						.about-benefits__card-text Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In eleifend suscipit enim, eu commodo neque molestie vitae.
+				.col-md-6.col-lg-4
+					.about-benefits__card
+						.about-benefits__card-top
+							.about-benefits__card-icon <ion-icon name="cart-outline" size="large"></ion-icon>
+							.about-benefits__card-title e-commerce
+						.about-benefits__card-text Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In eleifend suscipit enim, eu commodo neque molestie vitae.
+				.col-md-6.col-lg-4
+					.about-benefits__card
+						.about-benefits__card-top
+							.about-benefits__card-icon <ion-icon name="options-outline" size="large"></ion-icon>
+							.about-benefits__card-title CUSTOMIZABLE DESIGN
+						.about-benefits__card-text Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In eleifend suscipit enim, eu commodo neque molestie vitae.
+				.col-md-6.col-lg-4
+					.about-benefits__card
+						.about-benefits__card-top
+							.about-benefits__card-icon <ion-icon name="construct" size="large"></ion-icon>
+							.about-benefits__card-title SUPPORT
+						.about-benefits__card-text Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In eleifend suscipit enim, eu commodo neque molestie vitae.
+
+	section.about-team
+		.container
+			.row(class="wow fadeInUp")
+				.col-sm-8.offset-sm-2
+					.section-title
+						.shape-before.shape-before_large.title.section-title__title THE DREAM TEAM
+						.section-title__subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			.row(class="wow fadeInUp")
+				.col-sm-6.col-lg-3
+					img(src="img/about-team-1.jpg", alt="").about-team__img
+				.col-sm-6.col-lg-3
+					img(src="img/about-team-2.jpg", alt="").about-team__img
+				.col-sm-6.col-lg-3
+					img(src="img/about-team-3.jpg", alt="").about-team__img
+				.col-sm-6.col-lg-3
+					img(src="img/about-team-4.jpg", alt="").about-team__img
+				.col-sm-6.col-lg-3
+					img(src="img/about-team-5.jpg", alt="").about-team__img
+				.col-sm-6.col-lg-3
+					img(src="img/about-team-6.jpg", alt="").about-team__img
+				.col-sm-6.col-lg-3
+					img(src="img/about-team-7.jpg", alt="").about-team__img
+				.col-sm-6.col-lg-3
+					img(src="img/about-team-8.jpg", alt="").about-team__img
+			.about-team__read(class="wow fadeInUp")
+				.about-team__read-text Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+				button.btn.btn_lightgreen.about-team__read-btn read more
+	
+	section.about-clients
+		.container(class="wow fadeInUp")
+			.row
+				.col-md-6
+					.flexslider.about-clients__slider
+						ul.slides
+							li.about-clients__slide
+								.about-clients__slider-img-block
+									img(src="img/about-clients-person-1.png", alt="").about-clients__slider-img.img-default
+								.about-clients__slider-text Quisque iaculis lorem vestibulum eros vehicula, non congue elit dictum. Donec mollis aliquet lorem, eu porttitor sapien semper in. Duis ac erat luctus, gravida lectus sit amet, consectetur orci. Suspendisse libero mauris.
+								.about-clients__slider-author john doe
+							li.about-clients__slide
+								.about-clients__slider-img-block
+									img(src="img/about-clients-person-1.png", alt="").about-clients__slider-img.img-default
+								.about-clients__slider-text Quisque iaculis lorem vestibulum eros vehicula, non congue elit dictum. Donec mollis aliquet lorem, eu porttitor sapien semper in. Duis ac erat luctus, gravida lectus sit amet, consectetur orci. Suspendisse libero mauris.
+								.about-clients__slider-author john doe
+							li.about-clients__slide
+								.about-clients__slider-img-block
+									img(src="img/about-clients-person-1.png", alt="").about-clients__slider-img.img-default
+								.about-clients__slider-text Quisque iaculis lorem vestibulum eros vehicula, non congue elit dictum. Donec mollis aliquet lorem, eu porttitor sapien semper in. Duis ac erat luctus, gravida lectus sit amet, consectetur orci. Suspendisse libero mauris.
+								.about-clients__slider-author john doe
+							li.about-clients__slide
+								.about-clients__slider-img-block
+									img(src="img/about-clients-person-1.png", alt="").about-clients__slider-img.img-default
+								.about-clients__slider-text Quisque iaculis lorem vestibulum eros vehicula, non congue elit dictum. Donec mollis aliquet lorem, eu porttitor sapien semper in. Duis ac erat luctus, gravida lectus sit amet, consectetur orci. Suspendisse libero mauris.
+								.about-clients__slider-author john doe
+				.col-md-6
+					.row
+						.col-sm-4.col-md-6.col-xl-4
+							.about-clients__img-block
+								img.about-clients__company-img(src="img/about-clients-company-1.png", alt="").img-default
+						.col-sm-4.col-md-6.col-xl-4
+							.about-clients__img-block
+								img.about-clients__company-img(src="img/about-clients-company-2.png", alt="").img-default
+						.col-sm-4.col-md-6.col-xl-4
+							.about-clients__img-block
+								img.about-clients__company-img(src="img/about-clients-company-3.png", alt="").img-default
+						.col-sm-4.col-md-6.col-xl-4
+							.about-clients__img-block
+								img.about-clients__company-img(src="img/about-clients-company-4.png", alt="").img-default
+						.col-sm-4.col-md-6.col-xl-4
+							.about-clients__img-block
+								img.about-clients__company-img(src="img/about-clients-company-5.png", alt="").img-default
+						.col-sm-4.col-md-6.col-xl-4
+							.about-clients__img-block
+								img.about-clients__company-img(src="img/about-clients-company-6.png", alt="").img-default

@@ -1,0 +1,182 @@
+.features {
+  background: url(../img/features/Vector.png) left 140px no-repeat;
+  background-size: 459px 688px;
+  margin-bottom: 143px;
+  &__title {
+    margin-bottom: 100px;
+  }
+  &__inner {
+    display: flex;
+    margin: 0px -15px;
+  }
+}
+
+.usual {
+  width: 50%;
+  max-width: 688px;
+  padding-right: 15px;
+  &__heading {
+    padding: 40px 0px 40px 80px;
+    border-top: 15px solid $red;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 25px;
+
+    background-color: #e1e1e1;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    @include fontText($Gotham, 36px, 700);
+    color: $blacktext;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 128px;
+      height: 128px;
+      margin-right: 40px;
+
+      background: url(../img/features/usual.svg) center no-repeat;
+      background-size: contain;
+    }
+  }
+  &__item {
+    padding: 0px 15px;
+    margin-bottom: 30px;
+
+    display: flex;
+
+    min-height: 112px;
+    text-align: center;
+    &:nth-child(even) .usual__item-inner {
+      background-color: transparent;
+    }
+    &:nth-child(3),
+    &:nth-child(5),
+    &:nth-child(9) {
+      min-height: 176px;
+      text-align: center;
+    }
+  }
+  &__item-inner {
+    border-left: 5px solid $red;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    padding: 0px 24px;
+
+    @include flexbox(center, center, row);
+
+    flex-grow: 1;
+    @include fontText($Gotham, 18px, 400);
+    color: $blacktext;
+    line-height: 1.2;
+
+    background-color: #e1e1e1;
+  }
+}
+
+.cloudy {
+  width: 50%;
+  max-width: 688px;
+  padding-left: 15px;
+  &__heading {
+    padding: 40px 0px 40px 80px;
+    border-top: 15px solid $lightGreen;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 25px;
+
+    background-color: #e1e1e1;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+
+    @include fontText($Gotham, 36px, 700);
+    color: $blacktext;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 128px;
+      height: 128px;
+      margin-right: 40px;
+
+      background: url(../img/features/cloudy.svg) center no-repeat;
+      background-size: contain;
+    }
+  }
+  &__item {
+    padding: 0px 15px;
+    margin-bottom: 30px;
+
+    display: flex;
+
+    min-height: 112px;
+    &:nth-child(even) .cloudy__item-inner {
+      background-color: transparent;
+    }
+    &:nth-child(3),
+    &:nth-child(5),
+    &:nth-child(9) {
+      min-height: 176px;
+      text-align: center;
+    }
+  }
+  &__item-inner {
+    border-left: 5px solid $lightGreen;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    padding: 0px 24px;
+
+    @include flexbox(center, center, row);
+    flex-grow: 1;
+
+    @include fontText($Gotham, 18px, 400);
+    color: $blacktext;
+    line-height: 1.2;
+
+    background-color: #e1e1e1;
+    &:nth-child(even) {
+      background-color: transparent;
+    }
+  }
+}
+
+.features-tabs {
+  display: none;
+  &__tabs {
+    padding-left: 40px;
+  }
+  &__btn {
+    padding: 20px 50px;
+    @include fontText($Gotham, 18px, 400);
+    color: $snow;
+
+    &--red {
+      border-top: 5px solid $red;
+      background: $gray url(../img/features/usual.svg) 5px 15px no-repeat;
+      background-size: 30px 30px;
+    }
+    &--green {
+      border-top: 5px solid $lightGreen;
+      background: $gray url(../img/features/cloudy.svg) 5px 15px no-repeat;
+      background-size: 30px 30px;
+    }
+    &.active {
+      background-color: #7a7979;
+    }
+  }
+  &__list {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}

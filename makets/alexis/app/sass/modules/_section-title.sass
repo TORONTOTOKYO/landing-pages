@@ -1,0 +1,46 @@
+.section-title
+	text-align: center
+	&__wrapper
+		position: relative
+		&_ie
+			padding-top: 13px
+	&__title
+		position: absolute
+		width: 100%
+		color: #313131
+		font-family: "Libre Baskerville"
+		font-size: 50px
+		font-weight: 700
+		line-height: 80.02px
+		transform: translateY(-110%)
+	&__subtitle
+		color: #616161
+		font-family: Poppins
+		font-size: 18px
+		font-weight: 400
+		line-height: 29px
+	&__number
+		opacity: 0.3
+		color: #e0e0e0
+		font-family: Poppins
+		font-size: 274px
+		font-weight: 700
+		text-transform: uppercase
+		line-height: 0.8
+	&_dark
+		& .section-title
+			&__title,
+			&__subtitle
+				color: #ffffff
+			&__number
+				color: #5d5d62
+
+@media (max-width: 575.98px)
+	.section-title
+		&__title
+			left: 0
+			bottom: 20px
+			transform: none
+			font-size: 40px
+		&__number
+			font-size: 240px

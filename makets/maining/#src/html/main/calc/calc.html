@@ -1,0 +1,120 @@
+<!--calculator-->
+
+<section class="calc">
+  <div class="container">
+    <div class="calc__title title">Расчитайте свой доход</div>
+    <div class="calculator">
+      <!--POWER-->
+      <div class="calculator__item">
+        <label for="inputPower" class="calculator__label"
+          >Мощность, Th/ s</label
+        >
+        <input
+          type="number"
+          class="calculator__input"
+          id="inputPower"
+          placeholder="от 10 Th/ s "
+          min="10"
+          max="1000"
+        />
+        <div id="slider"></div>
+        <div class="calculator__info">
+          <div class="calculator__info-item">10 Th/ s</div>
+          <div class="calculator__info-item">1000 Th/ s</div>
+        </div>
+      </div>
+      <!--TERM-->
+      <div class="calculator__item">
+        <label for="inputTurn" class="calculator__label"
+          >Срок контракта, дни</label
+        >
+        <input
+          type="number"
+          class="calculator__input"
+          id="inputTurn"
+          placeholder="от 90 дней"
+          min="90"
+          max="365"
+        />
+        <div id="sliderSecond"></div>
+        <div class="calculator__info">
+          <div class="calculator__info-item">90 дней</div>
+          <div class="calculator__info-item">365 дней</div>
+        </div>
+      </div>
+      <!--MENU-->
+      <div class="menu">
+        <div class="menu__title">Вид валюты</div>
+        <div class="dropdown">
+          <div class="dropdown__name dropdown__name--btc" data-coast="1500000">
+            BTC
+          </div>
+          <div class="dropdown__arrow">
+            <img class="dropdown__arrow-image" src="img/calc/img1.svg" alt="" />
+          </div>
+        </div>
+        <div class="dropdown__hidden">
+          <div class="dropdown__hidden-item">
+            <div
+              class="dropdown__name dropdown__name--btc"
+              data-coast="1500000"
+            >
+              BTC
+            </div>
+            <img class="dropdown__okay-image" src="img/calc/okay.svg" alt="" />
+          </div>
+          <div class="dropdown__hidden-item">
+            <div
+              class="dropdown__name dropdown__name--ltc"
+              data-coast="1000000"
+            >
+              LTC
+            </div>
+          </div>
+          <div class="dropdown__hidden-item">
+            <div class="dropdown__name dropdown__name--rpl" data-coast="750000">
+              RPL
+            </div>
+          </div>
+          <div class="dropdown__hidden-item">
+            <div class="dropdown__name dropdown__name--eth" data-coast="50000">
+              ETH
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--INFO-->
+    <div class="info">
+      <div class="info__content">
+        <!--1-->
+        <div class="info__item">
+          <div class="info__item-heading coast">0,00</div>
+          <div class="info__item-subtitle">Стоимость контракта</div>
+        </div>
+        <!--2-->
+        <div class="info__item">
+          <div class="info__item-heading currency">BTC</div>
+          <div class="info__item-subtitle">Валюта</div>
+        </div>
+        <!--3-->
+        <div class="info__item">
+          <div class="info__item-heading info__item-heading--yellow">
+            0 <span class="info__sup">руб.</span>
+          </div>
+          <div class="info__item-subtitle">Обслуживание</div>
+        </div>
+        <!--4-->
+        <div class="info__item">
+          <div
+            class="info__item-heading total-profit info__item-heading--yellow"
+          >
+            0,00 <span>BTC</span>
+          </div>
+          <div class="info__item-subtitle">Выплата за период</div>
+        </div>
+      </div>
+      <button class="info__button">Заключить контракт</button>
+    </div>
+  </div>
+</section>

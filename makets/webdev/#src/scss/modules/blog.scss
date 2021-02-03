@@ -1,0 +1,47 @@
+.blog {
+  padding: 120px 0px;
+  background-color: #e4fdf9;
+  &__title {
+    margin-bottom: 120px;
+  }
+  &__column {
+    display: flex;
+    margin: 0px -7.5px;
+  }
+  &__button {
+    margin-top: 100px;
+  }
+}
+
+.img-blog {
+  width: 50%;
+  padding: 0px 7.5px;
+  & img {
+    max-width: 100%;
+  }
+}
+
+.blog-content {
+  width: 50%;
+  padding: 60px 7.5px 0px;
+  &__title {
+    margin-bottom: 25px;
+    @include fontext($OpenSans, 25px, 400);
+    color: #00897b;
+  }
+  &__info {
+    margin-bottom: 28px;
+    @include fontext($OpenSans, 17px, 400);
+    color: #212121;
+    text-transform: uppercase;
+  }
+  &__date {
+    margin-right: 30px;
+  }
+  &__text {
+    @include fontext($OpenSans, 15px, 400);
+    color: #212121;
+    width: 100%;
+    max-width: 440px;
+  }
+}

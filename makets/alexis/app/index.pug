@@ -1,0 +1,718 @@
+extends ./pug/layout/layout.pug
+block vars
+	-var pageTitle = 'Index';
+	-var footerBc = '#cccccc'
+
+block content
+	include ./pug/modules/svgs.pug
+	section.index-first-screen
+		.container
+			.row
+				.col-md-10.offset-md-1
+					.index-first-screen__title We design things with love and passion.
+			.index-first-screen__inner
+				a(href="https://www.google.com/" target="_blank").btn.btn_orange.index-first-screen__btn Our Works
+				.index-first-screen__card-container
+					.row
+						.col-xl-3.offset-xl-2
+							.index-first-screen__card.index-first-screen__card_first
+								svg.icon-color_green.index-first-screen__card-icon 
+									use(xlink:href="#dollar-sign")
+								.text-color_green.index-first-screen__card-text Fixed price projects
+						.col-xl-2
+							.index-first-screen__card.index-first-screen__card_second
+								svg.icon-color_purple.index-first-screen__card-icon 
+									use(xlink:href="#clock")
+								.text-color_purple.index-first-screen__card-text Receive on time
+						.col-xl-3
+							.index-first-screen__card.index-first-screen__card_third
+								svg.icon-color_orange.index-first-screen__card-icon 
+									use(xlink:href="#check-mark")
+								.text-color_orange.index-first-screen__card-text Satisfaction guranteed
+	
+	section.index-about
+		a(name="index-about" class="anchor")
+		.container
+			.row
+				.col-lg-6
+					.ibg.index-about__img
+						img(src="img/index-about-1.jpg", alt="")
+				.col-lg-7.index-about__right-block
+					.index-about__block
+						.section-title.index-about__section-title
+							.section-title__wrapper
+								.section-title__number.index-about__number 01
+								h3.section-title__title.index-about__title About Us.
+						.index-about__text Analytics release series A financing launch party interaction design android angel investor. Vesting period social media sales conversion launch party rockstar incubator customer social proof graphical user interface technology supply chain. Non-disclosure agreement rockstar creative partner network launch party social proof paradigm shift long tail influencer. <br><br>Monetization validation success. Seed round channels product management. Customer non-disclosure agreement strategy android growth hacking ramen buyer.
+	
+	section.index-focus
+		a(name="index-focus" class="anchor")
+		.container
+			.section-title
+				.section-title__wrapper
+					.section-title__number 02
+					h3.section-title__title Our Focus.
+				.section-title__subtitle.index-focus__subtitle We understand your requirement and provide quality works.
+			.row
+				.col-md-6.col-xl-3
+					.card-bottom-line.card-bottom-line_red.index-focus__card
+						svg.icon-color_orange.index-focus__card-icon
+							use(xlink:href="#design")
+						.index-focus__card-title Web Design
+						.index-focus__card-text Analytics release series A financing launch party interaction design android angel investor.
+				.col-md-6.col-xl-3
+					.card-bottom-line.card-bottom-line_green.index-focus__card
+						svg.icon-color_green.index-focus__card-icon
+							use(xlink:href="#booklet")
+						.index-focus__card-title UX Design
+						.index-focus__card-text Analytics release series A financing launch party interaction design android angel investor.
+				.col-md-6.col-xl-3
+					.card-bottom-line.card-bottom-line_purple.index-focus__card
+						svg.icon-color_purple.index-focus__card-icon
+							use(xlink:href="#image")
+						.index-focus__card-title Photogrpahy
+						.index-focus__card-text Analytics release series A financing launch party interaction design android angel investor.
+				.col-md-6.col-xl-3
+					.card-bottom-line.card-bottom-line_orange.index-focus__card
+						svg.icon-color_orange.index-focus__card-icon
+							use(xlink:href="#phones")
+						.index-focus__card-title App Development
+						.index-focus__card-text Analytics release series A financing launch party interaction design android angel investor.
+	
+	section.index-video
+		.index-video__title Explore Our Awesomeness
+		svg.icon-color_green.index-video__btn
+			use(xlink:href="#play-button")
+		.index-video__text Click to play the video
+		<iframe class="index-video__video" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+	section.index-portfolio
+		a(name="index-portfolio" class="anchor")
+		.container
+			.section-title.index-portfolio__section-title
+				.section-title__wrapper
+					.section-title__number 03
+					h3.section-title__title Portfolio.
+				.section-title__subtitle We understand your requirement and provide quality works.
+			.index-portfolio__row
+				.index-portfolio__column
+					.index-portfolio__img-block
+						.ibg.index-portfolio__img
+							img(src="img/index-portfolio-1.jpg", alt="")
+						.index-portfolio__hover-block
+							svg.icon-color_white.index-portfolio__hover-btn
+								use(xlink:href="#plus")
+							.index-portfolio__hover-title Project One
+				.index-portfolio__column
+					.index-portfolio__img-block
+						.ibg.index-portfolio__img
+							img(src="img/index-portfolio-2.jpg", alt="")
+						.index-portfolio__hover-block
+							svg.icon-color_white.index-portfolio__hover-btn
+								use(xlink:href="#plus")
+							.index-portfolio__hover-title Project One
+				.index-portfolio__column
+					.index-portfolio__img-block
+						.ibg.index-portfolio__img
+							img(src="img/index-portfolio-3.jpg", alt="")
+						.index-portfolio__hover-block
+							svg.icon-color_white.index-portfolio__hover-btn
+								use(xlink:href="#plus")
+							.index-portfolio__hover-title Project One
+				.index-portfolio__column
+					.index-portfolio__img-block
+						.ibg.index-portfolio__img
+							img(src="img/index-portfolio-4.jpg", alt="")
+						.index-portfolio__hover-block
+							svg.icon-color_white.index-portfolio__hover-btn
+								use(xlink:href="#plus")
+							.index-portfolio__hover-title Project One
+				.index-portfolio__column
+					.index-portfolio__img-block
+						.ibg.index-portfolio__img
+							img(src="img/index-portfolio-5.jpg", alt="")
+						.index-portfolio__hover-block
+							svg.icon-color_white.index-portfolio__hover-btn
+								use(xlink:href="#plus")
+							.index-portfolio__hover-title Project One
+				.index-portfolio__column
+					.index-portfolio__img-block
+						.ibg.index-portfolio__img
+							img(src="img/index-portfolio-6.jpg", alt="")
+						.index-portfolio__hover-block
+							svg.icon-color_white.index-portfolio__hover-btn
+								use(xlink:href="#plus")
+							.index-portfolio__hover-title Project One
+				.index-portfolio__column
+					.index-portfolio__img-block
+						.ibg.index-portfolio__img
+							img(src="img/index-portfolio-7.jpg", alt="")
+						.index-portfolio__hover-block
+							svg.icon-color_white.index-portfolio__hover-btn
+								use(xlink:href="#plus")
+							.index-portfolio__hover-title Project One
+				.index-portfolio__column
+					.index-portfolio__img-block
+						.ibg.index-portfolio__img
+							img(src="img/index-portfolio-8.jpg", alt="")
+						.index-portfolio__hover-block
+							svg.icon-color_white.index-portfolio__hover-btn
+								use(xlink:href="#plus")
+							.index-portfolio__hover-title Project One
+				.index-portfolio__column
+					.index-portfolio__img-block
+						.ibg.index-portfolio__img
+							img(src="img/index-portfolio-9.jpg", alt="")
+						.index-portfolio__hover-block
+							svg.icon-color_white.index-portfolio__hover-btn
+								use(xlink:href="#plus")
+							.index-portfolio__hover-title Project One
+	
+	section.index-team
+		a(name="index-team" class="anchor")
+		.container
+			.section-title.index-team__section-title
+				.section-title__wrapper
+					.section-title__number 04
+					h3.section-title__title Our Team.
+				.section-title__subtitle We understand your requirement and provide quality works.
+			.row
+				.col-lg-3
+					.card-bottom-line.card-bottom-line_red.index-team__card
+						.ibg.index-team__card-img
+							img(src="img/index-team-1.jpg", alt="")
+						.text-color_red.index-team__card-title Michael Schmitt
+						.index-team__card-text Founder & CEO
+						svg.index-team__card-arrow
+							use(xlink:href="#bottom-arrow")
+					.index-team__card-comment
+						.index-team__comment-title About Bennet.
+						.index-team__comment-text.index-team__card-comment-text Monetization first mover advantage iPad. Interaction design buzz handshake. Stealth agile development branding. Backing facebook hackathon conversion startup scrum project niche market business-to-consumer paradigm shift traction. Rockstar bandwidth twitter ownership success disruptive series A financing user experience buyer client social proof validation hypotheses. User experience crowdfunding facebook seed round A/B testing mass market. 
+						ul.index-team__socials
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#facebook")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link Facebook
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#twitter")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link Twitter
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#linkedin")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link LinkedIn
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#instagram")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link Instagram
+				.col-lg-3
+					.card-bottom-line.card-bottom-line_green.index-team__card
+						.ibg.index-team__card-img
+							img(src="img/index-team-2.jpg", alt="")
+						.text-color_green.index-team__card-title David Krämer
+						.index-team__card-text Lead Developer
+						svg.index-team__card-arrow
+							use(xlink:href="#bottom-arrow")
+					.index-team__card-comment
+						.index-team__comment-title About Bennet.
+						.index-team__comment-text.index-team__card-comment-text Monetization first mover advantage iPad. Interaction design buzz handshake. Stealth agile development branding. Backing facebook hackathon conversion startup scrum project niche market business-to-consumer paradigm shift traction. Rockstar bandwidth twitter ownership success disruptive series A financing user experience buyer client social proof validation hypotheses. User experience crowdfunding facebook seed round A/B testing mass market. Monetization first mover advantage iPad. Interaction design buzz handshake. Stealth agile development branding. Backing facebook hackathon conversion startup scrum project niche market business-to-consumer paradigm shift traction. Rockstar bandwidth twitter ownership success disruptive series A financing user experience buyer client social proof validation hypotheses. User experience crowdfunding facebook seed round A/B testing mass market. 
+						ul.index-team__socials
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#facebook")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link Facebook
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#twitter")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link Twitter
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#linkedin")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link LinkedIn
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#instagram")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link Instagram
+				.col-lg-3
+					.card-bottom-line.card-bottom-line_purple.index-team__card
+						.ibg.index-team__card-img
+							img(src="img/index-team-3.jpg", alt="")
+						.text-color_purple.index-team__card-title Anna Schröder
+						.index-team__card-text Designer
+						svg.index-team__card-arrow
+							use(xlink:href="#bottom-arrow")
+					.index-team__card-comment
+						.index-team__comment-title About Bennet.
+						.index-team__comment-text.index-team__card-comment-text Monetization first mover advantage iPad. Interaction design buzz handshake. Stealth agile development branding. Backing facebook hackathon conversion startup scrum project niche market business-to-consumer paradigm shift traction. Rockstar bandwidth twitter ownership success disruptive series A financing user experience buyer client social proof validation hypotheses. User experience crowdfunding facebook seed round A/B testing mass market. Monetization first mover advantage iPad. Interaction design buzz handshake. Stealth agile development branding. Backing facebook hackathon conversion startup scrum project niche market business-to-consumer paradigm shift traction. Rockstar bandwidth twitter ownership success disruptive series A financing user experience buyer client social proof validation hypotheses. User experience crowdfunding facebook seed round A/B testing mass market. 
+						ul.index-team__socials
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#facebook")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link Facebook
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#twitter")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link Twitter
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#linkedin")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link LinkedIn
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#instagram")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link Instagram
+				.col-lg-3
+					.card-bottom-line.card-bottom-line_orange.index-team__card
+						.ibg.index-team__card-img
+							img(src="img/index-team-4.jpg", alt="")
+						.text-color_orange.index-team__card-title Jason Teichmann
+						.index-team__card-text Consultant
+						svg.index-team__card-arrow
+							use(xlink:href="#bottom-arrow")
+					.index-team__card-comment
+						.index-team__comment-title About Bennet.
+						.index-team__comment-text.index-team__card-comment-text Monetization first mover advantage iPad. Interaction design buzz handshake. Stealth agile development branding. Backing facebook hackathon conversion startup scrum project niche market business-to-consumer paradigm shift traction. Rockstar bandwidth twitter ownership success disruptive series A financing user experience buyer client social proof validation hypotheses. User experience crowdfunding facebook seed round A/B testing mass market. 
+						ul.index-team__socials
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#facebook")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link Facebook
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#twitter")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link Twitter
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#linkedin")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link LinkedIn
+							li.index-team__social-item 
+								svg.icon-color_main.index-team__comment-icon
+									use(xlink:href="#instagram")
+								a(href="https://www.google.com/" target="_blank").index-team__social-link Instagram
+			.row
+				.col-md-12
+					.index-team__comment.index-team__comment_arrow-pos_0
+						.row
+							.col-md-7.offset-md-1
+								.index-team__comment-title About Bennet.
+						.row
+							.col-md-7.offset-md-1
+								.index-team__comment-text Monetization first mover advantage iPad. Interaction design buzz handshake. Stealth agile development branding. Backing facebook hackathon conversion startup scrum project niche market business-to-consumer paradigm shift traction. Rockstar bandwidth twitter ownership success disruptive series A financing user experience buyer client social proof validation hypotheses. User experience crowdfunding facebook seed round A/B testing mass market. 
+							.col-md-3
+								.index-team__comment-links
+									svg.icon-color_red.index-team__comment-share
+										use(xlink:href="#share")
+									ul.index-team__socials
+										li.index-team__social-item 
+											svg.icon-color_main.index-team__comment-icon
+												use(xlink:href="#facebook")
+											a(href="https://www.google.com/" target="_blank").index-team__social-link Facebook
+										li.index-team__social-item 
+											svg.icon-color_main.index-team__comment-icon
+												use(xlink:href="#twitter")
+											a(href="https://www.google.com/" target="_blank").index-team__social-link Twitter
+										li.index-team__social-item 
+											svg.icon-color_main.index-team__comment-icon
+												use(xlink:href="#linkedin")
+											a(href="https://www.google.com/" target="_blank").index-team__social-link LinkedIn
+										li.index-team__social-item 
+											svg.icon-color_main.index-team__comment-icon
+												use(xlink:href="#instagram")
+											a(href="https://www.google.com/" target="_blank").index-team__social-link Instagram
+		
+	section.index-statistics
+		a(name="index-statistics" class="anchor")
+		.container
+			.row
+				.col-sm-6.col-md-3
+					.index-statistics__card
+						svg.icon-color_red.index-statistics__card-icon
+							use(xlink:href="#schedule")
+						.index-statistics__card-number 12,458+
+						.index-statistics__card-text Projects Completed
+						svg.icon-color_red.index-statistics__card-circle
+							use(xlink:href="#double-circle")
+				.col-sm-6.col-md-3
+					.index-statistics__card
+						svg.icon-color_green.index-statistics__card-icon
+							use(xlink:href="#person")
+						.index-statistics__card-number 1,796+
+						.index-statistics__card-text Satisfied Clients
+						svg.icon-color_green.index-statistics__card-circle
+							use(xlink:href="#double-circle")
+				.col-sm-6.col-md-3
+					.index-statistics__card
+						svg.icon-color_purple.index-statistics__card-icon
+							use(xlink:href="#heart")
+						.index-statistics__card-number 1,000+
+						.index-statistics__card-text Positive Feedbacks
+						svg.icon-color_purple.index-statistics__card-circle 
+							use(xlink:href="#double-circle")
+				.col-sm-6.col-md-3
+					.index-statistics__card
+						svg.icon-color_orange.index-statistics__card-icon
+							use(xlink:href="#present")
+						.index-statistics__card-number 1,500+
+						.index-statistics__card-text Freebies Released
+						svg.icon-color_orange.index-statistics__card-circle
+							use(xlink:href="#double-circle")
+
+	section.index-work
+		a(name="index-work" class="anchor")
+		.container
+			.section-title.index-work__section-title
+				.section-title__wrapper
+					.section-title__number 05
+					h3.section-title__title Work Steps.
+				.section-title__subtitle We understand your requirement and provide quality works.
+			.row.index-work__row
+				.card-bottom-line.card-bottom-line_red.index-work__card.index-work__card_left.index-work__card_big-top
+					.index-work__card-number 01
+					.index-work__card-title Project Understanding
+					.index-work__card-text Buyer strategy incubator niche market startup. Entrepreneur non disclosure agreement MVP traction beta social media investor accelerator.
+				.col-lg-6.offset-lg-3
+					.ibg.index-work__img
+						img(src="img/index-work-1.jpg", alt="")
+			.row.index-work__row
+				.card-bottom-line.card-bottom-line_green.index-work__card.index-work__card_right
+					.index-work__card-number 02
+					.index-work__card-title Research & Planning
+					.index-work__card-text Buyer strategy incubator niche market startup. Entrepreneur non disclosure agreement MVP traction beta social media investor accelerator.
+				.col-lg-6.offset-lg-3
+					.ibg.index-work__img
+						img(src="img/index-work-2.jpg", alt="")
+			.row.index-work__row
+				.card-bottom-line.card-bottom-line_purple.index-work__card.index-work__card_left
+					.index-work__card-number 03
+					.index-work__card-title Wireframe & Design
+					.index-work__card-text Buyer strategy incubator niche market startup. Entrepreneur non disclosure agreement MVP traction beta social media investor accelerator.
+				.col-lg-6.offset-lg-3
+					.ibg.index-work__img
+						img(src="img/index-work-3.jpg", alt="")
+			.row.index-work__row
+				.card-bottom-line.card-bottom-line_orange.index-work__card.index-work__card_right
+					.index-work__card-number 04
+					.index-work__card-title Development
+					.index-work__card-text Buyer strategy incubator niche market startup. Entrepreneur non disclosure agreement MVP traction beta social media investor accelerator.
+				.col-lg-6.offset-lg-3
+					.ibg.index-work__img
+						img(src="img/index-work-4.jpg", alt="")
+
+	section.index-price
+		a(name="index-price" class="anchor")
+		.container
+			.section-title.index-price__section-title
+				.section-title__wrapper
+					.section-title__number 06
+					h3.section-title__title Pricing Table.
+				.section-title__subtitle We understand your requirement and provide quality works.
+			.row
+				.col-lg-4
+					.card-top-line.card-top-line_green.index-price__card
+						.index-price__card-title Starter
+						.index-price__card-cost
+							p.index-price__card-price $125
+							p.index-price__card-time Per Month
+						ul.index-price__card-list
+							li.index-price__card-item
+								span.index-price__bold-text 200GB 
+								div Online Storage
+							li.index-price__card-item
+								span.index-price__bold-text 20 
+								div Files Per Day
+							li.index-price__card-item
+								span.index-price__bold-text 2TB 
+								div Monthly Bandwidth
+							li.index-price__card-item
+								span.index-price__bold-text 
+									svg
+										use(xlink:href="#check")
+								div Secure Platform
+							li.index-price__card-item
+								span.index-price__bold-text 
+									svg
+										use(xlink:href="#check")
+								div 24/7 Customer Support
+							li.index-price__card-item
+								span.index-price__bold-text 
+									svg
+										use(xlink:href="#check")
+								div Fast & Reliable 
+						a.btn.btn_green(href="https://www.google.com/" target="_blank") Get Started
+				.col-lg-4
+					.card-top-line.card-top-line_red.index-price__card
+						.index-price__card-title Starter
+						.index-price__card-cost.index-price__card-cost_red
+							p.index-price__card-price $195
+							p.index-price__card-time Per Month
+						ul.index-price__card-list
+							li.index-price__card-item
+								span.index-price__bold-text 800GB 
+								div Online Storage
+							li.index-price__card-item
+								span.index-price__bold-text Unlimited
+								div Files Per Day
+							li.index-price__card-item
+								span.index-price__bold-text 10TB 
+								div Monthly Bandwidth
+							li.index-price__card-item
+								span.index-price__bold-text 
+									svg
+										use(xlink:href="#check")
+								div Secure Platform
+							li.index-price__card-item
+								span.index-price__bold-text 
+									svg
+										use(xlink:href="#check")
+								div 24/7 Customer Support
+							li.index-price__card-item
+								span.index-price__bold-text 
+									svg
+										use(xlink:href="#check")
+								div Fast & Reliable 
+						a.btn(href="https://www.google.com/" target="_blank") Get Started
+				.col-lg-4
+					.card-top-line.card-top-line_purple.index-price__card
+						.index-price__card-title Starter
+						.index-price__card-cost.index-price__card-cost_purple
+							p.index-price__card-price $125
+							p.index-price__card-time Per Month
+						ul.index-price__card-list
+							li.index-price__card-item
+								span.index-price__bold-text 200GB 
+								div Online Storage
+							li.index-price__card-item
+								span.index-price__bold-text 20 
+								div Files Per Day
+							li.index-price__card-item
+								span.index-price__bold-text 2TB 
+								div Monthly Bandwidth
+							li.index-price__card-item
+								span.index-price__bold-text 
+									svg
+										use(xlink:href="#check")
+								div Secure Platform
+							li.index-price__card-item
+								span.index-price__bold-text 
+									svg
+										use(xlink:href="#check")
+								div 24/7 Customer Support
+							li.index-price__card-item
+								span.index-price__bold-text 
+									svg
+										use(xlink:href="#check")
+								div Fast & Reliable 
+						a.btn.btn_purple(href="https://www.google.com/" target="_blank") Get Started
+	
+	section.index-testimonials
+		a(name="index-testimonials" class="anchor")
+		.container
+			.section-title.section-title_dark.index-testimonials__section-title
+				.section-title__wrapper
+					.section-title__number 07
+					h3.section-title__title Testimonials.
+				.section-title__subtitle We understand your requirement and provide quality works.
+			.row
+				.col-md-12
+						.index-testimonials__swiper
+							.swiper-wrapper
+								.swiper-slide
+									.swiper-pagination
+									.ibg.index-testimonials__slide-img
+										img(src="img/index-testimonials-1.jpg", alt="")
+									.index-testimonials__slide-wrapper
+										.card-bottom-line.card-bottom-line_red.index-testimonials__slide-block
+											.index-testimonials__slide-text Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing release client traction creative facebook monetization crowdfunding rockstar.
+											.index-testimonials__slide-signature Melina
+											.index-testimonials__slide-author Melina Albrecht
+											.index-testimonials__slide-author-job Founder, TingTong
+								.swiper-slide
+									.swiper-pagination
+									.ibg.index-testimonials__slide-img
+										img(src="img/index-testimonials-1.jpg", alt="")
+									.index-testimonials__slide-wrapper
+										.card-bottom-line.card-bottom-line_red.index-testimonials__slide-block
+											.index-testimonials__slide-text Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing release client traction creative facebook monetization crowdfunding rockstar. Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing release client traction creative facebook monetization crowdfunding rockstar.
+											.index-testimonials__slide-signature Melina
+											.index-testimonials__slide-author Melina Albrecht
+											.index-testimonials__slide-author-job Founder, TingTong
+								.swiper-slide
+									.swiper-pagination
+									.ibg.index-testimonials__slide-img
+										img(src="img/index-testimonials-1.jpg", alt="")
+									.index-testimonials__slide-wrapper
+										.card-bottom-line.card-bottom-line_red.index-testimonials__slide-block
+											.index-testimonials__slide-text Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing release client traction creative facebook monetization crowdfunding rockstar. Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing release client traction creative facebook monetization crowdfunding rockstar.
+											.index-testimonials__slide-signature Melina
+											.index-testimonials__slide-author Melina Albrecht
+											.index-testimonials__slide-author-job Founder, TingTong
+								.swiper-slide
+									.swiper-pagination
+									.ibg.index-testimonials__slide-img
+										img(src="img/index-testimonials-1.jpg", alt="")
+									.index-testimonials__slide-wrapper
+										.card-bottom-line.card-bottom-line_red.index-testimonials__slide-block
+											.index-testimonials__slide-text Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing release client traction creative facebook monetization crowdfunding rockstar.
+											.index-testimonials__slide-signature Melina
+											.index-testimonials__slide-author Melina Albrecht
+											.index-testimonials__slide-author-job Founder, TingTong
+								.swiper-slide
+									.swiper-pagination
+									.ibg.index-testimonials__slide-img
+										img(src="img/index-testimonials-1.jpg", alt="")
+									.index-testimonials__slide-wrapper
+										.card-bottom-line.card-bottom-line_red.index-testimonials__slide-block
+											.index-testimonials__slide-text Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing release client traction creative facebook monetization crowdfunding rockstar. Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing release client traction creative facebook monetization crowdfunding rockstar.
+											.index-testimonials__slide-signature Melina
+											.index-testimonials__slide-author Melina Albrecht
+											.index-testimonials__slide-author-job Founder, TingTong
+								.swiper-slide
+									.swiper-pagination
+									.ibg.index-testimonials__slide-img
+										img(src="img/index-testimonials-1.jpg", alt="")
+									.index-testimonials__slide-wrapper
+										.card-bottom-line.card-bottom-line_red.index-testimonials__slide-block
+											.index-testimonials__slide-text Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership equity series A financing network effects user experience crowdsource. Burn rate stock bootstrapping direct mailing release client traction creative facebook monetization crowdfunding rockstar.
+											.index-testimonials__slide-signature Melina
+											.index-testimonials__slide-author Melina Albrecht
+											.index-testimonials__slide-author-job Founder, TingTong
+	
+	section.index-select
+		.container
+			.section-title.index-select__section-title
+				.section-title__wrapper
+					.section-title__number 08
+					h3.section-title__title Why Select Us?
+				.section-title__subtitle We understand your requirement and provide quality works.
+			.row
+				.col-md-6.col-lg-4
+					.index-select__card
+						.index-select__card-title
+							svg.index-select__card-icon.icon-color_red
+								use(xlink:href="#business")
+							.index-select__card-name
+								p Business
+								p Growth
+						.index-select__card-text Success scrum project funding marketing seed money prototype innovator direct hackathon android angel investor. 
+				.col-md-6.col-lg-4
+					.index-select__card
+						.index-select__card-title
+							svg.index-select__card-icon.icon-color_green
+								use(xlink:href="#params")
+							.index-select__card-name
+								p Unlimited
+								p Revisions
+						.index-select__card-text Technology founders churn rate niche market long tail release iteration burn rate backing. Churn rate accelerator.
+				.col-md-6.col-lg-4
+					.index-select__card
+						.index-select__card-title
+							svg.index-select__card-icon.icon-color_purple
+								use(xlink:href="#perfection")
+							.index-select__card-name
+								p Ultimate
+								p Perfection
+						.index-select__card-text Deployment ownership non-disclosure agreement vesting period crowdfunding success influencer partnership.
+				.col-md-6.col-lg-4
+					.index-select__card
+						.index-select__card-title
+							svg.index-select__card-icon.icon-color_orange
+								use(xlink:href="#monitor")
+							.index-select__card-name
+								p Smart
+								p Experience
+						.index-select__card-text Success scrum project funding marketing seed money prototype innovator direct hackathon android angel investor. 
+				.col-md-6.col-lg-4
+					.index-select__card
+						.index-select__card-title
+							svg.index-select__card-icon.icon-color_red
+								use(xlink:href="#calendar")
+							.index-select__card-name
+								p Strict
+								p Deadline
+						.index-select__card-text Success scrum project funding marketing seed money prototype innovator direct hackathon android angel investor. 
+				.col-md-6.col-lg-4
+					.index-select__card
+						.index-select__card-title
+							svg.index-select__card-icon.icon-color_green
+								use(xlink:href="#award")
+							.index-select__card-name
+								p Award-winning
+								p Company
+						.index-select__card-text Technology founders churn rate niche market long tail release iteration burn rate backing. Churn rate accelerator.
+			.index-select__bottom
+				.index-select__bottom-text Start your journy with us now
+				a(href="https://www.google.com/" target="_blank").btn Get Started
+
+	section.index-blog
+		a(name="index-blog" class="anchor")
+		.container
+			.section-title.index-blog__section-title
+				.section-title__wrapper
+					.section-title__number 09
+					h3.section-title__title Our Blog.
+				.section-title__subtitle We understand your requirement and provide quality works.
+			.row
+				.col-lg-6
+					.card-bottom-line.card-bottom-line_red.index-blog__big-card
+						.ibg.index-blog__big-card-img
+							img(src="img/index-blog-1.jpg", alt="")
+							.index-blog__big-card-info
+								.text-color_red.index-blog__card-author.index-blog__big-card-author Damian Schreiber
+								.index-blog__card-date.index-blog__big-card-date December 10, 2015
+						.index-blog__card.index-blog__big-card-bottom
+							.index-blog__card-title.index-blog__big-card-title Facebook’s CNN livestream will test its place in the second screen era
+							.index-blog__card-text Traction seed money infographic accelerator pivot value proposition ownership business-to-consumer iteration market analytics paradigm
+								a(href="https://www.google.com/" target="_blank").text-color_black.index-blog__card-read Read Full Article »
+				.col-lg-6
+					.card-bottom-line.card-bottom-line_green.index-blog__card
+						.index-blog__card-info
+							.text-color_green.index-blog__card-author Damian Schreiber
+							.index-blog__card-date December 10, 2015
+						.index-blog__card-title Google Street View adds virtual reality support
+						.index-blog__card-text Traction seed money infographic accelerator pivot value proposition ownership business-to-consumer iteration market analytics paradigm
+							a(href="https://www.google.com/" target="_blank").text-color_green.index-blog__card-read Read Full Article »
+					.card-bottom-line.card-bottom-line_purple.index-blog__card
+						.index-blog__card-info
+							.text-color_purple.index-blog__card-author Damian Schreiber
+							.index-blog__card-date December 10, 2015
+						.index-blog__card-title Google Street View adds virtual reality support
+						.index-blog__card-text Traction seed money infographic accelerator pivot value proposition ownership business-to-consumer iteration market analytics paradigm
+							a(href="https://www.google.com/" target="_blank").text-color_purple.index-blog__card-read Read Full Article »
+					.card-bottom-line.card-bottom-line_orange.index-blog__card
+						.index-blog__card-info
+							.text-color_orange.index-blog__card-author Damian Schreiber
+							.index-blog__card-date December 10, 2015
+						.index-blog__card-title Google Street View adds virtual reality support
+						.index-blog__card-text Traction seed money infographic accelerator pivot value proposition ownership business-to-consumer iteration market analytics paradigm
+							a(href="https://www.google.com/" target="_blank").text-color_orange.index-blog__card-read Read Full Article »
+	
+	section.subscribe
+		.container
+			.subscribe__title Subscribe to Newsletter
+			form.subscribe__form
+				input.subscribe__input(type="email" placeholder="Enter your email")
+				button.btn.subscribe__btn Subscribe now
+	
+	section.index-form
+		a(name="index-form" class="anchor")
+		.container
+			.section-title.index-form__section-title
+				.section-title__wrapper
+					.section-title__number 10
+					h3.section-title__title Get in Touch.
+				.section-title__subtitle We understand your requirement and provide quality works.
+			.row
+				.col-lg-8.offset-lg-2
+					.row
+						form.index-form__form(action="")
+							.col-lg-6
+								input(type="text" placeholder="Your Name").index-form__input
+							.col-lg-6
+								input(type="email" placeholder="Your Email").index-form__input
+							.col-lg-6
+								input(type="text" placeholder="Subject").index-form__input
+							.col-lg-6
+								input(type="text" placeholder="Project Budget").index-form__input
+							.col-lg-12
+								textarea(placeholder="Your Message").index-form__input.index-form__textarea
+			a(href="https://www.google.com/" target="_blank").btn.index-form__btn Send Message

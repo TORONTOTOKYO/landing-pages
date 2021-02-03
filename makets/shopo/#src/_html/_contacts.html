@@ -1,0 +1,163 @@
+<!--CONTACTS-->
+<section id="contacts" class="contacts">
+  <div class="container">
+    <div class="contacts__wrapper">
+      <div class="contacts__form form">
+        <form action="#" method="POST" id="form" class="form__content">
+          <div class="form__item">
+            <input
+              id="formName"
+              class="form__input _req"
+              type="text"
+              name="name"
+              placeholder="Имя*"
+            />
+          </div>
+          <div class="form__item">
+            <input
+              class="form__input _req"
+              type="text"
+              name="nameCompany"
+              placeholder="Название Компании*"
+            />
+          </div>
+          <div class="form__item">
+            <input
+              id="formEmail"
+              class="form__input _req _email"
+              type="text"
+              name="email"
+              placeholder="Ваш электронный адрес*"
+            />
+          </div>
+          <div class="form__title">Численность вашей компании составляет:</div>
+          <div class="form__item">
+            <div class="options">
+              <div class="options__item">
+                <input
+                  type="radio"
+                  id="formsmallCompany"
+                  class="options__input"
+                  name="companySize"
+                  value="smallCompany"
+                  checked
+                />
+                <label for="formsmallCompany" class="options__label"
+                  >от 3 до 10 человек</label
+                >
+              </div>
+
+              <div class="options__item">
+                <input
+                  type="radio"
+                  id="formBigCompany"
+                  class="options__input"
+                  name="companySize"
+                  value="BigCompany"
+                />
+                <label for="formBigCompany" class="options__label"
+                  >Больше 10 человек</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="form__item">
+            <textarea
+              id="formMessage"
+              class="form__textarea _req"
+              name="formMessage"
+              placeholder="Сообщение*"
+            ></textarea>
+          </div>
+          <div class="form__item">
+            <div class="form__title">Прикрепить тестовое задание для нас:</div>
+            <div class="file">
+              <div class="file__item">
+                <input
+                  id="formImage"
+                  accept=".jpg, .png, .gif"
+                  type="file"
+                  name="image"
+                  class="file__input"
+                />
+                <div class="file__button">Выбрать</div>
+              </div>
+              <div id="formPreview" class="file__prieview"></div>
+            </div>
+          </div>
+          <div class="form__item">
+            <div class="checkbox">
+              <input
+                id="formAgreement"
+                type="checkbox"
+                name="agreement"
+                class="checkbox__input _req"
+              />
+              <label for="formAgreement" class="checkbox__label"
+                ><span
+                  >Я даю согласие на обработку своих персональных данных, в
+                  соответствии с
+
+                  <a href="">Условиями настоящего соглашения*</a>
+                </span></label
+              >
+            </div>
+          </div>
+          <div class="form__item">
+            <button class="form__button" type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+      <div class="contacts__data">
+        <ul class="contacts__data-info">
+          <li class="contacts__data-item">г.Челябинск, ул.Чайковского, д3</li>
+          <li class="contacts__data-item">
+            г.Екатеринбург, ул. Володарского, д23
+          </li>
+          <li class="contacts__data-item">
+            Телефон: <a href="tel:+7 967 864 08 75">+7 967 864 08 75</a>
+          </li>
+          <li class="contacts__data-item">Факс: +456456 54546</li>
+          <li class="contacts__data-item">
+            Web: <a href="https://vk.com/">www.designagency.net</a>
+          </li>
+          <li class="contacts__data-item">
+            E-mail:
+            <a href="mailto:info@designagency.net">info@designagency.net</a>
+          </li>
+        </ul>
+        <div class="contacts__data-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2279.1259156286415!2d61.550058716029!3d55.16357314474795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c5f210e423b343%3A0x89463b8547b5f7e3!2z0JTQtdGC0YHQutC40Lkg0YHQsNC0IOKEliA0NA!5e0!3m2!1sru!2sru!4v1605511154734!5m2!1sru!2sru"
+            width="600"
+            height="450"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            s
+            tabindex="0"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!--POPUP CONTACTS-->
+
+    <div class="popup">
+      <div class="popup__overlay popup__overlay--contacts">
+        <button class="popup__button-closed popup__button-closed--intro">
+          <svg class="popup__button-icon popup__button-icon--contacts">
+            <use xlink:href="#closed"></use>
+          </svg>
+        </button>
+        <div class="popup__modal-wrapper popup__modal-wrapper--contacts">
+          <div class="popup__modal form popup__modal--contacts">
+            <div class="popup__modal-warning">
+              <div class="popup__modal-warning-text">Пожалуйста, заполните поля, отмеченные красным.</div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>

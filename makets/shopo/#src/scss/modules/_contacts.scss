@@ -1,0 +1,47 @@
+.contacts {
+  min-height: 560px;
+  padding: 50px 0px;
+  background: url(../img/contacts/background.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__form {
+    width: 53%;
+    margin-right: 25px;
+  }
+  &__data {
+    width: 43%;
+    padding: 36px 22px 20px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(0, 0, 0, 0.63);
+  }
+  &__data-info {
+    flex-grow: 1;
+  }
+  &__data-item {
+    margin-bottom: 10px;
+
+    @include fontText($Raleway, 15px, 400);
+    color: #fff;
+    &:nth-child(4) {
+      margin-bottom: 35px;
+    }
+    & a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+  &__data-map {
+    display: flex;
+    align-items: center;
+    min-height: 224px;
+
+    overflow: hidden;
+  }
+}

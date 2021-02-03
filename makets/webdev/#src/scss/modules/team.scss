@@ -1,0 +1,89 @@
+.team {
+  padding-bottom: 120px;
+  &__title {
+    margin-bottom: 120px;
+  }
+  &__inner {
+    display: flex;
+  }
+}
+
+// SLIDER
+// Указываем, чтобы корректно работал слайдер
+.slick {
+  &-track {
+    display: flex;
+  }
+  &-list {
+    overflow: hidden;
+  }
+}
+
+.slider {
+  margin: 0 -7.5px;
+  &__item {
+    display: flex;
+  }
+}
+
+// Active dot\
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  & li.slick-active button {
+    background-color: #3949ab;
+  }
+  & li button {
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #00897b;
+  }
+}
+
+.person {
+  color: #212121;
+
+  &__wrapper {
+    padding: 0px 7.5px;
+    text-align: center;
+  }
+  &__img {
+    max-width: 100%;
+    margin-bottom: 38px;
+  }
+  &__name {
+    margin-bottom: 12px;
+    @include fontext($OpenSans, 20px, 400);
+  }
+  &__position {
+    margin-bottom: 20px;
+    @include fontext($OpenSans, 15px, 400);
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  &__link {
+    @include flexbox(center, center, row);
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #e5e5e5;
+    margin-right: 10px;
+    &:hover .social__icon {
+      fill: #000;
+    }
+  }
+  &__icon {
+    height: 28px;
+    fill: rgba(0, 0, 0, 0.507);
+
+    transition: fill 0.4s linear;
+  }
+}

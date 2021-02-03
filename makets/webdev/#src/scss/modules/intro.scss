@@ -1,0 +1,51 @@
+.intro {
+  margin-bottom: 120px;
+  background: url(../img/intro/intro.jpg) center no-repeat;
+  background-size: auto 100%;
+  &__inner {
+    position: relative;
+
+    width: 100%;
+    @include flexbox(center, center, row);
+    height: 782px;
+
+    text-align: center;
+    color: #fff;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+
+      border: 20px solid transparent;
+      border-top: 20px solid #fff;
+
+      transform: translateX(-50%);
+    }
+  }
+  &__title {
+    margin-bottom: 26px;
+    @include fontext($OpenSans, 60px, 400);
+  }
+  &__subtitle {
+    margin-bottom: 100px;
+    @include fontext($OpenSans, 22px, 400);
+  }
+  &__btn {
+    padding: 20px 36px;
+    border: 3px solid #f8f8f8;
+
+    @include fontext($Roboto, 20px, 700);
+    color: #fff;
+
+    background: transparent;
+
+    transition: background 0.4s linear;
+    &:first-child {
+      margin-right: 25px;
+    }
+    &:hover {
+      background: #00897b;
+    }
+  }
+}

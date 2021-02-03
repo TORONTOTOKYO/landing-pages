@@ -1,0 +1,30 @@
+.about {
+  padding-bottom: 120px;
+  &__title {
+    margin-bottom: 120px;
+  }
+}
+.advantages {
+  display: flex;
+  &__wrapper {
+    width: 33.3333%;
+  }
+  &__item {
+    width: 100%;
+    max-width: 254px;
+    margin: 0 auto;
+    text-align: center;
+    color: #212121;
+  }
+  &__icon {
+    margin-bottom: 39px;
+  }
+  &__title {
+    margin-bottom: 26px;
+    @include fontext($OpenSans, 20px, 400);
+  }
+  &__text {
+    @include fontext($OpenSans, 15px, 400);
+    line-height: 1.4;
+  }
+}

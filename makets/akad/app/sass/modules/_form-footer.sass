@@ -1,0 +1,35 @@
+.form-footer
+	min-height: 329px
+	background-color: $aquamarine
+	padding: 39px 0 31px
+	&__title
+		margin-bottom: 15px
+		line-height: 48px
+	&__input-block
+		background-color: $white
+		padding: 12px 22px 18px 27px
+		margin-top: 11px
+		margin-bottom: 3px
+	&__input-title
+		font-family: 'Montserrat'
+		font-size: 24px
+		font-weight: 700
+		line-height: 36px
+		text-transform: uppercase
+		margin-bottom: 2px
+	&__subtitle
+		color: $lightgray
+		margin-bottom: 26px
+	&__send-btn
+		padding-left: 28px
+		padding-right: 28px
+	&__form
+		display: flex
+		justify-content: center
+
+@media (max-width: 575.98px)
+	.form-footer
+		&__form
+			display: block
+		&__send-btn
+			margin-top: 15px

@@ -1,0 +1,476 @@
+// МИКСИН ШРИФТЫ
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+// <-----------------------  ПЕРЕМЕННЫЕ ----------------------->
+
+// ШРИФТЫ
+$Merriweather: "Merriweather", serif;
+$Merriweather-bold: "Merriweather-Bold", serif;
+$Montserrat: "Montserrat", sans-serif;
+$Raleway: "Raleway", sans-serif;
+
+// МИКСИНЫ =======================================================>
+
+@mixin fontText($font, $size, $weight) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+// <----------------------- КОНТЕНТ-КОНТЕЙНЕР  ----------------------->
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+// <----------------------- ОБЩИЕ КЛАССЫ  ----------------------->
+
+.heart {
+  position: fixed;
+  top: -1vh;
+
+  width: 20px;
+  height: 20px;
+
+  transform: translateY(0);
+
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
+
+.heading {
+  text-align: center;
+  &__title {
+    margin-bottom: 10px;
+
+    @include fontText($Montserrat, 38px, 700);
+    color: #191919;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    @include fontText($Merriweather, 18px, 400);
+    color: #9d9f9f;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+}
+
+.form {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.63);
+  &__content {
+    position: relative;
+
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 25px 35px;
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: rgba(0, 0, 0, 0.534) url(../img/send.gif) center / 200px
+        no-repeat;
+
+      opacity: 0;
+      visibility: hidden;
+    }
+    &._sending::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+
+    @include fontText($Raleway, 15px, 400);
+  }
+  &__item {
+    margin-bottom: 10px;
+    &:nth-child(4) {
+      flex-grow: 1;
+    }
+  }
+  &__input {
+    width: 100%;
+    padding: 17px 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.397);
+
+    @include fontText($Raleway, 15px, 400);
+    color: #fff;
+
+    background-color: transparent;
+
+    caret-color: #71f6eb;
+    &::placeholder {
+      @include fontText($Raleway, 15px, 400);
+      color: #fff;
+    }
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.274);
+      border-left: 1px solid #71f6eb;
+    }
+  }
+  &__textarea {
+    width: 100%;
+    height: 140px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.397);
+
+    @include fontText($Raleway, 15px, 400);
+    color: #fff;
+
+    background-color: transparent;
+    resize: none;
+
+    &::placeholder {
+      @include fontText($Raleway, 15px, 400);
+      color: #fff;
+    }
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.274);
+      border-bottom: 1px solid #71f6eb;
+    }
+  }
+  &__button {
+    @include fontText($Montserrat, 18px, 500);
+    color: #000000;
+
+    padding: 15px 45px;
+    text-transform: uppercase;
+
+    background-color: #6eeee4;
+    opacity: 0.9;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+
+    transition: box-shadow 0.2s linear;
+    &:hover {
+      box-shadow: 1px 1px 32px 4px rgba(255, 255, 255, 0.192);
+    }
+  }
+}
+
+._error {
+  box-shadow: -11px -30px 100px 74px rgba(243, 22, 22, 0.363) inset;
+}
+
+.options {
+  &__item {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+  &__input {
+    display: none;
+
+    &:checked + .options__label::after {
+      transform: scale(1);
+    }
+  }
+  &__label {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    line-height: 140%;
+
+    @include fontText($Raleway, 15px, 400);
+
+    cursor: pointer;
+    &::before {
+      content: "";
+      flex: 0 0 18px;
+      align-self: flex-start;
+      height: 18px;
+      margin-right: 10px;
+
+      background-color: #fff;
+      border-radius: 50%;
+    }
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 10px;
+      height: 10px;
+      background-color: #6eeee4;
+      border-radius: 50%;
+
+      transform: scale(0);
+      transition: transform 0.1s linear;
+    }
+  }
+}
+
+.file {
+  margin-bottom: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  &__item {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    font-size: 0;
+
+    cursor: pointer;
+  }
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0px 10px;
+    border-radius: 10px;
+
+    @include fontText($Raleway, 15px, 400);
+    color: #000;
+
+    background-color: #71f6eb;
+  }
+  &__prieview {
+    display: inline-block;
+    max-width: 100px;
+    padding: 5px;
+    & img {
+      max-width: 100%;
+    }
+  }
+}
+
+.checkbox {
+  margin-bottom: 30px;
+  @include fontText($Raleway, 15px, 400);
+  color: #fff;
+  line-height: 140%;
+  & a {
+    color: inherit;
+    text-decoration: underline;
+    &:hover {
+      color: #f6260e;
+    }
+  }
+  &__input {
+    display: none;
+
+    &:checked + .checkbox__label::after {
+      transform: scale(1);
+    }
+  }
+  &__label {
+    position: relative;
+
+    display: inline-flex;
+    align-items: flex-start;
+
+    cursor: pointer;
+    &::before {
+      content: "";
+      flex: 0 0 18px;
+      height: 18px;
+      align-self: flex-start;
+      margin: 4px 10px 0px 0px;
+
+      background-color: #fff;
+    }
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 7px;
+      left: 3px;
+
+      width: 12px;
+      height: 12px;
+
+      background-color: #6eeee4;
+
+      transform: scale(0);
+      transition: transform 0.2s linear;
+    }
+  }
+  &._error {
+    box-shadow: none;
+  }
+  &._error &__label::before {
+    box-shadow: 0px 0px 10px red;
+  }
+}
+
+// POPUP
+
+.popup {
+  &__overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.26);
+
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    &--intro {
+      opacity: 0;
+    }
+    &--contacts {
+      opacity: 0;
+    }
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s linear;
+    }
+  }
+  &__button-closed {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: #fff;
+
+    transition: background-color 0.3s linear;
+    & svg {
+      fill: #000;
+      height: 15px;
+
+      transition: fill 0.3s linear;
+    }
+    &:hover {
+      background-color: #71f6eb;
+      & svg {
+        fill: #fff;
+      }
+    }
+  }
+
+  &__modal {
+    &-wrapper {
+      position: relative;
+      &--intro {
+        display: none;
+      }
+      &--contacts {
+        display: none;
+      }
+      &--visible {
+        display: block;
+      }
+    }
+    &-warning {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 10px;
+      &-text {
+        @include fontText($Raleway, 15px, 400);
+        color: #fff;
+        text-align: center;
+      }
+    }
+    &--intro {
+      width: 400px;
+      height: 80vh;
+      animation: visibleModal 0.3s linear forwards;
+    }
+    &--contacts {
+      width: 300px;
+      height: 100px;
+      animation: visibleModal 0.3s linear forwards;
+    }
+    &--visible {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes visibleModal {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes hiddenModal {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+// <----------------------- ИМПОРТЫ  ----------------------->
+@import "fonts";
+@import "./aos/aos";
+@import "normalize";
+@import "./modules/header";
+@import "./modules/intro";
+@import "./modules/about";
+@import "./modules/works";
+@import "./modules/services";
+@import "./modules/team";
+@import "./modules/say";
+@import "./modules/partners";
+@import "./modules/contacts";
+@import "./modules/footer";
+
+// <----------------------- МЕДИАЗАПРОСЫ  ----------------------->
+@import "./mediaQuery.scss";

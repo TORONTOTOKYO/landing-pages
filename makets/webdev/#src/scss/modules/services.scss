@@ -1,0 +1,75 @@
+.services {
+  padding: 173px 0px 126px;
+  margin-bottom: 120px;
+  background-color: #e4fdf9;
+  &__title {
+    margin-bottom: 120px;
+  }
+}
+
+.services__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 - 7.5px;
+}
+
+.card {
+  background-color: #fff;
+  height: 100%;
+
+  transition: all 0.4s linear;
+  &:hover {
+    background-color: #00897b;
+  }
+  &:hover &__inner,
+  &:hover &__svg {
+    color: #fff;
+    fill: #fff;
+  }
+  &:hover &__link {
+    border-color: #fff;
+  }
+
+  &__wrapper {
+    width: 33.33333%;
+    max-width: 370px;
+    height: 438px;
+    padding: 0px 7.5px;
+    margin-bottom: 30px;
+  }
+  &__inner {
+    height: 100%;
+    padding: 60px 50px;
+    text-align: center;
+    color: #212121;
+  }
+  &__image {
+    width: 56px;
+    height: 62px;
+    display: flex;
+    margin: 0 auto 39px;
+  }
+  &__svg {
+    max-height: 60px;
+  }
+  &__title {
+    margin-bottom: 26px;
+    @include fontext($OpenSans, 20px, 400);
+  }
+  &__text {
+    margin-bottom: 70px;
+    @include fontext($OpenSans, 15px, 400);
+    line-height: 1.4;
+  }
+  &__link {
+    border: 2px solid #212121;
+    padding: 10px 15px;
+    @include fontext($OpenSans, 20px, 400);
+    text-transform: uppercase;
+    color: inherit;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

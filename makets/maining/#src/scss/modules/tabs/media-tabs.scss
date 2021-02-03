@@ -1,0 +1,36 @@
+@media (max-width: 992px) {
+  .tabs {
+    &__inner {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .tabs {
+    &__item {
+      min-width: 100%;
+      min-height: 469px;
+      padding: 0px 5px;
+      &::after {
+        display: none;
+      }
+    }
+
+    &__item-inner {
+      width: 100%;
+      max-width: 300px;
+
+      margin: 0 auto;
+      padding: 34px 24px 32px 24px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .tabs {
+    &__item-text {
+      font-size: 14px;
+    }
+  }
+}

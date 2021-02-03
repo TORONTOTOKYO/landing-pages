@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>Shopino</title>
+  </head>
+  <body>
+    <!--SVG-->
+    <svg style="display: none">
+  <symbol id="power-button" viewBox="0 0 512.101 512.101">
+    <g>
+      <path
+        d="m436.862 75.238c-100.3-100.301-261.29-100.335-361.624 0-100.301 100.3-100.335 261.29 0 361.624 100.3 100.301 261.29 100.335 361.624 0 100.301-100.299 100.335-261.29 0-361.624zm-180.812 406.812c-124.617 0-226-101.383-226-226s101.383-226 226-226 226 101.383 226 226-101.383 226-226 226z"
+      />
+      <path
+        d="m329.703 173.005c-6.197-5.499-15.677-4.934-21.176 1.263-5.499 6.196-4.934 15.677 1.263 21.176 17.324 15.375 27.26 37.465 27.26 60.607 0 44.664-36.336 81-81 81s-81-36.336-81-81c0-23.371 10.101-45.606 27.712-61.005 6.236-5.453 6.872-14.929 1.418-21.166-5.453-6.237-14.929-6.871-21.166-1.418-24.127 21.096-37.965 51.563-37.965 83.589 0 61.206 49.794 111 111 111s111-49.794 111-111c.001-31.714-13.611-61.982-37.346-83.046z"
+      />
+      <path
+        d="m256.05 231.05c8.284 0 15-6.716 15-15v-80c0-8.284-6.716-15-15-15s-15 6.716-15 15v80c0 8.285 6.716 15 15 15z"
+      />
+    </g>
+  </symbol>
+  <symbol id="facebook" viewBox="0 0 155.139 155.139">
+    <g>
+      <path
+        d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184
+		c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452
+		v20.341H37.29v27.585h23.814v70.761H89.584z"
+      />
+    </g>
+  </symbol>
+  <symbol id="google" viewBox="0 0 512 512">
+    <g>
+      <path
+        d="m147.682 173.862c24.86-32.704 64.162-53.862 108.318-53.862 36.326 0 70.479 14.146 96.167 39.833l10.606 10.606 84.853-84.852-10.606-10.606c-48.352-48.352-112.639-74.981-181.02-74.981-68.38 0-132.667 26.629-181.02 74.98-4.389 4.39-8.594 8.914-12.622 13.557z"
+      />
+      <path
+        d="m423.462 449.642c4.643-4.028 9.168-8.233 13.558-12.622 48.351-48.353 74.98-112.64 74.98-181.02 0-15.575-1.41-31.179-4.192-46.377l-2.251-12.299h-264.557v120h136.452c-9.437 18.773-22.936 34.779-39.199 47.109z"
+      />
+      <path
+        d="m311.602 380.208c-17.091 7.623-35.947 11.792-55.602 11.792-44.156 0-83.458-21.158-108.318-53.862l-85.324 85.324c4.028 4.643 8.233 9.168 12.622 13.557 48.353 48.352 112.64 74.981 181.02 74.981 51.916 0 101.464-15.363 143.479-43.915z"
+      />
+      <path
+        d="m131.863 311.531c-7.619-16.965-11.863-35.761-11.863-55.531s4.244-38.566 11.863-55.531l-87.948-87.948c-28.552 42.015-43.915 91.563-43.915 143.479s15.363 101.464 43.915 143.479z"
+      />
+    </g>
+  </symbol>
+  <symbol id="twitter" viewBox="0 0 512 512">
+    <g>
+      <path
+        d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+			c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+			c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+			c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+			c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+			c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+			C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+			C480.224,136.96,497.728,118.496,512,97.248z"
+      />
+    </g>
+  </symbol>
+  <symbol id="star" viewBox="0 -10 511.98685 511">
+    <g>
+      <path
+        d="m510.652344 185.902344c-3.351563-10.367188-12.546875-17.730469-23.425782-18.710938l-147.773437-13.417968-58.433594-136.769532c-4.308593-10.023437-14.121093-16.511718-25.023437-16.511718s-20.714844 6.488281-25.023438 16.535156l-58.433594 136.746094-147.796874 13.417968c-10.859376 1.003906-20.03125 8.34375-23.402344 18.710938-3.371094 10.367187-.257813 21.738281 7.957031 28.90625l111.699219 97.960937-32.9375 145.089844c-2.410156 10.667969 1.730468 21.695313 10.582031 28.09375 4.757813 3.4375 10.324219 5.1875 15.9375 5.1875 4.839844 0 9.640625-1.304687 13.949219-3.882813l127.46875-76.183593 127.421875 76.183593c9.324219 5.609376 21.078125 5.097657 29.910156-1.304687 8.855469-6.417969 12.992187-17.449219 10.582031-28.09375l-32.9375-145.089844 111.699219-97.941406c8.214844-7.1875 11.351563-18.539063 7.980469-28.925781zm0 0"
+        fill="#ffc107"
+      />
+    </g>
+  </symbol>
+  <symbol id="spotify" viewBox="0 0 24 24">
+    <g>
+      <path
+        d="m12 24c6.624 0 12-5.376 12-12s-5.376-12-12-12-12 5.376-12 12 5.376 12 12 12zm4.872-6.344v.001c-.807 0-3.356-2.828-10.52-1.36-.189.049-.436.126-.576.126-.915 0-1.09-1.369-.106-1.578 3.963-.875 8.013-.798 11.467 1.268.824.526.474 1.543-.265 1.543zm1.303-3.173c-.113-.03-.08.069-.597-.203-3.025-1.79-7.533-2.512-11.545-1.423-.232.063-.358.126-.576.126-1.071 0-1.355-1.611-.188-1.94 4.716-1.325 9.775-.552 13.297 1.543.392.232.547.533.547.953-.005.522-.411.944-.938.944zm-13.627-7.485c4.523-1.324 11.368-.906 15.624 1.578 1.091.629.662 2.22-.498 2.22l-.001-.001c-.252 0-.407-.063-.625-.189-3.443-2.056-9.604-2.549-13.59-1.436-.175.048-.393.125-.625.125-.639 0-1.127-.499-1.127-1.142 0-.657.407-1.029.842-1.155z"
+      />
+    </g>
+  </symbol>
+
+  <symbol id="mtv" viewBox="0 0 512 512">
+    <g>
+      <path
+        d="M421,274.519l15.504,38.006L452,274.567V86H279.787L226,139.787L172.213,86H0v340h181v-97.867l45,45l45-45V426h181
+			v-72.057L447.078,366h-21.159L391,280.401v-5.882H421z M361,195.291V366h-30V212.632l-97.493,56.354l-15.014-25.973l173-100
+			l15.014,25.973L361,195.291z"
+      />
+      <polygon
+        points="482.031,201 482,201.076 482,280.454 512,206.963 512,201 		"
+      />
+    </g>
+  </symbol>
+
+  <symbol id="apple" viewBox="0 0 512 512">
+    <g>
+      <g>
+        <path
+          d="M457.081,362.584c-14.003-7.049-47.42-28.262-55.26-72.862c-0.717-4.079-4.601-6.802-8.687-6.088
+			c-4.079,0.717-6.805,4.605-6.088,8.686c8.997,51.185,47.102,75.493,63.188,83.613c-4.334,12.556-14.158,37.284-31.447,62.524
+			c-18.375,26.867-39.2,57.318-70.12,57.904c-31.048,0.514-42.266-19.777-82.011-19.777c-39.752,0-52.398,19.222-81.827,20.388
+			c-27.702,1.06-49.923-27.66-72.124-59.749c-41.025-59.34-73.555-169.266-31.209-242.766
+			c17.707-30.733,47.025-51.569,80.435-57.165c4.085-0.684,6.842-4.551,6.158-8.637s-4.548-6.845-8.637-6.158
+			c-37.849,6.34-71.001,29.839-90.956,64.472c-45.263,78.562-12.643,194.408,31.87,258.788
+			c18.316,26.475,45.829,66.248,83.046,66.244c33.553,0,46.154-20.414,83.243-20.416c36.163,0,46.793,20.438,82.29,19.774
+			c38.656-0.733,62.814-36.053,82.22-64.43c18.326-26.754,28.72-52.962,33.283-66.204
+			C466.864,373.714,463.697,365.915,457.081,362.584z"
+        />
+      </g>
+    </g>
+    <g>
+      <g>
+        <path
+          d="M363.875,14.506c-0.188-8.95-8.289-15.691-17.175-14.331c-58.293,8.905-100.445,65.247-98.593,114.719
+			c0.299,7.943,6.883,14.251,14.771,14.251c0.14,0,0.28-0.002,0.42-0.006C317.845,127.596,365.066,70.92,363.875,14.506z
+			 M263.091,114.138c-0.874-25.268,12.409-49.994,25.186-64.767c14.729-17.245,39.083-31.046,60.605-34.365
+			C349.781,62.719,309.703,112.647,263.091,114.138z"
+        />
+      </g>
+    </g>
+    <g>
+      <g>
+        <path
+          d="M447.658,165.468c-22.62-28.835-54.825-43.14-91.835-45.9c-42.603-3.154-78.92,22.862-95.694,22.862
+			c-13.729,0-37.375-14.517-62.942-19.715c-4.062-0.828-8.019,1.796-8.845,5.855c-0.825,4.059,1.796,8.019,5.855,8.845
+			c25.02,5.088,47.74,20.016,65.932,20.016c21.872,0,55.367-25.811,94.582-22.904c32.643,2.436,61.016,14.63,81.035,40.061
+			c-13.025,9.383-43.764,35.909-49.606,80.457c-0.538,4.107,2.355,7.873,6.461,8.412c0.331,0.043,0.66,0.064,0.985,0.064
+			c3.708,0,6.931-2.75,7.428-6.525c5.09-38.814,32.158-62.078,43.558-70.277C451.318,181.869,452.966,172.233,447.658,165.468z"
+        />
+      </g>
+    </g>
+  </symbol>
+
+  <symbol id="yandex" viewBox="0 0 485 485">
+    <g>
+      <path
+        d="m208.464844 400 53.222656-117.585938h23.515625v117.585938h33.414063v-315h-59.171876c-37.664062 0-82.539062 39.609375-82.539062 103.964844 0 64.367187 56.3125 90.355468 56.3125 90.355468l-66.835938 120.679688zm20.636718-160.847656c-8.222656-10.332032-15.382812-27.523438-15.382812-56.058594 0-62.507812 35.941406-70.582031 40.898438-71.394531.355468-.058594.703124-.078125 1.058593-.078125h28.59375v142.945312h-22.246093c-12.71875 0-25-5.464844-32.921876-15.414062zm0 0"
+      />
+      <path d="m0 0v485h485v-485zm455 455h-425v-425h425zm0 0" />
+    </g>
+  </symbol>
+  <symbol id="logo" viewBox="0 0 329.922 329.922">
+    <g>
+      <path
+        d="M79.812,113.981c19.062,0,31.215,5.586,37.154,17.079c1.218,2.357,3.321,4.132,5.848,4.938
+		c2.526,0.804,5.27,0.572,7.627-0.645l6.219-3.214c4.906-2.536,6.828-8.568,4.292-13.475c-7.469-14.454-24.14-31.684-61.141-31.684
+		c-42.574,0-64.849,24.577-64.849,48.855c0,33.961,25.471,42.986,50.106,51.715c2.029,0.719,4.105,1.454,6.223,2.221
+		c3.13,1.132,6.257,2.191,9.336,3.234c22.893,7.752,33.896,12.256,33.896,29.796c0,21.822-23.908,24.179-34.187,24.179
+		c-30.435,0-38.429-13.633-40.485-21.76c-1.354-5.354-6.794-8.594-12.147-7.242l-6.786,1.717c-2.571,0.651-4.779,2.296-6.137,4.574
+		c-1.358,2.278-1.756,5.003-1.105,7.574c1.799,7.11,6.087,17.445,16.294,26.297c12.121,10.511,29.066,15.84,50.365,15.84
+		c17.607,0,32.62-4.554,43.415-13.167c11.627-9.276,17.772-22.42,17.772-38.012c0-16.708-6.115-29.972-18.175-39.424
+		c-9.912-7.769-22.189-11.926-34.062-15.946c-2.913-0.986-5.924-2.006-8.814-3.052c-2.153-0.778-4.265-1.526-6.388-2.279
+		c-24.403-8.646-32.123-12.059-32.123-26.265C41.963,125.241,55.229,113.981,79.812,113.981z"
+      />
+      <path
+        d="M316.059,125.293c-1.328-4.088-5.12-6.869-9.418-6.909l-116.514-1.083L153.093,6.821C151.727,2.746,147.909,0,143.611,0
+		c-4.298,0-8.115,2.746-9.482,6.821l-23.793,70.98c7.107,2.049,13.614,4.913,19.47,8.595c1.721,1.082,3.373,2.234,4.97,3.444
+		l8.834-26.353l24.765,73.879c1.355,4.043,5.125,6.781,9.389,6.821l77.906,0.724l-62.61,46.374
+		c-3.427,2.538-4.867,6.97-3.587,11.037l23.391,74.322l-58.051-41.361c-1.744,9.383-5.499,17.863-11.163,25.198l94.854,67.585
+		c1.737,1.237,3.77,1.855,5.803,1.855c0.006,0,0.012,0,0.02,0c5.523,0,10-4.477,10-10c0-1.278-0.24-2.501-0.677-3.625
+		l-34.786-110.525l93.635-69.352C315.954,133.86,317.387,129.381,316.059,125.293z"
+      />
+    </g>
+  </symbol>
+  <symbol id="closed" viewBox="0 0 409.806 409.806">
+    <g>
+      <path
+        d="M228.929,205.01L404.596,29.343c6.78-6.548,6.968-17.352,0.42-24.132c-6.548-6.78-17.352-6.968-24.132-0.42
+			c-0.142,0.137-0.282,0.277-0.42,0.42L204.796,180.878L29.129,5.21c-6.78-6.548-17.584-6.36-24.132,0.42
+			c-6.388,6.614-6.388,17.099,0,23.713L180.664,205.01L4.997,380.677c-6.663,6.664-6.663,17.468,0,24.132
+			c6.664,6.662,17.468,6.662,24.132,0l175.667-175.667l175.667,175.667c6.78,6.548,17.584,6.36,24.132-0.42
+			c6.387-6.614,6.387-17.099,0-23.712L228.929,205.01z"
+      />
+    </g>
+  </symbol>
+</svg>
+
+    <!--ОСНОВНОЙ HTML-->
+    <!--HEADER-->
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a class="header__link" href="#intro">SH<span>O</span>PNO</a>
+      </div>
+      <!--burger-->
+      <div class="header__burger">
+        <span></span>
+      </div>
+      <ul class="header__menu">
+        <li><a class="header__menu-link" href="#about">О нас</a></li>
+        <li><a class="header__menu-link" href="#works">Работы</a></li>
+        <li><a class="header__menu-link" href="#services">Услуги</a></li>
+        <li><a class="header__menu-link" href="#team">Команда</a></li>
+        <li><a class="header__menu-link" href="#say">Мысли</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<!--INTRO-->
+<section id="intro" class="intro">
+  <div class="container">
+    <div class="intro__wrapper">
+      <div class="intro__inner">
+        <div class="intro__title">
+          На связи <span class="blue">SHOPNO!</span>
+        </div>
+        <div class="intro__title">
+          <span class="blue">Место,</span> где живет креатив.
+        </div>
+        <button class="intro__button">Связаться с нами</button>
+        <button class="intro__button-power">
+          <svg class="intro__btn-icon">
+            <use xlink:href="#power-button"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="popup">
+      <div class="popup__overlay popup__overlay--intro">
+        <button class="popup__button-closed">
+          <svg class="popup__button-icon">
+            <use xlink:href="#closed"></use>
+          </svg>
+        </button>
+        <div class="popup__modal-wrapper popup__modal-wrapper--intro">
+          <div class="popup__modal popup__modal--intro form">
+            <form class="form__content" method="post">
+              <div class="form__item">
+                <input class="form__input" type="text" placeholder="Name*" />
+              </div>
+              <div class="form__item">
+                <input class="form__input" type="text" placeholder="Subject*" />
+              </div>
+              <div class="form__item">
+                <input class="form__input" type="text" placeholder="E-mail*" />
+              </div>
+              <div class="form__item">
+                <textarea
+                  class="form__textarea"
+                  placeholder="Message*"
+                ></textarea>
+              </div>
+              <div class="form__item">
+                <button class="form__button" type="submit">send message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!--ABOUT-->
+<section id="about" class="about">
+  <div class="container">
+    <div class="about__heading heading">
+      <div class="heading__title">Кто мы такие?</div>
+      <div class="heading__subtitle">Digital-агенство, которое Вас слышит.</div>
+    </div>
+
+    <div class="about__wrapper">
+      <div class="slider" data-aos="fade-down">
+        <div class="slider__item">
+          <img src="img/about/img1.jpg" alt="" />
+        </div>
+        <div class="slider__item">
+          <img src="img/about/img2.jpg" alt="" />
+        </div>
+        <div class="slider__item">
+          <img src="img/about/img3.jpg" alt="" />
+        </div>
+      </div>
+      <div class="content" data-aos="fade-up" data-aos-delay="100">
+        <div class="content__body">
+          <div class="content__title">Медиастратегия</div>
+          <div class="content__text">
+            <p>
+              Первоочередная задача рекламной кампании - донесение сообщения до
+              потенциального потребителя. Сделать это невозможно без ответа на
+              несколько вопросов: кто является потребителем? Как он ведёт себя в
+              сети? Где его искать? Как установить с ним контакт? Сколько это
+              будет стоить?
+            </p>
+            <p>
+              Медиастратегия, составленная на этапе подготовки продвижения
+              продукта, ответит на эти вопросы и приведет нас к следующему
+              этапу: созданию точного и эффективного медиаплана.
+            </p>
+            <div class="content__title">Почему мы делаем это круто?</div>
+            <p>
+              У нас очень большой опыт и самые лучшие сотрудники на этом рынке,
+              можете в этом не сомневаться.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!--WORKS-->
+<section id="works" class="works">
+  <div class="container">
+    <div class="works__heading heading">
+      <div class="heading__title">Эскизы работ</div>
+      <div class="heading__subtitle">
+        Наши художники с нуля напишут концепт вашего проекта.
+      </div>
+    </div>
+    <div class="works__wrapper">
+      <div class="works__image">
+        <img src="img/works/img1.jpg" alt="" />
+      </div>
+      <div class="works__image">
+        <img src="img/works/img2.jpg" alt="" />
+      </div>
+      <div class="works__image">
+        <img src="img/works/img3.jpg" alt="" />
+      </div>
+      <div class="works__image">
+        <img src="img/works/img4.jpg" alt="" />
+      </div>
+      <div class="works__image">
+        <img src="img/works/img5.jpg" alt="" />
+      </div>
+      <div class="works__image">
+        <img src="img/works/img6.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!--SERVICES-->
+<section id="services" class="services">
+  <div class="container">
+    <div class="services__heading heading">
+      <div class="heading__title">Услуги</div>
+      <div class="heading__subtitle">
+        Начиная от написания текста, заканчивая созданием сайта и его
+        наполнением. Мы все сделаем.
+      </div>
+    </div>
+    <div class="services__wrapper">
+      <!--1-->
+      <div class="services__row">
+        <div
+          class="services__item-body services__item-body--big"
+          data-target="one"
+        >
+          <div class="services__item">
+            <img src="img/services/img1.jpg" alt="" />
+            <div class="services__content">
+              <div class="services__content-title">Медиа</div>
+              <div class="services__content-text">
+                Определит необходимые частоту и форматы размещения для
+                эффективности рекламной кампании.
+              </div>
+              <button class="services__content-button" data-path="one">
+                Подробнее ➡
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="services__item-body services__item-body--small"
+          data-target="second"
+          data-size="small"
+        >
+          <div class="services__item">
+            <img src="img/services/img2.jpg" alt="" />
+            <div class="services__content">
+              <div class="services__content-title">Перформанс</div>
+              <div class="services__content-text">
+                Знает, как моментально увеличить продажи любого товара.
+              </div>
+              <button class="services__content-button" data-path="second">
+                Подробнее ➡️
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--2-->
+      <div class="services__row">
+        <div
+          class="services__item-body services__item-body--big"
+          data-target="three"
+        >
+          <div class="services__item">
+            <img src="img/services/img3.jpg" alt="" />
+            <div class="services__content">
+              <div class="services__content-title">Креатив</div>
+              <div class="services__content-text">
+                Сгенерирует идею рекламного сообщения, которую запомнит не
+                только целевая аудитория, но и весь мир.
+              </div>
+              <button class="services__content-button" data-path="three">
+                Подробнее ➡️
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="services__item-body services__item-body--small"
+          data-target="four"
+          data-size="small"
+        >
+          <div class="services__item">
+            <img src="img/services/img4.jpg" alt="" />
+            <div class="services__content">
+              <div class="services__content-title">SMM</div>
+              <div class="services__content-text">
+                Определит самые эффективные социальные сети и способы
+                продвижения в них.
+              </div>
+              <button class="services__content-button" data-path="four">
+                Подробнее ➡️
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--3-->
+      <div class="services__row">
+        <div
+          class="services__item-body services__item-body--small"
+          data-target="five"
+          data-size="small"
+        >
+          <div class="services__item">
+            <img src="img/services/img5.jpg" alt="" />
+            <div class="services__content">
+              <div class="services__content-title">Стратегия</div>
+              <div class="services__content-text">
+                Построит пошаговую стратегию рекламной кампании, которая
+                приведет к достижению заданных целей.
+              </div>
+              <button class="services__content-button" data-path="five">
+                Подробнее ➡️
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="services__item-body services__item-body--big"
+          data-target="six"
+        >
+          <div class="services__item">
+            <img src="img/services/img6.jpg" alt="" />
+            <div class="services__content">
+              <div class="services__content-title">Продакшн</div>
+              <div class="services__content-text">
+                Реализует самые смелые, яркие и неординарные идеи — все захотят
+                такой же сайт или приложение, как у вас!
+              </div>
+              <button class="services__content-button" data-path="six">
+                Подробнее ➡️
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--TEAM-->
+<section id="team" class="team">
+  <div class="container">
+    <div class="team__heading heading">
+      <div class="heading__title">Команда</div>
+      <div class="heading__subtitle">
+        Поставьте нам задачу и мы решим её на максимальном уровне.
+      </div>
+    </div>
+    <div class="team__wrapper">
+      <div
+        class="team__item"
+        data-card="oneWorker"
+        data-aos="zoom-in"
+        data-aos-delay="50"
+      >
+        <img src="img/team/img1.jpg" alt="" />
+        <div class="team__person" data-target="oneWorker">
+          <div class="team__person-wrapper">
+            <div class="team__person-name">Милена Тимченко</div>
+            <div class="team__person-about">Специалист в области диазйна.</div>
+            <div class="team__social">
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#google"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="team__item"
+        data-card="secondWorker"
+        data-aos="zoom-in"
+        data-aos-delay="100"
+      >
+        <img src="img/team/img2.jpg" alt="" />
+        <div class="team__person" data-target="secondWorker">
+          <div class="team__person-wrapper">
+            <div class="team__person-name">Иван Бочтанов</div>
+            <div class="team__person-about">
+              Специалист в области рекламы недвижимости.
+            </div>
+            <div class="team__social">
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#google"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="team__item"
+        data-card="threeWorker"
+        data-aos="zoom-in"
+        data-aos-delay="150"
+      >
+        <img src="img/team/img3.jpg" alt="" />
+        <div class="team__person" data-target="threeWorker">
+          <div class="team__person-wrapper">
+            <div class="team__person-name">Дмитрий Серебров</div>
+            <div class="team__person-about">
+              Лучший креативный-диазйнер Москвы по итогам WCS2020
+            </div>
+            <div class="team__social">
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#google"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="team__item"
+        data-card="fourWorker"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+      >
+        <img src="img/team/img4.jpg" alt="" />
+        <div class="team__person" data-target="fourWorker">
+          <div class="team__person-wrapper">
+            <div class="team__person-name">Иван Борода</div>
+            <div class="team__person-about">
+              В прошлом - барбер, в настоящем - никто.
+            </div>
+            <div class="team__social">
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#google"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="team__item"
+        data-card="fiveWorker"
+        data-aos="zoom-in"
+        data-aos-delay="250"
+      >
+        <img src="img/team/img5.jpg" alt="" />
+        <div class="team__person" data-target="fiveWorker">
+          <div class="team__person-wrapper">
+            <div class="team__person-name">Анастасия Черданцева</div>
+            <div class="team__person-about">
+              Специалист в области гармонизации дизайна интерьера. Чемпион
+              WSA2020
+            </div>
+            <div class="team__social">
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#google"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="team__item"
+        data-card="sixWorker"
+        data-aos="zoom-in"
+        data-aos-delay="300"
+      >
+        <img src="img/team/img6.jpg" alt="" />
+        <div class="team__person" data-target="sixWorker">
+          <div class="team__person-wrapper">
+            <div class="team__person-name">Горинов Максим</div>
+            <div class="team__person-about">
+              Креативный директор с многолетним опытом. Лучший в своем деле.
+            </div>
+            <div class="team__social">
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
+              <a class="team__social-link" href="#">
+                <svg>
+                  <use xlink:href="#google"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!--SAY-->
+<section id='say' class="say">
+  <div class="container">
+    <div class="say__heading heading">
+      <div class="heading__title">Навыки</div>
+      <div class="heading__subtitle">
+        В нашей команде работают лучшие специалисты своих отраслей.
+      </div>
+    </div>
+    <div class="slider-say">
+        <!--1-->
+        <div class="slider-say__item">
+            <div class="slider-say__image">
+                <img src="img/say/img1.jpg" alt="">
+            </div>
+            <div class="slider-say__body">
+            <div class="slider-say__person">Милена Тимченко</div>
+            <div class="slider-say__info">
+             Милена Тимченко — не только поставщик высокопрофессиональных услуг и удобного сервиса по отслеживанию кампаний. Это еще и источник компетентных оперативных консультаций».
+            </div>
+            <div class="slider-say__stars">
+                <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+            </div>
+            </div>
+        </div>
+        <!--2-->
+           <div class="slider-say__item">
+                     <div class="slider-say__image">
+                <img src="img/say/img2.jpg" alt="">
+            </div>
+            <div class="slider-say__body">
+            <div class="slider-say__person">Иван Бочтанов</div>
+            <div class="slider-say__info">
+               «С Иваном работаем уже не первый год. Отмечу не только качественное размещение контекстной рекламы, но и отличную работу менеджеров, оперативную реакцию на запросы, помощь с настройкой целей, коллтрекингом и многим другим. Рекомендую Ивана как ответственного и добросовестного подрядчика»
+            </div>
+            <div class="slider-say__stars">
+                <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+            </div>
+            </div>
+            </div>
+            <!--3-->
+             <div class="slider-say__item">
+                     <div class="slider-say__image">
+                <img src="img/say/img3.jpg" alt="">
+            </div>
+            <div class="slider-say__body">
+            <div class="slider-say__person">Дмитрий Серебров</div>
+            <div class="slider-say__info">
+               «Мы удачно сочетаем инхаусную команду и аккаунтинг, использование западной технологии и системы Marilyn. Близкое сотрудничество с агентством дает эффективный результат в виде отдачи от рекламных кампаний.»
+            </div>
+            <div class="slider-say__stars">
+                <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+            </div>
+            </div>
+            </div>
+             <!--4-->
+            <div class="slider-say__item">
+                     <div class="slider-say__image">
+                <img src="img/say/img4.jpg" alt="">
+            </div>
+            <div class="slider-say__body">
+            <div class="slider-say__person">Иван Борода</div>
+            <div class="slider-say__info">
+               «Рекомендую данного парня как надежного и ответственного подрядчика. Мы очень довольны сотрудничеством и уверены в его продолжении, ведь когда наши клиенты в итоге получают хороший результат по всем рекламным кампаниям — это самый важный показатель»
+            </div>
+            <div class="slider-say__stars">
+                <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+            </div>
+            </div>
+            </div>
+              <!--5-->
+            <div class="slider-say__item">
+                    <div class="slider-say__image">
+                <img src="img/say/img5.jpg" alt="">
+            </div>
+            <div class="slider-say__body">
+            <div class="slider-say__person">Анастасия Черданцева</div>
+            <div class="slider-say__info">
+               «Сотрудники агентства внимательно и проактивно подходят к решению наших задач, помогают с аналитикой, задают правильные вопросы и предлагают оптимальные решения. Самое главное, что они не просто готовы погружаться в специфику нашего бизнеса, но и сами считают это обязательным условием сотрудничества.»
+            </div>
+            <div class="slider-say__stars">
+                <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+            </div>
+            </div>
+            </div>
+              <!--6-->
+                   <div class="slider-say__item">
+                    <div class="slider-say__image">
+                <img src="img/say/img6.jpg" alt="">
+            </div>
+            <div class="slider-say__body">
+            <div class="slider-say__person">Горинов Максим</div>
+            <div class="slider-say__info">
+               «Рекомендую Блондинка.Ру как надежного и ответственного подрядчика. Мы очень довольны сотрудничеством и уверены в его продолжении, ведь когда наши клиенты в итоге получают хороший результат по всем рекламным кампаниям — это самый важный показатель»
+            </div>
+            <div class="slider-say__stars">
+                <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+                 <svg class='slider-say__stars-item'>
+                    <use xlink:href='#star'></use>
+                </svg>
+            </div>
+            </div>
+            </div>
+              
+    </div>
+    </section><!--PARTNERS-->
+<section id="partners" class="partners">
+  <div class="container">
+    <div class="partners__heading heading">
+      <div class="heading__title">Наши партнеры</div>
+      <div class="heading__subtitle partners__subtitle">
+        Многие компании уже доверили нам свой фирменный стиль
+      </div>
+    </div>
+    <!--1-->
+    <div class="partners__wrapper">
+      <div class="partners__item" data-aos="fade-up">
+        <a
+          href="https://www.mtv.ru/"
+          class="partners__item-pic partners__item-pic--tap"
+        >
+          <svg class="partners__item-icon partners__item-icon_darkred">
+            <use xlink:href="#mtv"></use>
+          </svg>
+        </a>
+        <div class="partners__item-name">mtv</div>
+      </div>
+      <!--2-->
+      <div class="partners__item" data-aos="fade-up">
+        <a href="https://www.spotify.com/" class="partners__item-pic">
+          <svg class="partners__item-icon partners__item-icon_green">
+            <use xlink:href="#spotify"></use>
+          </svg>
+        </a>
+        <div class="partners__item-name">spotify</div>
+      </div>
+      <!--3-->
+      <div class="partners__item" data-aos="fade-up">
+        <a href="https://music.yandex.ru/" class="partners__item-pic">
+          <svg class="partners__item-icon partners__item-icon_red">
+            <use xlink:href="#yandex"></use>
+          </svg>
+        </a>
+        <div class="partners__item-name">yandex.music</div>
+      </div>
+      <!--4-->
+      <div class="partners__item" data-aos="fade-up">
+        <a
+          href="https://www.apple.com/ru/apple-music/"
+          class="partners__item-pic"
+        >
+          <svg class="partners__item-icon partners__item-icon_gold">
+            <use xlink:href="#apple"></use>
+          </svg>
+        </a>
+        <div class="partners__item-name">apple.music</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!--CONTACTS-->
+<section id="contacts" class="contacts">
+  <div class="container">
+    <div class="contacts__wrapper">
+      <div class="contacts__form form">
+        <form action="#" method="POST" id="form" class="form__content">
+          <div class="form__item">
+            <input
+              id="formName"
+              class="form__input _req"
+              type="text"
+              name="name"
+              placeholder="Имя*"
+            />
+          </div>
+          <div class="form__item">
+            <input
+              class="form__input _req"
+              type="text"
+              name="nameCompany"
+              placeholder="Название Компании*"
+            />
+          </div>
+          <div class="form__item">
+            <input
+              id="formEmail"
+              class="form__input _req _email"
+              type="text"
+              name="email"
+              placeholder="Ваш электронный адрес*"
+            />
+          </div>
+          <div class="form__title">Численность вашей компании составляет:</div>
+          <div class="form__item">
+            <div class="options">
+              <div class="options__item">
+                <input
+                  type="radio"
+                  id="formsmallCompany"
+                  class="options__input"
+                  name="companySize"
+                  value="smallCompany"
+                  checked
+                />
+                <label for="formsmallCompany" class="options__label"
+                  >от 3 до 10 человек</label
+                >
+              </div>
+
+              <div class="options__item">
+                <input
+                  type="radio"
+                  id="formBigCompany"
+                  class="options__input"
+                  name="companySize"
+                  value="BigCompany"
+                />
+                <label for="formBigCompany" class="options__label"
+                  >Больше 10 человек</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="form__item">
+            <textarea
+              id="formMessage"
+              class="form__textarea _req"
+              name="formMessage"
+              placeholder="Сообщение*"
+            ></textarea>
+          </div>
+          <div class="form__item">
+            <div class="form__title">Прикрепить тестовое задание для нас:</div>
+            <div class="file">
+              <div class="file__item">
+                <input
+                  id="formImage"
+                  accept=".jpg, .png, .gif"
+                  type="file"
+                  name="image"
+                  class="file__input"
+                />
+                <div class="file__button">Выбрать</div>
+              </div>
+              <div id="formPreview" class="file__prieview"></div>
+            </div>
+          </div>
+          <div class="form__item">
+            <div class="checkbox">
+              <input
+                id="formAgreement"
+                type="checkbox"
+                name="agreement"
+                class="checkbox__input _req"
+              />
+              <label for="formAgreement" class="checkbox__label"
+                ><span
+                  >Я даю согласие на обработку своих персональных данных, в
+                  соответствии с
+
+                  <a href="">Условиями настоящего соглашения*</a>
+                </span></label
+              >
+            </div>
+          </div>
+          <div class="form__item">
+            <button class="form__button" type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+      <div class="contacts__data">
+        <ul class="contacts__data-info">
+          <li class="contacts__data-item">г.Челябинск, ул.Чайковского, д3</li>
+          <li class="contacts__data-item">
+            г.Екатеринбург, ул. Володарского, д23
+          </li>
+          <li class="contacts__data-item">
+            Телефон: <a href="tel:+7 967 864 08 75">+7 967 864 08 75</a>
+          </li>
+          <li class="contacts__data-item">Факс: +456456 54546</li>
+          <li class="contacts__data-item">
+            Web: <a href="https://vk.com/">www.designagency.net</a>
+          </li>
+          <li class="contacts__data-item">
+            E-mail:
+            <a href="mailto:info@designagency.net">info@designagency.net</a>
+          </li>
+        </ul>
+        <div class="contacts__data-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2279.1259156286415!2d61.550058716029!3d55.16357314474795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c5f210e423b343%3A0x89463b8547b5f7e3!2z0JTQtdGC0YHQutC40Lkg0YHQsNC0IOKEliA0NA!5e0!3m2!1sru!2sru!4v1605511154734!5m2!1sru!2sru"
+            width="600"
+            height="450"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            s
+            tabindex="0"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!--POPUP CONTACTS-->
+
+    <div class="popup">
+      <div class="popup__overlay popup__overlay--contacts">
+        <button class="popup__button-closed popup__button-closed--intro">
+          <svg class="popup__button-icon popup__button-icon--contacts">
+            <use xlink:href="#closed"></use>
+          </svg>
+        </button>
+        <div class="popup__modal-wrapper popup__modal-wrapper--contacts">
+          <div class="popup__modal form popup__modal--contacts">
+            <div class="popup__modal-warning">
+              <div class="popup__modal-warning-text">Пожалуйста, заполните поля, отмеченные красным.</div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--FOOTER-->
+<section class="footer">
+  <div class="container">
+    <div class="footer-wrapper">
+      <div class="footer__item">
+        <div class="footer__item-title">Подпишитесь на нас</div>
+        <div class="footer__item-social">
+          <a class="footer__item-link" href="#" alt="">
+            <svg>
+              <use xlink:href="#google"></use>
+            </svg>
+          </a>
+          <!--2-->
+          <a class="footer__item-link" href="#" alt="">
+            <svg>
+              <use xlink:href="#facebook"></use>
+            </svg>
+          </a>
+          <!--3-->
+          <a class="footer__item-link" href="#" alt="">
+            <svg>
+              <use xlink:href="#twitter"></use>
+            </svg>
+          </a>
+          <!--4-->
+          <a class="footer__item-link" href="#" alt="">
+            <svg>
+              <use xlink:href="#yandex"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="footer__item-copyright">
+          Все права незащищены. Разработано TORONTOTOKIO
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <script
+      src="https://kit.fontawesome.com/6ccbf80ddd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

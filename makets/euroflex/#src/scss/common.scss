@@ -1,0 +1,271 @@
+// <----------------------- ОБЩИЕ СТИЛИ ----------------------->
+
+// <----------------------- Кнопка  ----------------------->
+.button {
+  border-radius: 2px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #fff;
+
+  background-color: #ff5c5c;
+
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.24);
+  transition: background 0.4s linear;
+  &:hover {
+    background: #c51e1e;
+  }
+}
+
+// <----------------------- Заголовок  ----------------------->
+.heading {
+  @include fontText($Roboto, 32px, 500);
+  color: $textTitle;
+  text-align: center;
+}
+
+// <----------------------- Форма  ----------------------->
+.form {
+  height: 100%;
+  &__wrapper {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 20px 60px 0px 60px;
+    border-radius: 2px;
+
+    background-color: #fff;
+
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16),
+      0px 2px 4px rgba(0, 0, 0, 0.24);
+  }
+
+  &__title {
+    margin-bottom: 28px;
+
+    @include fontText($Roboto, 23px, 700);
+    color: #444444;
+    line-height: 1.4;
+  }
+  &__subtitle {
+    margin-bottom: 35px;
+
+    @include fontText($Roboto, 14px, 400);
+    color: #80a2c5;
+  }
+  &__item {
+    margin-bottom: 20px;
+    &:nth-child(5) {
+      margin-bottom: 10px;
+      flex-grow: 1;
+    }
+  }
+  &__file-title {
+    margin-bottom: 10px;
+    @include fontText($Roboto, 15px, 700);
+  }
+  &__label {
+    display: block;
+
+    @include fontText($Roboto, 16px, 400);
+    color: #444444;
+    line-height: 1.7;
+  }
+  &__input {
+    width: 100%;
+    padding: 8px 0px 8px 10px;
+    border: 2px solid transparent;
+    border-radius: 2px;
+
+    @include fontText($Roboto, 14px, 400);
+
+    background: #edeff2;
+
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.12);
+    &:focus {
+      border-color: #ff5c5c;
+    }
+  }
+  &__button {
+    width: 100%;
+    padding: 18px 32px;
+    margin-bottom: 20px;
+    @include fontText($Roboto, 14px, 700);
+    color: #fff;
+    text-transform: uppercase;
+
+    background: #ff5c5c;
+
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16),
+      0px 2px 4px rgba(0, 0, 0, 0.24);
+    transition: background 0.4s linear;
+    &:hover {
+      background: #c51e1e;
+    }
+  }
+  &__confidentiality {
+    padding-bottom: 22px;
+
+    @include fontText($Roboto, 10px, 400);
+    color: #bcbfc4;
+    text-align: center;
+  }
+}
+
+.file {
+  display: inline-flex;
+  flex-direction: column;
+  &__item {
+    position: relative;
+  }
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    font-size: 0;
+
+    cursor: pointer;
+  }
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0px 10px;
+    border-radius: 10px;
+
+    @include fontText($Roboto, 15px, 400);
+    color: #fff;
+
+    background: #ff5c5c;
+    &:hover {
+      background: #c51e1e;
+    }
+  }
+  &__prieview {
+    display: inline-block;
+    max-width: 100px;
+
+    padding: 5px;
+    & img {
+      max-width: 100%;
+      height: 50px;
+    }
+  }
+}
+
+// <----------------------- POPUP  ----------------------->
+
+.popup {
+  position: relative;
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.26);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__modal {
+    transform: scale(0);
+
+    transition: transform 0.3s ease-in-out;
+    &--visible {
+      transform: scale(1);
+    }
+  }
+  &__button-closed {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: #fff;
+
+    transition: background-color 0.3s linear;
+    & svg {
+      fill: #000;
+      height: 12px;
+
+      transition: fill 0.3s linear;
+    }
+    &:hover {
+      background-color: #ff5c5c;
+      & svg {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+// // <----------------------- PHONE-BUTTON  ----------------------->
+
+.phone-call {
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+  right: 70px;
+
+  width: 100px;
+  height: 100px;
+
+  &__svg {
+    height: 100px;
+    fill: #2ee609;
+
+    transition: fill 0.4s linear;
+    &:hover {
+      fill: #2bff00;
+    }
+  }
+}
+
+// // <----------------------- ARROW  ----------------------->
+
+.arrow {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  left: 70px;
+
+  width: 100px;
+  height: 100px;
+  &__svg {
+    height: 100px;
+    fill: #ff5c5c;
+
+    transition: fill 0.2s linear;
+    &:hover {
+      fill: #e71a1a;
+    }
+  }
+}

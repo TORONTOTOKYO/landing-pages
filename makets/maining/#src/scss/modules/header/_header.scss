@@ -1,0 +1,83 @@
+.logo {
+  width: 170px;
+}
+
+.nav {
+  transition: right 0.2s ease-in-out;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    margin-left: 100px;
+  }
+  &.active-menu {
+    right: 0;
+  }
+}
+
+@include btn__split($colorPrimary, $colorSecondary, $black);
+
+// BURGER
+
+.burger {
+  position: relative;
+  z-index: 200;
+
+  display: none;
+  width: 50px;
+  height: 40px;
+
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: #95be5b; //Цвет верхней и нижней полосы
+
+    transition: all 0.3s ease-in-out;
+  }
+  &::after {
+    bottom: 5px;
+    left: 0;
+  }
+  &::before {
+    top: 5px;
+    left: 0;
+  }
+  &__line {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: #95be5b; // Цвет свердней полосы
+
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+  }
+  &.active {
+    &::before {
+      top: 8px;
+
+      background-color: #95be5b;
+    }
+    &::after {
+      bottom: 10px;
+
+      background-color: #95be5b;
+    }
+    & .burger__line {
+      opacity: 0;
+    }
+  }
+}

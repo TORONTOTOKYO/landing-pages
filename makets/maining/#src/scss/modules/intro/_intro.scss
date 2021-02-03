@@ -1,0 +1,86 @@
+.intro {
+  background: url(../img/intro/background.png) center no-repeat,
+    url(../img/intro/background2.png) 100% 230px no-repeat;
+  background-size: 100% auto, 100% auto;
+  &__inner {
+    position: relative;
+    min-height: 600px;
+    @include flexbox(center, center, row);
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 150px;
+      right: 150px;
+      z-index: 1;
+      width: 65px;
+      height: 65px;
+
+      background: url(../img/intro/Ripple.svg) center no-repeat;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 150px;
+      left: 0px;
+      z-index: 1;
+      width: 48px;
+      height: 48px;
+
+      background: url(../img/intro/ETH.svg) center no-repeat;
+    }
+  }
+  &__content {
+    width: 100%;
+    max-width: 840px;
+
+    color: $blacktext;
+    text-align: center;
+  }
+  &__title {
+    position: relative;
+    z-index: 20;
+
+    margin-bottom: 55px;
+
+    @include fontText($Gotham, 60px, 700);
+
+    letter-spacing: 2px;
+    line-height: 1.2;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 170px;
+      left: -70px;
+      z-index: 1;
+      width: 56px;
+      height: 56px;
+
+      background: url(../img/intro/FCT.svg) center no-repeat;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -90px;
+      right: -90px;
+      z-index: 1;
+      width: 104px;
+      height: 104px;
+
+      background: url(../img/intro/BTC.svg) center no-repeat;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 55px;
+
+    @include fontText($Gotham, 24px, 400);
+  }
+  &__buttons-container {
+    &:first-child {
+      margin-right: 30px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+  }
+}

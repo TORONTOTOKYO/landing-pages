@@ -1,0 +1,144 @@
+.say {
+  margin-bottom: 120px;
+  padding-bottom: 100px;
+  background-color: #f9fbfb;
+  &__heading {
+    padding-top: 120px;
+    margin-bottom: 130px;
+  }
+}
+
+// SLIDER
+.slider-say {
+  position: relative;
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+  &__image {
+    width: 41%;
+    display: flex;
+    justify-content: center;
+    padding: 0px 7.5px;
+
+    background: url(../img/say/bb.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    & img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__body {
+    margin-left: 14px;
+    padding: 0px 80px;
+    width: 59%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: #eaebed;
+  }
+  &__person {
+    margin-bottom: 30px;
+
+    @include fontText($Merriweather-bold, 20px, 700);
+  }
+  &__info {
+    margin-bottom: 35px;
+
+    @include fontText($Raleway, 16px, 400);
+    color: #000000;
+    line-height: 1.5;
+
+    opacity: 0.75;
+  }
+  &__stars {
+    display: flex;
+  }
+  &__stars-item {
+    display: block;
+    width: 16px;
+    height: 14px;
+    margin-right: 5px;
+  }
+}
+
+/* Точки (булиты) */
+.slider-say .slick-dots {
+  position: absolute;
+  bottom: -59px;
+  left: 212px;
+
+  display: flex;
+  justify-content: flex-start;
+}
+.slider-say .slick-dots li {
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+/* Активная точка */
+.slider-say .slick-dots li.slick-active button {
+  background-color: #71f6eb;
+}
+/* Элемент точки */
+.slider-say .slick-dots li button {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+
+  font-size: 0;
+
+  background-color: #d0d0d0;
+}
+
+/* Стрелка */
+.slider-say .slick-arrow {
+  position: absolute;
+  z-index: 10;
+
+  bottom: -59px;
+
+  width: 14px;
+  height: 15px;
+  padding: 25px;
+
+  font-size: 0;
+
+  background-color: #71f6eb;
+  box-shadow: 1px 1px 16px 1px rgba(0, 0, 0, 0.185);
+
+  transition: background-color, box-shadow 0.2s linear;
+  &:hover {
+    background-color: rgb(214, 214, 214);
+    box-shadow: 1px 1px 16px 1px rgba(0, 0, 0, 0.068);
+  }
+}
+
+.slick-arrow.slick-next {
+  right: 0px;
+  background-image: url(../img/say/right.svg);
+  background-color: #71f6eb;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+}
+
+.slick-arrow.slick-prev {
+  right: 80px;
+
+  background-image: url(../img/say/left.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+}
+
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}

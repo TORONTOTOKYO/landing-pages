@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Mining | Майнинг - это просто!</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--SVG-->
+    <svg style="display: none">
+  <symbol id="facebook" viewBox="0 0 155.139 155.139">
+    <g>
+      <path
+        d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184
+		c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452
+		v20.341H37.29v27.585h23.814v70.761H89.584z"
+      />
+    </g>
+  </symbol>
+  <symbol id="google" viewBox="0 0 512 512">
+    <g>
+      <path
+        d="m147.682 173.862c24.86-32.704 64.162-53.862 108.318-53.862 36.326 0 70.479 14.146 96.167 39.833l10.606 10.606 84.853-84.852-10.606-10.606c-48.352-48.352-112.639-74.981-181.02-74.981-68.38 0-132.667 26.629-181.02 74.98-4.389 4.39-8.594 8.914-12.622 13.557z"
+      />
+      <path
+        d="m423.462 449.642c4.643-4.028 9.168-8.233 13.558-12.622 48.351-48.353 74.98-112.64 74.98-181.02 0-15.575-1.41-31.179-4.192-46.377l-2.251-12.299h-264.557v120h136.452c-9.437 18.773-22.936 34.779-39.199 47.109z"
+      />
+      <path
+        d="m311.602 380.208c-17.091 7.623-35.947 11.792-55.602 11.792-44.156 0-83.458-21.158-108.318-53.862l-85.324 85.324c4.028 4.643 8.233 9.168 12.622 13.557 48.353 48.352 112.64 74.981 181.02 74.981 51.916 0 101.464-15.363 143.479-43.915z"
+      />
+      <path
+        d="m131.863 311.531c-7.619-16.965-11.863-35.761-11.863-55.531s4.244-38.566 11.863-55.531l-87.948-87.948c-28.552 42.015-43.915 91.563-43.915 143.479s15.363 101.464 43.915 143.479z"
+      />
+    </g>
+  </symbol>
+  <symbol id="phone" viewBox="0 0 512 512">
+    <g>
+      <path
+        d="M436.992,74.953c-99.989-99.959-262.08-99.935-362.039,0.055s-99.935,262.08,0.055,362.039s262.08,99.935,362.039-0.055
+			c48.006-48.021,74.968-113.146,74.953-181.047C511.986,188.055,485.005,122.951,436.992,74.953z M387.703,356.605
+			c-0.011,0.011-0.022,0.023-0.034,0.034v-0.085l-12.971,12.885c-16.775,16.987-41.206,23.976-64.427,18.432
+			c-23.395-6.262-45.635-16.23-65.877-29.525c-18.806-12.019-36.234-26.069-51.968-41.899
+			c-14.477-14.371-27.483-30.151-38.827-47.104c-12.408-18.242-22.229-38.114-29.184-59.051
+			c-7.973-24.596-1.366-51.585,17.067-69.717l15.189-15.189c4.223-4.242,11.085-4.257,15.326-0.034
+			c0.011,0.011,0.023,0.022,0.034,0.034l47.957,47.957c4.242,4.223,4.257,11.085,0.034,15.326c-0.011,0.011-0.022,0.022-0.034,0.034
+			l-28.16,28.16c-8.08,7.992-9.096,20.692-2.389,29.867c10.185,13.978,21.456,27.131,33.707,39.339
+			c13.659,13.718,28.508,26.197,44.373,37.291c9.167,6.394,21.595,5.316,29.525-2.56l27.221-27.648
+			c4.223-4.242,11.085-4.257,15.326-0.034c0.011,0.011,0.022,0.022,0.034,0.034l48.043,48.128
+			C391.911,345.502,391.926,352.363,387.703,356.605z"
+      />
+    </g>
+  </symbol>
+  <symbol id="arrow" viewBox="0 0 337.085 337.086">
+    <g>
+      <path
+        d="M168.54,0C75.619,0,0.012,75.609,0.012,168.543c0,92.93,75.606,168.543,168.528,168.543
+		c92.933,0,168.534-75.613,168.534-168.543C337.074,75.609,261.473,0,168.54,0z M271.405,224.327
+		c-2.407,2.402-5.561,3.615-8.713,3.615c-3.158,0-6.311-1.213-8.719-3.615L168.54,138.9l-85.424,85.427
+		c-4.816,4.815-12.631,4.815-17.447,0c-4.819-4.815-4.819-12.622,0-17.438l94.152-94.141c4.822-4.815,12.613-4.815,17.426,0
+		l94.152,94.141C276.221,211.705,276.221,219.512,271.405,224.327z"
+      />
+      />
+    </g>
+  </symbol>
+</svg>
+
+    <!--HTML-->
+    <!--HEADER-->
+<header class="header">
+  <div class="container-layout">
+    <img class="logo" src="img/header/logos.svg" alt="Логотип компании" />
+    <div class="burger">
+      <span class="burger__line"></span>
+    </div>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#" class="nav__link link">О проекте</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link link">Тарифы</a>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link link">FAQ</a></li>
+        <li class="nav__item">
+          <a href="#" class="nav__link link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="btn">Войти в кабинет</button>
+  </div>
+</header>
+<!--MAIN CONTENT-->
+<main class="main">
+  <!--INTRO-->
+<section class="intro">
+  <div class="container">
+    <div class="intro__inner">
+      <div class="intro__content">
+        <h1 class="intro__title">
+          Снижение рисков связанных с майнингом по максимуму
+        </h1>
+        <h2 class="intro__subtitle">
+          Честность майнинга заложена в архитектуре
+        </h2>
+        <div class="intro__buttons">
+          <div
+            class="intro__buttons-container buttons-grout buttons-grout--green"
+          >
+            <span class="buttons-grout__mas">Начать зарабатывать</span>
+            <button class="buttons-grout__button buttons-grout__button--green">
+              Начать зарабатывать
+            </button>
+          </div>
+          <div class="intro__buttons-container buttons-grout">
+            <span class="buttons-grout__mas">Узнать больше</span>
+            <button class="buttons-grout__button">Узнать больше</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--PREVIEW-->
+<section class="preview">
+  <div class="preview__container">
+    <div class="preview__image">
+      <img src="img/preview/notebook.png" alt="" />
+    </div>
+    <div class="preview__content">
+      <h2 class="preview__title">open mining</h2>
+      <div class="preview__text">
+        — это прозрачный заработок на майнинге криптовалют, а самое главное — мы
+        находимся в России.
+      </div>
+    </div>
+  </div>
+</section>
+<!--TABS-->
+<section class="tabs">
+  <div class="container">
+    <div class="tabs__inner">
+      <!--1-->
+      <div class="tabs__item">
+        <div class="tabs__item-inner">
+          <img
+            class="tabs__img"
+            src="img/tabs/1.png"
+            alt="Все риски берем на себя"
+          />
+          <h3 class="tabs__item-title">
+            Все риски берем<br />
+            на себя
+          </h3>
+          <div class="tabs__item-text">
+            Покупка оборудование, его транспортировка, размещение, оплата
+            электричества, ремонт и сопровождение — все эти риски мы берем на
+            себя.
+          </div>
+        </div>
+      </div>
+      <!--2-->
+      <div class="tabs__item">
+        <div class="tabs__item-inner">
+          <img
+            class="tabs__img"
+            src="img/tabs/2.png"
+            alt="Гарантия честности схемы работы"
+          />
+          <h3 class="tabs__item-title">Гарантия честности схемы работы</h3>
+          <div class="tabs__item-text">
+            Вы покупаете только мощность оборудования — хешрайт, так заключается
+            контракт.<br />
+            Купленная мощность направляется на один из пулов, который вы
+            выбираете. Сторонний пул гарантирует прозрачность, честность и
+            простоту схемы.
+          </div>
+        </div>
+      </div>
+      <!--3-->
+      <div class="tabs__item">
+        <div class="tabs__item-inner">
+          <img
+            class="tabs__img"
+            src="img/tabs/3.png"
+            alt="Никаких скрытых платежей"
+          />
+          <h3 class="tabs__item-title">Никаких скрытых платежей</h3>
+          <div class="tabs__item-text">
+            Никаких ежедневных списаний за обслуживание и электроэнергию.
+            Короткие контракты на 3 месяца, минимизируют риски, что майнинг
+            станет невыгоден вследствие роста сложности, халвинга и падение
+            курсов.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--FEATURES-->
+<section class="features">
+  <div class="container">
+    <h2 class="features__title title">Преимущества облачного майнинга</h2>
+    <div class="features__inner">
+      <div class="usual">
+        <div class="usual__heading">
+          <h3 class="usual__title">Обычный майнинг</h3>
+        </div>
+        <ul class="usual__list">
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Ожидаете поставки майнеров и теряете драгоценное время.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Тратите время на подготовку оборудования к работе.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Отсутствие достаточного охлаждения снижает эффективность
+              оборудования. Велик риск перегревания и поломки. Результат –
+              дополнительные затраты и потеря времени.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Высокая стоимость электроэнергии.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Необходимость уделять много времени обслуживанию оборудование.
+              Результат поломок – потеря времени и упущенная прибыль.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Шум от оборудования и избыточное тепло.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Дополнительные расходы на обеспечение безопасности майнеров.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Возможны дополнительные траты на оплату таможенных пошлин при
+              поставке оборудования.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Необходимость в специальных знаниях для настройки и поддержания
+              работоспособности майнеров.
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="cloudy">
+        <div class="cloudy__heading">
+          <h3 class="cloudy__title">Облачный майнинг</h3>
+        </div>
+        <ul class="cloudy__list">
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">
+              Оборудование всегда готово к работе. Просто выбирайте контракт и
+              начинайте зарабатывать.
+            </div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">
+              Просто и удобно. Не нужно ничего настраивать и иметь IT-навыки.
+            </div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">
+              Оптимальные промышленные условия обеспечивают максимальную
+              производительность майнеров.
+            </div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">
+              Низкая стоимость электроэнергии, значит отличные цены на всех
+              контрактах.
+            </div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">
+              Бесперебойная работа. 24/7/365 контроль за работой майнеров.
+              Высочайшие стандарты безопасности.
+            </div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">Тишина и спокойствие.</div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">
+              Гарантия безопасности майнеров.
+            </div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">
+              Отсутствие непредвиденных расходов. Вы платите только один раз и
+              только ту сумму, которая указана в контракте.
+            </div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">Квалифицированные специалисты.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!--TABS-HIDDEN-->
+<section class="features-tabs">
+  <div class="container">
+    <div class="features-tabs__inner">
+      <div class="features-tabs__tabs">
+        <button class="features-tabs__btn features-tabs__btn--red">
+          Обычный
+        </button>
+        <button class="features-tabs__btn features-tabs__btn--green">
+          Облачный
+        </button>
+      </div>
+      <div class="features-tabs__content">
+        <ul class="features-tabs__list active usual__list">
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Ожидаете поставки майнеров и теряете драгоценное время.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Тратите время на подготовку оборудования к работе.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Отсутствие достаточного охлаждения снижает эффективность
+              оборудования. Велик риск перегревания и поломки. Результат –
+              дополнительные затраты и потеря времени.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Высокая стоимость электроэнергии.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Необходимость уделять много времени обслуживанию оборудование.
+              Результат поломок – потеря времени и упущенная прибыль.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Шум от оборудования и избыточное тепло.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Дополнительные расходы на обеспечение безопасности майнеров.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Возможны дополнительные траты на оплату таможенных пошлин при
+              поставке оборудования.
+            </div>
+          </li>
+          <li class="usual__item">
+            <div class="usual__item-inner">
+              Необходимость в специальных знаниях для настройки и поддержания
+              работоспособности майнеров.
+            </div>
+          </li>
+        </ul>
+        <ul class="features-tabs__list cloudy__list">
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">
+              Оборудование всегда готово к работе. Просто выбирайте контракт и
+              начинайте зарабатывать.
+            </div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">
+              Просто и удобно. Не нужно ничего настраивать и иметь IT-навыки.
+            </div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">
+              Оптимальные промышленные условия обеспечивают максимальную
+              производительность майнеров.
+            </div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">
+              Низкая стоимость электроэнергии, значит отличные цены на всех
+              контрактах.
+            </div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">
+              Бесперебойная работа. 24/7/365 контроль за работой майнеров.
+              Высочайшие стандарты безопасности.
+            </div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">Тишина и спокойствие.</div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">
+              Гарантия безопасности майнеров.
+            </div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">
+              Отсутствие непредвиденных расходов. Вы платите только один раз и
+              только ту сумму, которая указана в контракте.
+            </div>
+          </li>
+          <li class="cloudy__item">
+            <div class="cloudy__item-inner">Квалифицированные специалисты.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!--calculator-->
+
+<section class="calc">
+  <div class="container">
+    <div class="calc__title title">Расчитайте свой доход</div>
+    <div class="calculator">
+      <!--POWER-->
+      <div class="calculator__item">
+        <label for="inputPower" class="calculator__label"
+          >Мощность, Th/ s</label
+        >
+        <input
+          type="number"
+          class="calculator__input"
+          id="inputPower"
+          placeholder="от 10 Th/ s "
+          min="10"
+          max="1000"
+        />
+        <div id="slider"></div>
+        <div class="calculator__info">
+          <div class="calculator__info-item">10 Th/ s</div>
+          <div class="calculator__info-item">1000 Th/ s</div>
+        </div>
+      </div>
+      <!--TERM-->
+      <div class="calculator__item">
+        <label for="inputTurn" class="calculator__label"
+          >Срок контракта, дни</label
+        >
+        <input
+          type="number"
+          class="calculator__input"
+          id="inputTurn"
+          placeholder="от 90 дней"
+          min="90"
+          max="365"
+        />
+        <div id="sliderSecond"></div>
+        <div class="calculator__info">
+          <div class="calculator__info-item">90 дней</div>
+          <div class="calculator__info-item">365 дней</div>
+        </div>
+      </div>
+      <!--MENU-->
+      <div class="menu">
+        <div class="menu__title">Вид валюты</div>
+        <div class="dropdown">
+          <div class="dropdown__name dropdown__name--btc" data-coast="1500000">
+            BTC
+          </div>
+          <div class="dropdown__arrow">
+            <img class="dropdown__arrow-image" src="img/calc/img1.svg" alt="" />
+          </div>
+        </div>
+        <div class="dropdown__hidden">
+          <div class="dropdown__hidden-item">
+            <div
+              class="dropdown__name dropdown__name--btc"
+              data-coast="1500000"
+            >
+              BTC
+            </div>
+            <img class="dropdown__okay-image" src="img/calc/okay.svg" alt="" />
+          </div>
+          <div class="dropdown__hidden-item">
+            <div
+              class="dropdown__name dropdown__name--ltc"
+              data-coast="1000000"
+            >
+              LTC
+            </div>
+          </div>
+          <div class="dropdown__hidden-item">
+            <div class="dropdown__name dropdown__name--rpl" data-coast="750000">
+              RPL
+            </div>
+          </div>
+          <div class="dropdown__hidden-item">
+            <div class="dropdown__name dropdown__name--eth" data-coast="50000">
+              ETH
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--INFO-->
+    <div class="info">
+      <div class="info__content">
+        <!--1-->
+        <div class="info__item">
+          <div class="info__item-heading coast">0,00</div>
+          <div class="info__item-subtitle">Стоимость контракта</div>
+        </div>
+        <!--2-->
+        <div class="info__item">
+          <div class="info__item-heading currency">BTC</div>
+          <div class="info__item-subtitle">Валюта</div>
+        </div>
+        <!--3-->
+        <div class="info__item">
+          <div class="info__item-heading info__item-heading--yellow">
+            0 <span class="info__sup">руб.</span>
+          </div>
+          <div class="info__item-subtitle">Обслуживание</div>
+        </div>
+        <!--4-->
+        <div class="info__item">
+          <div
+            class="info__item-heading total-profit info__item-heading--yellow"
+          >
+            0,00 <span>BTC</span>
+          </div>
+          <div class="info__item-subtitle">Выплата за период</div>
+        </div>
+      </div>
+      <button class="info__button">Заключить контракт</button>
+    </div>
+  </div>
+</section>
+<!--warranty-->
+<section class="warranty">
+  <div class="container">
+    <h2 class="warranty__title title">Гарантии</h2>
+    <div class="warranty__list">
+      <!--1-->
+      <div class="warranty__item">
+        <div class="warranty__item-inner warranty__item-inner--yellow">
+          <div class="warranty__item-title">
+            Наша компания зарегистрирована не в офшорных зонах
+          </div>
+          <div class="warranty__item-text">
+            Мы являемся резидентами Российской Федерации, у нас есть собственная
+            площадка для размещения оборудования в Иркутской области.
+          </div>
+        </div>
+      </div>
+      <!--2-->
+      <div class="warranty__item">
+        <div class="warranty__item-inner warranty__item-inner--blue">
+          <div class="warranty__item-title">
+            Подтверждено публичным пулом pool.in
+          </div>
+          <div class="warranty__item-text">
+            Мы продаем контракты на облачный майнинг из уже имеющегося
+            оборудования
+          </div>
+
+          <button class="warranty__item-button"></button>
+        </div>
+      </div>
+      <!--3-->
+      <div class="warranty__item">
+        <div class="warranty__item-inner warranty__item-inner--snow">
+          <div class="warranty__item-title">
+            Никаких скрытых<br />
+            действий
+          </div>
+          <div class="warranty__item-text">
+            Вся финансовая отчетность<br />
+            о нашей компании опубликована в свободном доступе. Вы можете её
+            найти по ИНН.
+          </div>
+
+          <button class="warranty__item-button"></button>
+        </div>
+      </div>
+    </div>
+    <div class="warranty__screenshot">
+      <img src="img/warranty/screenshot.jpg" alt="" />
+      <div class="warranty__screenshot-subtitle">
+        Наши возможности:
+        <a href="https://www.xvideos.com" target="_blank"
+          >https://www.poolin.com/my/9053220/b...</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+<!--FAQ-->
+<section class="faq">
+  <div class="container">
+    <h2 class="faq__title title">FAQ</h2>
+    <!---->
+    <div class="faq__list">
+   
+      <div class="faq__accordion">
+        <!--1-->
+        <div class="faq__acc-item">
+          <h3 class="faq__acc-question accordion">
+            Что такое майнинг криптовалют?
+          </h3>
+          <p class="faq__acc-answer accordion-content">
+            Криптовалюты добывается оборудованием для майнинга, которое
+            используют свои вычислительные мощности для возможности обработки
+            транзакций и получения вознаграждений. Точнее говоря, майнинг - это
+            процесс записи транзакций в блокчейн и получение за это
+            вознаграждения.
+          </p>
+        </div>
+        <!--2-->
+        <div class="faq__acc-item">
+          <h3 class="faq__acc-question accordion">Что такое хэшрейт?</h3>
+          <p class="faq__acc-answer accordion-content">
+           Хэшрейт — единица, с помощью которой измеряется вычислительная мощность оборудования для добычи криптовалюты (майнинга). Во время майнинга биткоина нужно решить огромное количество математических задач, только после этого можно заработать криптовалюту.
+          </p>
+        </div>
+        <!--3-->
+        <div class="faq__acc-item">
+          <h3 class="faq__acc-question accordion">
+            Что такое пул для майнинга?
+          </h3>
+          <p class="faq__acc-answer accordion-content">
+          Под пулом для майнинга сегодня понимается специальный сервер, который используется для того, чтобы распределять задачи по добыче биткоинов или других видов цифровой монеты между участниками пула.
+          </p>
+        </div>
+        <!--4-->
+        <div class="faq__acc-item">
+          <h3 class="faq__acc-question accordion">Сколько я заработаю?</h3>
+          <p class="faq__acc-answer accordion-content">
+          Да много. В нашу пирамиду уже успел вложиться Миша Пограничник. Он вложил 500 тысяч. 300 было у него своих, 200 он занял.
+          </p>
+        </div>
+        <!--5-->
+        <div class="faq__acc-item">
+          <h3 class="faq__acc-question accordion">
+            Как начать работать с сервисом?
+          </h3>
+          <p class="faq__acc-answer accordion-content">
+          После этого в разделе «Реквизиты и настройки» ознакомьтесь с Учетной политикой и Планом счетов, в соответствии с которыми в сервисе Контур.Бухгалтерии ведется учет;
+            На вкладке «Отчетность» ознакомьтесь со списком отчетов, которые формируются в сервисе;
+            Заполните реквизиты организации и банковские реквизиты, укажите систему налогообложения. Добавьте сотрудников, заведите документы на соответствующих вкладках;
+          </p>
+        </div>
+        <!--6-->
+        <div class="faq__acc-item">
+          <h3 class="faq__acc-question accordion">Как это работает?</h3>
+          <p class="faq__acc-answer accordion-content">
+           К примеру, в сети Биткоина в среднем появляется 144 новых блока в день. Конкуренция просто сумасшедшая. Майнеров намного больше, чем 144 человека, а получить свой кусок пирога хочет каждый. Одному майнеру в добыче Биткоина делать нечего, поэтому все одиночные майнеры собрались в майнинг-пулы. Майнинг пул — это сервер, который объединяет майнеров. Майнеры совместно находят решения блоков и делят между собой награду.
+          </p>
+        </div>
+        <!--7-->
+        <div class="faq__acc-item">
+          <h3 class="faq__acc-question accordion">
+            Зачем мне регистрироваться на стороннем пуле?
+          </h3>
+          <p class="faq__acc-answer accordion-content">
+           Если один из майнеров пула находит решение задачи, он отправляет решение на пул, пул его проверяет и отправляет дальше в сеть криптовалюты. Сеть никогда не узнает, какой именно майнер нашёл блок: для неё это сделал майнинг пул. Таким образом вся слава достаётся майнинг-пулу, и именно ему будут петь дифирамбы, а майнерам нет. Однако цель майнера это не известность, а заработок. Поэтому майнер прежде всего хочет, чтобы пул честно распределил вознаграждение за блок и отдал ему его долю.
+          </p>
+        </div>
+        <!--8-->
+        <div class="faq__acc-item">
+          <h3 class="faq__acc-question accordion">
+            Почему сейчас необходимо использовать пул для майнинга Pool.in
+          </h3>
+          <p class="faq__acc-answer accordion-content">
+          Такой подход решает сразу несколько задач. Во-первых, у пула есть возможность честно распределить награду среди майнеров в соответствии с количеством обезьянок (шар), которые они отправляют на пул. Петя, нашедший 500 обезьян (шар), получит в 5 раз больше, чем Вася, нашедший 100 обезьян. И не важно, что заветную обезьянку нашёл Вася. Во-вторых, на основании полученных шар пул может предоставить майнеру красивую и понятную статистику его работы.
+          </p>
+        </div>
+        <!--9-->
+        <div class="faq__acc-item">
+          <h3 class="faq__acc-question accordion">
+            Почему я не могу получать сразу выплаты с вашего сервиса?
+          </h3>
+          <p class="faq__acc-answer accordion-content">
+            Потому что мы такие все славные ребята, че хотим, то и делаем.
+          </p>
+        </div>
+        <!--10-->
+        <div class="faq__acc-item">
+          <h3 class="faq__acc-question accordion">
+            Какие преимущества нашего сервиса облачного майнинга перед другими?
+          </h3>
+          <p class="faq__acc-answer accordion-content">
+         Мы тут не кидаем никого
+          </p>
+        </div>
+      </div>
+      <!---->
+      <div class="faq__question">
+        <div class="faq__question-title">Остались вопросы<br> и нужна помощь?</div>
+        <div class="faq__question-subtitle">
+          Напишите нам на <a href='mailto:dimavlasov2017@yandex.ru'>почту</a> и мы постараемся решить<br> ваш вопрос
+        </div>
+    </div>
+  </div>
+</section>
+
+  <!--CONTACTS-->
+<section class="contacts">
+  <div class="contacts__container">
+    <h2 class="contacts__title title">Как с нами связаться?</h2>
+    <h3 class="contacts__subtitle">
+      Если у вас остались вопросы мы с радостью ответим на них, а так же
+      подробнее расскажем о нашем продукте.
+    </h3>
+
+    <form action="#" method="" class="form-contacts">
+      <div class="form-contacts__item">
+        <input
+          type="text"
+          id="formName"
+          class="form-contacts__input"
+          placeholder="Ваше имя"
+          name="Имя клиента"
+        />
+        <label for="formName" class="form-contacts__label">Ваше имя</label>
+      </div>
+
+      <div class="form-contacts__item">
+        <input
+          type="email"
+          id="formEmail"
+          class="form-contacts__input"
+          placeholder="Ваш электронный адрес"
+          name="Почта клиента"
+        />
+        <label for="formEmail" class="form-contacts__label"
+          >Ваш электронный адрес</label
+        >
+      </div>
+      <div class="form-contacts__item">
+        <input
+          type="number"
+          id="formPhone"
+          class="form-contacts__input"
+          placeholder="Номер телефона"
+          name="Номер телефона"
+        />
+        <label for="formEmail" class="form-contacts__label"
+          >Номер телефона</label
+        >
+      </div>
+      <div class="form-contacts__item confirm">
+        <input
+          type="checkbox"
+          id="formConfirm"
+          class="confirm__input"
+          name="Согласие на обработку персональных данных получено."
+        />
+        <label for="formConfirm" class="confirm__label"
+          ><span
+            >Я принимаю условия на <a href="#">обработку персональных данных.</a
+            ><br />Обещаем не передавать информацию третьим лицам.</span
+          >
+        </label>
+      </div>
+      <button class="form-contacts__button">Отправить</button>
+    </form>
+  </div>
+</section>
+
+</main>
+<!--FOOTER-->
+<section class="footer">
+  <div class="footer__container container-layout">
+    <img class="logo" src="img/header/logos.svg" alt="Логотип компании" />
+    <div class="info-company">
+      <!--1-->
+      <div class="info-company__item">
+        <div class="info-company__title">О проекте</div>
+        <ul class="info-company__list">
+          <li class="info-company__el">
+            <a class="info-company__link link" href="#">Вход</a>
+          </li>
+          <li class="info-company__el">
+            <a class="info-company__link link" href="#">Регистрация</a>
+          </li>
+        </ul>
+      </div>
+      <!--2-->
+      <div class="info-company__item">
+        <div class="info-company__title">Тарифы</div>
+        <ul class="info-company__list">
+          <li class="info-company__el">
+            <a class="info-company__link link" href="#">Предложение</a>
+          </li>
+          <li class="info-company__el">
+            <a class="info-company__link link" href="#">Оферта</a>
+          </li>
+        </ul>
+      </div>
+      <!--3-->
+      <div class="info-company__item">
+        <div class="info-company__title">FAQ</div>
+        <ul class="info-company__list">
+          <li class="info-company__el">
+            <a class="info-company__link link" href="#">Тарифы</a>
+          </li>
+          <li class="info-company__el">
+            <a class="info-company__link link" href="#">Оплата</a>
+          </li>
+        </ul>
+      </div>
+      <!--4-->
+      <div class="info-company__item">
+        <div class="info-company__title">Контакты</div>
+        <ul class="info-company__list">
+          <li class="info-company__el">
+            <a class="info-company__link link" href="#">8 800 920 00 00</a>
+          </li>
+          <li class="info-company__el">
+            <a class="info-company__link link" href="#">honest@maning.ru</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="social">
+      <a href="" class="social__link">
+        <svg class="social__icon">
+          <use xlink:href="#facebook"></use>
+        </svg>
+      </a>
+      <a href="" class="social__link">
+        <svg class="social__icon">
+          <use xlink:href="#google"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="autor">TORONTOTOKYO <i class="fas fa-heart"></i></div>
+</section>
+<a href="#" class="arrow">
+  <svg class="arrow__svg">
+    <use xlink:href="#arrow"></use>
+  </svg>
+</a>
+<a href="tel:+74951234567" class="phone-call">
+  <svg class="phone-call__svg">
+    <use xlink:href="#phone"></use>
+  </svg>
+</a>
+
+    <script
+      src="https://kit.fontawesome.com/6ccbf80ddd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

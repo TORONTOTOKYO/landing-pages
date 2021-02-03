@@ -1,0 +1,57 @@
+.footer {
+  padding-top: 216px;
+
+  background: url(../img/footer/right.png) bottom right no-repeat,
+    url(../img/footer/left.png) bottom left no-repeat;
+  &__container {
+    margin-bottom: 60px;
+  }
+}
+
+.info-company {
+  display: flex;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 100px;
+    }
+  }
+  &__title {
+    margin-bottom: 40px;
+
+    @include fontText($Gotham, 24px, 400);
+    color: $blacktext;
+  }
+  &__el {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  &__link {
+    display: flex;
+    width: 20px;
+    height: 32px;
+    &:first-child {
+      margin-right: 80px;
+    }
+  }
+  &__icon {
+    height: 32px;
+    &:hover {
+      fill: #56c5e9;
+    }
+  }
+}
+
+.autor {
+  padding-bottom: 20px;
+
+  @include fontText($Gotham, 14px, 400);
+  text-align: center;
+  & i {
+    color: red;
+  }
+}

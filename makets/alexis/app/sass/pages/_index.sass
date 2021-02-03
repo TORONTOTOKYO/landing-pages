@@ -1,0 +1,777 @@
+.index-first-screen
+	min-height: 775px
+	padding: 237px 0 143px
+	+bg('../img/index-first-screen-background.jpg')
+	&__title
+		color: #ffffff
+		font-family: "Libre Baskerville"
+		font-size: 60px
+		line-height: 85px
+		text-align: center
+		margin-bottom: 42px
+	&__inner
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__btn
+		margin-bottom: 83px
+	&__card-container
+		width: 100%
+	&__card
+		text-align: center
+		&.index-first-screen__card
+			&_first
+				padding-right: 55px
+			&_third
+				padding-left: 23px 
+	&__card-icon
+		margin-bottom: 28px
+		width: 40px
+		height: 40px
+	&__card-text
+		font-size: 18px
+		font-weight: 500
+		line-height: 30px
+		text-transform: uppercase
+
+@media (max-width: 1199.98px)
+	.index-first-screen
+		&__card
+			padding: 0!important
+			margin-bottom: 30px
+
+@media (max-width: 991.98px)
+	.index-first-screen
+		padding-top: 162px
+
+@media (max-width: 575.98px)
+	.index-first-screen
+		&__card
+			margin-bottom: 35px
+
+.index-about
+	min-height: 1000px
+	padding: 150px 0
+	&__right-block
+		margin-left: -8.34%
+	&__img
+		padding: 0 0 123% 0
+		background-origin: border-box
+		border: 10px solid rgba(0, 0, 0, 0.2)
+	&__block
+		padding: 0 83px 61px 0
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+		background-color: #ffffff
+		margin-top: 75px
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 3px
+			background: linear-gradient(to right,$red 0%, $red 25%, $green 25%, $green 50%, $purple 50%, $purple 75%, $orange 75%, $orange 100%)
+	&__text
+		font-size: 15px
+		line-height: 27.01px
+		padding-left: 83px
+		transform: translateY(-40px)
+	&__section-title
+		text-align: left
+	&__title
+		position: absolute
+		transform: none
+		left: 83px
+		bottom: 58px
+
+@media (max-width: 991.98px)
+	.index-about
+		&__right-block
+			margin: 0
+
+@media (max-width: 575.98px)
+	.index-about
+		&__block
+			padding-right: 10px
+			padding-left: 10px
+		&__text
+			padding-left: 0
+
+.index-focus
+	min-height: 824px
+	background-color: #f7f7f7
+	padding: 0 0 149px
+	&__subtitle
+		margin-bottom: 79px
+	&__card
+		padding: 61px 33px 64px
+		text-align: center
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+		background-color: #ffffff
+	&__card-icon
+		margin-bottom: 24px
+		width: 55px
+		height: 40px
+	&__card-title
+		color: #313131
+		font-size: 20px
+		font-weight: 500
+		line-height: 30px
+		margin-bottom: 24px
+	&__card-text
+		font-size: 15px
+		line-height: 25px
+
+@media (max-width: 1199.98px)
+	.index-focus
+		&__card
+			margin-bottom: 30px
+
+.index-video
+	min-height: 500px
+	padding: 119px 0 122px
+	display: flex
+	flex-direction: column
+	align-items: center
+	position: relative
+	+bg('../img/index-background-2.jpg')
+	line-height: 80px
+	color: #ffffff
+	&__title
+		font-size: 30px
+		margin-bottom: 11px
+	&__text
+		font-family: Poppins
+		font-size: 15px
+	&__video
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		min-height: 100%
+		z-index: -1
+	&__btn
+		width: 80px
+		height: 80px
+		margin-bottom: 8px
+		cursor: pointer
+
+@media (max-width: 575.98px)
+	.index-video
+		&__title
+			font-size: 23px
+
+.index-portfolio
+	min-height: 1385px
+	padding-bottom: 131px
+	&__section-title
+		padding-bottom: 73px
+	&__row
+		display: flex
+		flex-wrap: wrap
+	&__column
+		max-width: $column * 4
+		flex: 0 0 $column * 4
+		padding: 0 5px
+	&__img-block
+		margin-bottom: 13px
+		border: 5px solid #ffffff
+		position: relative
+		cursor: pointer
+		&:hover 
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+			.index-portfolio__hover-block
+				opacity: 1
+			.index-portfolio__img
+				&::after
+					background: rgba(2, 2, 2, 0.25)
+	&__img
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			transition: all .2s
+			background: rgba(2, 2, 2, 0)
+	&__hover-block
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		text-align: center
+		opacity: 0
+		transition: all .2s
+	&__hover-btn
+		position: absolute
+		width: 61px
+		height: 61px
+		top: 28%
+		left: 50%
+		transform: translateX(-50%)
+	&__hover-title
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		padding: 21px 0 18px
+		background-color: #ffffff
+		color: #313131
+		font-size: 18px
+		font-weight: 500
+		letter-spacing: 0.9px
+		line-height: 25px
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 3px
+			background: linear-gradient(to right,$red 0%, $red 25%, $green 25%, $green 50%, $purple 50%, $purple 75%, $orange 75%, $orange 100%)
+	&__img
+		padding: 0 0 80% 0
+
+@media (max-width: 991.98px)
+	.index-portfolio
+		&__column
+			max-width: $column * 6
+			flex: 0 0 $column * 6
+
+@media (max-width: 575.98px)
+	.index-portfolio
+		&__column
+			max-width: $column * 12
+			flex: 0 0 $column * 12
+
+.index-team
+	min-height: 1226px
+	padding-bottom: 147px
+	background-color: #f7f7f7
+	&__section-title
+		padding-bottom: 75px
+	&__card
+		position: relative
+		padding: 5px 5px 14px 5px
+		text-align: center
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+		background-color: #ffffff
+		margin-bottom: 48px
+	&__card-img
+		padding-bottom: 104%
+		margin-bottom: 15px
+	&__card-title
+		font-size: 18px
+		font-weight: 500
+		line-height: 26px
+	&__card-text
+		font-family: Poppins;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 26px
+	&__comment
+		padding: 74px 0 76px
+		background-color: #ffffff
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: -76px
+			left: 0%
+			transform: translateX(-50%)
+			width: 0
+			height: 0
+			border: 38px solid transparent
+			border-bottom: 53px solid #ffffff
+			transition: all .3s
+		&_arrow-pos
+			&_0
+				&::before
+					left: 11%
+			&_1
+				&::before
+					left: 37%
+			&_2
+				&::before
+					left: 63%
+			&_3
+				&::before
+					left: 88%
+	&__comment-title
+		color: #272727
+		font-size: 20px
+		font-weight: 500
+		margin-bottom: 24px
+	&__comment-text
+		line-height: 27px
+	&__comment-links
+		position: absolute
+		top: 50%
+		right: 15px
+		transform: translateY(-50%)
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		&::before
+			content: ''
+			position: absolute
+			height: 100%
+			width: 2px
+			background-color: #efefef
+			left: -44px
+			top: 0
+	&__comment-share
+		position: absolute
+		width: 36px
+		height: 36px
+		left: -116px
+		top: 50%
+		transform: translateY(-50%)
+	&__socials
+		margin-right: 6px
+	&__social-item
+		margin-bottom: 14px
+		padding-left: 20px
+		position: relative
+		&:last-child
+			margin-bottom: 0
+	&__social-link
+		color: #616161
+	&__comment-icon
+		width: 15px
+		height: 15px
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+	&__card-arrow
+		display: none
+		position: absolute
+		bottom: -55px
+		cursor: pointer
+		left: 50%
+		transform: translateX(-50%)
+		width: 50px
+		height: 50px
+		&_active
+			transform: translateX(-50%) rotate(180deg)
+	&__card-comment
+		display: none
+		padding: 20px
+		margin-bottom: 30px
+		background-color: #ffffff
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+		&_active
+			display: block
+	&__card-comment-text
+		margin-bottom: 20px
+
+@media (max-width: 991.98px)
+	.index-team
+		&__card
+			margin-bottom: 80px
+		&__card-arrow
+			display: block
+		&__comment
+			display: none
+
+.index-statistics
+	min-height: 464px
+	padding: 145px 0 126px
+	+bg('../img/index-statistics-background.jpg')
+	&__card
+		text-align: center
+	&__card-icon
+		width: 51px
+		height: 48px
+		margin-bottom: 18px
+	&__card-number
+		color: #fefefe
+		font-size: 20px
+		font-weight: 500
+		line-height: 35px
+		margin-bottom: 14px
+	&__card-text
+		opacity: 0.7
+		color: #fefefe
+		line-height: 25px
+		margin-bottom: 34px
+	&__card-circle
+		width: 15px
+		height: 15px
+
+@media (max-width: 767.98px)
+	.index-statistics
+		&__card
+			margin-bottom: 40px
+
+.index-work
+	min-height: 1726px
+	padding: 0 0 150px 0
+	&__section-title
+		padding: 0 0 128px 0
+	&__row
+		position: relative
+	&__card
+		position: absolute
+		background-color: $white
+		top: 0
+		padding: 46px 47px 72px 130px
+		width: 39.66667%
+		transform: translateY(-52px)
+		margin: 0 15px
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+		z-index: 2
+		&_right
+			right: 0
+		&_left
+			left: 0
+		&_big-top
+			padding: 71px 52px 47px 124px
+	&__card-title
+		color: #272727
+		font-size: 25px
+		margin-bottom: 20px
+	&__card-number
+		position: absolute
+		top: 38px
+		left: 37px
+		color: #e0e0e0
+		font-family: "Libre Baskerville"
+		font-size: 50px
+		font-weight: 700
+		text-transform: uppercase
+		&::after
+			content: ''
+			position: absolute
+			bottom: 7px
+			left: -16px
+			width: 118px
+			height: 1px
+			background-color: #e0e0e0
+			transform: rotate(-45deg)
+	&__card-text
+		line-height: 27px
+	&__img
+		padding: 0 0 54%
+
+@media (max-width: 1199.98px)
+	.index-work
+		&__card
+			padding: 46px 18px 44px 120px
+
+@media (max-width: 991.98px)
+	.index-work
+		&__card
+			position: static
+			width: 100%
+			transform: none
+			margin-bottom: 20px
+		&__img
+			margin-bottom: 50px
+
+@media (max-width: 575.98px)
+	.index-work
+		&__card
+			padding-left: 18px
+		&__img
+			padding: 0 0 72% 0
+		&__card-number
+			position: static
+			&::after
+				display: none
+
+.index-price
+	background-color: #f7f7f7
+	min-height: 1050px
+	padding: 0 0 149px 0
+	&__section-title
+		padding-bottom: 75px
+	&__card
+		text-align: center
+		display: flex
+		flex-direction: column
+		align-items: center
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+		background-color: #ffffff
+		padding: 27px 0 37px
+	&__card-title
+		color: #313131
+		font-size: 20px
+		font-weight: 500
+		line-height: 30px
+		margin-bottom: 27px
+	&__card-cost
+		box-shadow: 0 0 0 3px #38c695
+		border: 3px solid #ffffff
+		background-color: #38c695
+		width: 106px
+		height: 106px
+		border-radius: 50%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		color: #ffffff
+		font-size: 25px
+		line-height: 20px
+		margin-bottom: 29px
+		&_red
+			box-shadow: 0 0 0 3px #fc5f45
+			background-color: #fc5f45
+		&_purple
+			box-shadow: 0 0 0 3px #b27cf5
+			background-color: #b27cf5
+	&_card-price
+		margin-bottom: 4px
+	&__card-time
+		font-size: 13px
+	&__card-list
+		line-height: 40px
+		margin-bottom: 27px
+	&__card-item
+		display: flex
+		justify-content: center
+	&__bold-text
+		color: #272727
+		font-weight: 500
+		margin-right: 3px
+		svg
+			width: 15px
+			height: 15px
+			fill: #272727
+
+@media (max-width: 991.98px)
+	.index-price
+		&__card
+			margin-bottom: 30px
+
+.index-testimonials
+	min-height: 874px
+	background-color: rgba(38, 39, 50, 0.85)
+	padding: 0 0 41px 0
+	& .swiper-pagination
+		right: 0
+		bottom: 0
+	& .swiper-slide
+		display: flex
+		align-items: center
+	& .swiper-pagination-bullet
+		width: 18px
+		height: 18px
+		border-radius: 50%
+		border: 2px solid $white
+		background-color: transparent
+		opacity: 1
+		margin-right: 7px
+		&:last-child
+			margin-right: 2px
+	& .swiper-pagination-bullet-active
+		width: 16px
+		height: 16px
+		margin-bottom: 1px!important
+		background-color: $red
+		box-shadow: 0 0 0 2px $red
+		border: 3px solid #464751
+	&__section-title
+		padding-bottom: 76px
+	&__swiper
+		overflow: hidden
+	&__slide-img
+		background-origin: border-box
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+		border: 10px solid rgba(0, 0, 0, 0.2)
+		padding: 0 0 33% 0
+		max-width: 34%
+		flex: 0 0 34%
+	&__slide-block
+		position: relative
+		background-color: #ffffff
+		padding: 34px 76px 38px 54px
+		&::before
+			content: '“'
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0.3
+			color: #e0e0e0
+			font-family: "Libre Baskerville"
+			font-size: 338px
+			font-weight: 700
+	&__slide-wrapper
+		padding: 43px 0 46px
+	&__slide-text
+		line-height: 27px
+		margin-bottom: 36px
+		position: relative
+	&__slide-signature
+		color: #272727
+		font-family: Sacramento
+		font-size: 40px
+		margin-bottom: 12px
+	&__slide-author
+		color: #272727
+		font-size: 18px
+		font-weight: 500
+		margin-bottom: 10px
+	&__slide-author-job
+		color: #fc5f45
+		font-size: 13px
+
+@media (max-width: 991.98px)
+	.index-testimonials 
+		& .swiper-slide
+			display: block
+		&__slide-img
+			max-width: 100%
+			padding: 0 0 50% 0
+
+@media (max-width: 575.98px)
+	.index-testimonials
+		&__slide-block
+			padding: 34px 15px 38px 15px
+
+.index-select
+	min-height: 1050px
+	padding: 0 0 150px 0
+	&__section-title
+		padding-bottom: 76px
+	&__card
+		margin-bottom: 69px
+		padding-left: 22px
+	&__card-title
+		color: #272727
+		font-size: 18px
+		font-weight: 500
+		line-height: 26px
+		margin-bottom: 25px
+		display: flex
+	&__card-name
+		margin-top: -6px
+	&__card-icon
+		width: 49px
+		height: 48px
+		margin-right: 15px
+	&__card-text
+		line-height: 27px
+	&__bottom
+		text-align: center
+		margin-top: 79px
+	&__bottom-text
+		display: inline-block
+		margin-right: 28px
+		color: #272727
+		font-size: 25px
+		line-height: 40px
+
+@media (max-width: 767.98px)
+	.index-select
+		&__bottom-text
+			display: block
+			margin: 0 0 20px 0
+
+.index-blog
+	min-height: 1151px
+	padding: 0 0 151px 0
+	background-color: #f7f7f7
+	&__section-title
+		padding-bottom: 73px
+	&__big-card-img
+		padding: 0 0 80% 0
+		position: relative
+	&__big-card-info
+		position: absolute
+		bottom: 26px
+		left: 48px
+	&__card
+		padding: 23px 39px 27px 38px
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+		& + & 
+			margin-top: 21px
+	&__big-card-bottom
+		padding: 24px 49px 38px 50px
+	&__card-title
+		margin-bottom: 7px
+	&__big-card-title
+		margin-bottom: 17px
+	&__card-author
+		display: inline-block
+		font-size: 15px
+		font-weight: 500
+		line-height: 35px
+		text-transform: uppercase
+		margin-right: 20px
+	&__card-title
+		color: #272727
+		font-size: 20px
+		font-weight: 500
+		line-height: 35px
+	&__card-date
+		display: inline-block
+		font-size: 13px
+		line-height: 35px
+	&__card-read
+		margin-left: 4px
+	&__card-text
+		line-height: 27px
+	&__big-card-date
+		opacity: 0.7
+		color: #ffffff
+		font-size: 13px
+		line-height: 35px
+
+@media (max-width: 1199.98px)
+	.index-blog
+		&__card
+			padding: 20px 20px 20px 20px
+
+@media (max-width: 991.98px)
+	.index-blog
+		&__big-card
+			margin-bottom: 70px
+
+@media (max-width: 575.98px)
+	.index-blog
+		&__big-card-info
+			left: 10px
+			bottom: 5px
+		&__big-card-author
+			display: block
+		&__card-read
+			display: block
+			margin-left: 0
+			margin-top: 4px
+
+.index-form
+	min-height: 927px
+	padding: 0 0 126px 0
+	background-color: #cccccc
+	text-align: center
+	&__section-title
+		padding-bottom: 77px
+	&__form
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+	&__input
+		text-align: center
+		width: 100%
+		height: 50px
+		border-radius: 4px
+		border: 1px solid #efefef
+		background-color: #ffffff
+		font-size: 16px
+		line-height: 30px
+		margin-bottom: 24px
+		padding: 0 10px
+	&__textarea
+		padding: 10px
+		min-height: 200px
+		resize: vertical
+	&__btn
+		margin-top: 25px
+		width: 190px

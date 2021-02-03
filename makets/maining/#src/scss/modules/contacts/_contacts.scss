@@ -1,0 +1,137 @@
+.contacts {
+  &__container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-bottom: 110px;
+
+    background: url(../img/contacts/big.png) center no-repeat,
+      url(../img/contacts/small.png) top right no-repeat;
+    background-size: 987px 713px, 520px 472px;
+  }
+  &__title {
+    margin-bottom: 60px;
+  }
+  &__subtitle {
+    width: 100%;
+    max-width: 472px;
+    margin: 0 auto 104px;
+    @include fontText($Gotham, 18px, 400);
+    color: $blacktext;
+    line-height: 1.4;
+  }
+}
+
+.form-contacts {
+  width: 100%;
+  max-width: 480px;
+
+  margin: 0 auto;
+  &__item {
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+  }
+  &__label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    @include fontText($Gotham, 14px, 400);
+    color: $black;
+    line-height: 1.4;
+
+    animation: wow 0.3s ease-in-out forwards;
+  }
+  &__input {
+    width: 100%;
+    padding: 15px 0px 15px 15px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+
+    @include fontText($Gotham, 18px, 400);
+    color: $black;
+    line-height: 1.4;
+    &::placeholder {
+      font-size: 14px;
+      color: $gray;
+    }
+    &:placeholder-shown + label {
+      display: none;
+      animation: none;
+    }
+    &:focus {
+      border-color: #22e708;
+    }
+  }
+  &__button {
+    display: block;
+    margin: 0 auto;
+
+    @include fontText($Gotham, 24px, 500);
+    color: $snow;
+
+    background-color: $lightGreen;
+    padding: 15px 60px;
+  }
+}
+
+.confirm {
+  margin-bottom: 75px;
+  &__input {
+    display: none;
+    &:checked + .confirm__label::after {
+      transform: scale(1);
+    }
+  }
+  &__label {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-start;
+    width: 100%;
+
+    @include fontText($Gotham, 14px, 400);
+    color: $snow;
+    line-height: 1.7;
+
+    cursor: pointer;
+
+    &::before {
+      content: "";
+
+      flex: 0 0 18px;
+      height: 18px;
+      align-self: flex-start;
+      margin: 4px 10px 0px 0px;
+      border: 1px solid #fff;
+
+      background-color: transparent;
+    }
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 7px;
+      left: 3px;
+
+      width: 12px;
+      height: 12px;
+
+      background-color: #87b645;
+
+      transform: scale(0);
+      transition: transform 0.2s linear;
+    }
+  }
+}
+
+@keyframes wow {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    left: 120%;
+    opacity: 0.4;
+    text-shadow: -20px 0 0 $black;
+  }
+}

@@ -1,0 +1,27 @@
+.benefit {
+  padding: 100px 0px 20px 0px;
+  &__title {
+    margin-bottom: 80px;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 25%;
+    max-width: 280px;
+    min-width: 280px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  &__img {
+    margin-bottom: 20px;
+  }
+  &__text {
+    @include fontText($Roboto, 16px, 400);
+    color: #444444;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+}
